@@ -1,0 +1,42 @@
+SOURCE: Zenodo record 8346860 (official dataset archive, Part I, Oil)
+TITLE: Sentinel-1 SAR Oil spill image dataset for train, validate, and test deep learning models. Part I.
+URL / DOI: https://zenodo.org/records/8346860 / 10.5281/zenodo.8346860
+RELEVANT INFORMATION: 'The dataset comprises Sentinel-1 SAR images in Sigma0, in decibels (db)'; '1200 Sentinel-1 SAR Sigma0 images, in db'; images 2048x2048x2 TIFF; masks 2048x2048, foreground=1/background=0, same number as image. Notes: 'only the Sentinel-1 Sigma0 images in decibels (db) with two polarizations (VV, VH) and dimensions of 2048x2048x2 are georeferenced. The masks ... are not georeferenced because they were treated as matrices'.
+WHAT IT PROVES: Stored values are calibrated Sigma0 backscatter in dB (linear->dB done by authors); polarization set is {VV, VH}; image/mask layout matches local dataset (1200 Oil).
+CONFIDENCE: HIGH
+
+SOURCE: Zenodo record 8253899 (official dataset archive, Part II, No Oil + Lookalike)
+TITLE: Sentinel-1 SAR Oil spill image dataset for train, validate, and test deep learning models. Part II.
+URL / DOI: https://zenodo.org/records/8253899 / 10.5281/zenodo.8253899
+RELEVANT INFORMATION: '685 images of oil-free Sentinel-1 SAR Sigma0 images'; '685 Sentinel-1 SAR Sigma0 images ... of look-alikes'; No_oil/Lookalike ground truths are all 0 ('the value of the ground truth ... is only 0'). Same Sigma0-dB / (VV,VH) notes.
+WHAT IT PROVES: Same representation for No_oil/Lookalike; all-zero masks are by design.
+CONFIDENCE: HIGH
+
+SOURCE: Zenodo record 13761290 (official dataset archive, Part III, test)
+TITLE: Sentinel-1 SAR Oil spill image dataset for train, validate, and test deep learning models. Part III
+URL / DOI: https://zenodo.org/records/13761290 / 10.5281/zenodo.13761290
+RELEVANT INFORMATION: 'This part contains the test images'; 150 Oil + 150 No oil + 150 Lookalike Sigma0-dB images plus *_segmentation ground truths. Same (VV,VH) notes.
+WHAT IT PROVES: Local Test_Images/ (150/class, no masks shipped locally) and local nested Mask/<class>/*_segmentation.tif (150/class) both originate from Part III.
+CONFIDENCE: HIGH
+
+SOURCE: Crossref metadata for the dataset paper
+TITLE: Marine oil spill detection and segmentation in SAR data with two steps Deep Learning framework
+URL / DOI: https://doi.org/10.1016/j.marpolbul.2024.116549 (Mar. Pollut. Bull. 204, 116549)
+RELEVANT INFORMATION: Peer-reviewed paper by the dataset authors (Trujillo-Acatitla et al., IPICYT, Mexico); Zenodo records I-III declare this DOI under 'documents'. Full text is paywalled (Elsevier 429 on TDM fetch); abstract-level metadata confirms authorship, venue, year. References SNAP (ESA Sentinel Application Platform).
+WHAT IT PROVES: Dataset is peer-reviewed and documented; preprocessing pipeline details live in the paper.
+CONFIDENCE: MEDIUM (metadata inspected; full methods text not accessible)
+
+SOURCE: Kaggle third-party pipeline for this exact dataset (NON-authoritative)
+TITLE: Oil Spill Segmentation (Sentinel-1 SAR, dual-pol VV+VH) — oil-spill-code
+URL / DOI: https://www.kaggle.com/datasets/shuddhabrotabanerjee/oil-spill-code (no DOI)
+RELEVANT INFORMATION: Claims local TIFF layout '2048x2048x2 float32, Sigma0 dB (band0=VV, band1=VH)'. Author is unrelated to the dataset creators.
+WHAT IT PROVES: Nothing authoritative; records a band-order claim (band0=VV) that CONFLICTS with the physical-consistency check below. Listed only to document the conflict.
+CONFIDENCE: LOW
+
+SOURCE: Terrascope S1 ATBD + STEP forum / Copernicus openEO docs (sensor background only)
+TITLE: Terrascope Sentinel-1 ATBD S1 SIGMA0; forum.step.esa.int; dataspace copernicus OilSpillMapping
+URL / DOI: https://docs.terrascope.be/.../S1%20SIGMA0%20V131.pdf (no DOI)
+RELEVANT INFORMATION: Standard S1 IW GRD dual-pol (VV,VH) products; sigma0 dB = 10*log10(sigma0_linear); VH ocean backscatter is weaker than VV; SNAP is the standard calibration tool.
+WHAT IT PROVES: General SAR background ONLY - used solely to interpret (not to decide) the local band statistics. Never applied to this dataset's files.
+CONFIDENCE: LOW (background context only)
+

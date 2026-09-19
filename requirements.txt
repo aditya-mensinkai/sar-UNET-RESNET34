@@ -1,0 +1,8 @@
+# Direct dependencies for tools/validate_b1_dataset.py,
+// tools/resolve_b1_issues.py, tools/investigate_sar_radiometry.py,
+// tools/create_dataset_split.py  (install: pip install -r requirements.txt)
+rasterio==1.5.1
+numpy==2.5.3
+matplotlib==3.11.2
+pillow==12.3.0
+tqdm==4.70.0

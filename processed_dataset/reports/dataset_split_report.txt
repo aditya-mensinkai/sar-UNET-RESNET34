@@ -1,0 +1,22 @@
+DATASET SPLIT REPORT (HARD LINKS, seed 42; 2026-09-19T18:24:17.592303+00:00)
+Test masks: Part III provenance dataset/Mask/<class>/*_segmentation.tif (IDs verified equal to Test_Images).
+
+SOURCE COUNTS: Oil 1200 | No_oil 685 | Lookalike 685 | Total flat 2570 (+450 test)
+EXCLUDED (metadata/quarantine/quarantine.csv; raw files untouched):
+  G1: Oil/00007.tif, Oil/01339.tif | dupes: Oil/00357.tif, No_oil/00543.tif
+TRAIN: Oil 958 | No_oil 547 | Lookalike 548 | Total 2053
+VAL: Oil 239 | No_oil 137 | Lookalike 137 | Total 513
+TEST: Oil 150 | No_oil 150 | Lookalike 150 | Total 450
+INTEGRITY: missing images 0 | missing masks 0 | hash mismatches 0
+  dimension mismatches 0
+  duplicate image groups (pixel-md5): 1 [['test/No_oil/00005.tif', 'test/No_oil/00087.tif']]
+  non-empty mask reuse across IDs: none
+  train/val overlap 0 | train/test overlap 0 | val/test overlap 0
+  errors: none
+STORAGE: raw 136.78GB | free before 120.36GB -> after 120.35GB
+  (delta 6.2MB ~ directory entries only; TIFF data shared)
+LINK STATUS: hard links created 6032 | verification failures 0 | physical copies created 0
+RAW DATASET MODIFIED: NO (size+mtime re-verified on 6040 files)
+PREPROCESSING: NOT PERFORMED (normalize/radiometric/despeckle/augment/tile/resize/crop/stitch all NO)
+
+ADDENDUM 2026-09-19: intra-test exact duplicate VERIFIED via np.array_equal - Test_Images/No oil/00005.tif == 00087.tif (image+mask identical, masks empty). Official test set kept intact; flag for evaluation (dedup/weighted scoring at eval stage). Train/val/test cross-overlaps remain 0.

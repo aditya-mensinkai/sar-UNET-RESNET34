@@ -1,0 +1,282 @@
+{
+  "dataset": "Trujillo-Acatitla et al. Sentinel-1 SAR oil-spill dataset, Zenodo Parts I-III (10.5281/zenodo.8346860, 10.5281/zenodo.8253899, 10.5281/zenodo.13761290); paper 10.1016/j.marpolbul.2024.116549",
+  "source": [
+    "https://zenodo.org/records/8346860",
+    "https://zenodo.org/records/8253899",
+    "https://zenodo.org/records/13761290",
+    "https://doi.org/10.1016/j.marpolbul.2024.116549"
+  ],
+  "bands": {
+    "band_1": {
+      "polarization": "UNKNOWN (member of {VV, VH})",
+      "physical_quantity": "sigma0",
+      "representation": "decibels (dB)",
+      "unit": "dB",
+      "confidence": "HIGH (representation); UNKNOWN (polarization order)",
+      "evidence": [
+        "Zenodo record 8346860 (official dataset archive, Part I, Oil): 'The dataset comprises Sentinel-1 SAR images in Sigma0, in decibels (db)'; '1200 Sentinel-1 SAR Sigma0 images, in db'; images 2048x2048x2 TIFF; masks 2048x2048, foreground=1/background=0, same number as image. Notes: 'only the Sentinel-1 Sigma0 images in decibels (db) with two polarizations (VV, VH) and dimensions of 2048x2048x2 are georeferenced. The masks ... are not georeferenced because they were treated as matrices'.",
+        "Zenodo record 8253899 (official dataset archive, Part II, No Oil + Lookalike): '685 images of oil-free Sentinel-1 SAR Sigma0 images'; '685 Sentinel-1 SAR Sigma0 images ... of look-alikes'; No_oil/Lookalike ground truths are all 0 ('the value of the ground truth ... is only 0'). Same Sigma0-dB / (VV,VH) notes.",
+        "Zenodo record 13761290 (official dataset archive, Part III, test): 'This part contains the test images'; 150 Oil + 150 No oil + 150 Lookalike Sigma0-dB images plus *_segmentation ground truths. Same (VV,VH) notes.",
+        "Third-party claim 'band0=VV' (LOW, non-authoritative, conflicts with observed band strength order).",
+        "Sample stats band1 (supporting only): {\"Oil/00000.tif\": {\"band1\": {\"min\": -54.12104797363281, \"max\": -1.9929887056350708, \"mean\": -34.27081684377552, \"median\": -33.30106163024902, \"std\": 4.846808740194406, \"P1\": -48.58317947387695, \"P5\": -44.60256385803223, \"P25\": -36.60432529449463, \"P50\": -33.30106163024902, \"P75\": -30.87594509124756, \"P95\": -28.09637861251831, \"P99\": -26.48129867553711}, \"band2\": {\"min\": -38.24626159667969, \"max\": 5.545726299285889, \"mean\": -20.78446385738382, \"median\": -20.73689842224121, \"std\": 1.5858391154157716, \"P1\": -24.68993106842041, \"P5\": -23.374958801269532, \"P25\""
+      ]
+    },
+    "band_2": {
+      "polarization": "UNKNOWN (member of {VV, VH})",
+      "physical_quantity": "sigma0",
+      "representation": "decibels (dB)",
+      "unit": "dB",
+      "confidence": "HIGH (representation); UNKNOWN (polarization order)",
+      "evidence": [
+        "Zenodo record 8346860 (official dataset archive, Part I, Oil): 'The dataset comprises Sentinel-1 SAR images in Sigma0, in decibels (db)'; '1200 Sentinel-1 SAR Sigma0 images, in db'; images 2048x2048x2 TIFF; masks 2048x2048, foreground=1/background=0, same number as image. Notes: 'only the Sentinel-1 Sigma0 images in decibels (db) with two polarizations (VV, VH) and dimensions of 2048x2048x2 are georeferenced. The masks ... are not georeferenced because they were treated as matrices'.",
+        "Zenodo record 8253899 (official dataset archive, Part II, No Oil + Lookalike): '685 images of oil-free Sentinel-1 SAR Sigma0 images'; '685 Sentinel-1 SAR Sigma0 images ... of look-alikes'; No_oil/Lookalike ground truths are all 0 ('the value of the ground truth ... is only 0'). Same Sigma0-dB / (VV,VH) notes.",
+        "Zenodo record 13761290 (official dataset archive, Part III, test): 'This part contains the test images'; 150 Oil + 150 No oil + 150 Lookalike Sigma0-dB images plus *_segmentation ground truths. Same (VV,VH) notes.",
+        "Band2 systematically stronger than band1 (e.g. Oil means -19.9 vs -33.2 dB); consistent-with-[VH,VV]-order hypothesis offered as supporting evidence ONLY."
+      ]
+    }
+  },
+  "radiometric_calibration": {
+    "status": "YES",
+    "evidence": [
+      "Authors state stored values are Sigma0 (exists only post-calibration)."
+    ]
+  },
+  "terrain_correction": {
+    "status": "UNKNOWN",
+    "evidence": [
+      "Georeferenced EPSG:4326 verified; method (Range-Doppler vs ellipsoid) unstated."
+    ]
+  },
+  "speckle_filtering": {
+    "status": "UNKNOWN",
+    "evidence": [
+      "No author statement found."
+    ]
+  },
+  "linear_to_db": {
+    "status": "YES",
+    "evidence": [
+      "Authors state stored Sigma0 is in decibels."
+    ]
+  },
+  "overall_status": "PARTIALLY_CONFIRMED",
+  "overall_status_reason": "Representation sigma0-dB CONFIRMED (HIGH); polarization set {VV,VH} CONFIRMED (HIGH); per-band polarization order UNCONFIRMED (UNKNOWN) due to documented conflict; pipeline specifics partly UNKNOWN.",
+  "numerical_support_only": {
+    "Oil/00000.tif": {
+      "band1": {
+        "min": -54.12104797363281,
+        "max": -1.9929887056350708,
+        "mean": -34.27081684377552,
+        "median": -33.30106163024902,
+        "std": 4.846808740194406,
+        "P1": -48.58317947387695,
+        "P5": -44.60256385803223,
+        "P25": -36.60432529449463,
+        "P50": -33.30106163024902,
+        "P75": -30.87594509124756,
+        "P95": -28.09637861251831,
+        "P99": -26.48129867553711
+      },
+      "band2": {
+        "min": -38.24626159667969,
+        "max": 5.545726299285889,
+        "mean": -20.78446385738382,
+        "median": -20.73689842224121,
+        "std": 1.5858391154157716,
+        "P1": -24.68993106842041,
+        "P5": -23.374958801269532,
+        "P25": -21.778175354003906,
+        "P50": -20.73689842224121,
+        "P75": -19.72943687438965,
+        "P95": -18.331497478485108,
+        "P99": -17.36731945037842
+      }
+    },
+    "Oil/00007.tif": {
+      "band1": {
+        "min": -47.589778900146484,
+        "max": 14.835772514343262,
+        "mean": -30.08031652515216,
+        "median": -29.95681667327881,
+        "std": 2.3635714799156586,
+        "P1": -36.213928108215335,
+        "P5": -34.11204032897949,
+        "P25": -31.56743860244751,
+        "P50": -29.95681667327881,
+        "P75": -28.442674160003662,
+        "P95": -26.494693756103516,
+        "P99": -25.26521762847901
+      },
+      "band2": {
+        "min": -29.926971435546875,
+        "max": 25.42379379272461,
+        "mean": -17.6655482426483,
+        "median": -17.649906158447266,
+        "std": 1.4950034506125924,
+        "P1": -21.410524044036865,
+        "P5": -20.016383266448976,
+        "P25": -18.590124130249023,
+        "P50": -17.649906158447266,
+        "P75": -16.709346294403076,
+        "P95": -15.338274574279787,
+        "P99": -14.340592470169067
+      }
+    },
+    "Oil/00356.tif": {
+      "band1": {
+        "min": -49.59285354614258,
+        "max": 9.717618942260742,
+        "mean": -31.880135127695155,
+        "median": -31.74337387084961,
+        "std": 2.690417805106568,
+        "P1": -38.90024543762207,
+        "P5": -36.43820457458496,
+        "P25": -33.54060363769531,
+        "P50": -31.74337387084961,
+        "P75": -30.04226541519165,
+        "P95": -27.865894317626953,
+        "P99": -26.484424171447767
+      },
+      "band2": {
+        "min": -42.00171661376953,
+        "max": 21.264877319335938,
+        "mean": -19.548399376510307,
+        "median": -19.2272310256958,
+        "std": 2.294550614293738,
+        "P1": -29.004187049865724,
+        "P5": -23.65924596786499,
+        "P25": -20.250232696533203,
+        "P50": -19.2272310256958,
+        "P75": -18.276838302612305,
+        "P95": -16.951021194458008,
+        "P99": -15.99958330154419
+      }
+    },
+    "No_oil/00000.tif": {
+      "band1": {
+        "min": -54.02985763549805,
+        "max": -24.37700843811035,
+        "mean": -36.545279705758276,
+        "median": -36.188819885253906,
+        "std": 3.7529922685989403,
+        "P1": -46.85148807525635,
+        "P5": -43.444651222229005,
+        "P25": -38.83552646636963,
+        "P50": -36.188819885253906,
+        "P75": -33.86927032470703,
+        "P95": -30.995976066589357,
+        "P99": -29.341440429687502
+      },
+      "band2": {
+        "min": -30.429672241210938,
+        "max": -15.443129539489746,
+        "mean": -22.07009314236211,
+        "median": -22.04145050048828,
+        "std": 1.4460484122495298,
+        "P1": -25.594632930755616,
+        "P5": -24.49460792541504,
+        "P25": -23.025230884552002,
+        "P50": -22.04145050048828,
+        "P75": -21.077962398529053,
+        "P95": -19.746404933929444,
+        "P99": -18.852123260498047
+      }
+    },
+    "No_oil/00027.tif": {
+      "band1": {
+        "min": -114.01885223388672,
+        "max": 0.0,
+        "mean": -19.547170100625863,
+        "median": -29.080954551696777,
+        "std": 16.504876785334286,
+        "P1": -50.58851902008057,
+        "P5": -37.16807384490967,
+        "P25": -32.14960861206055,
+        "P50": -29.080954551696777,
+        "P75": 0.0,
+        "P95": 0.0,
+        "P99": 0.0
+      },
+      "band2": {
+        "min": -104.1347885131836,
+        "max": 0.0,
+        "mean": -16.126560465396324,
+        "median": -23.369933128356934,
+        "std": 13.933214058716956,
+        "P1": -48.96381355285644,
+        "P5": -28.996518230438234,
+        "P25": -25.398396968841553,
+        "P50": -23.369933128356934,
+        "P75": 0.0,
+        "P95": 0.0,
+        "P99": 0.0
+      }
+    },
+    "Lookalike/00000.tif": {
+      "band1": {
+        "min": -54.47390365600586,
+        "max": -22.01230239868164,
+        "mean": -33.1911380878073,
+        "median": -32.852298736572266,
+        "std": 3.4699012456760028,
+        "P1": -43.303994522094726,
+        "P5": -39.40885486602783,
+        "P25": -35.19784927368164,
+        "P50": -32.852298736572266,
+        "P75": -30.772165775299072,
+        "P95": -28.155674839019778,
+        "P99": -26.6172399711609
+      },
+      "band2": {
+        "min": -49.03485107421875,
+        "max": -12.103548049926758,
+        "mean": -30.321338938655344,
+        "median": -30.95467472076416,
+        "std": 4.7724307381893984,
+        "P1": -39.927302513122555,
+        "P5": -36.80405750274658,
+        "P25": -33.215394020080566,
+        "P50": -30.95467472076416,
+        "P75": -28.493860721588135,
+        "P95": -19.419206714630132,
+        "P99": -16.49721572875977
+      }
+    },
+    "Lookalike/00087.tif": {
+      "band1": {
+        "min": -48.291812896728516,
+        "max": 28.29137420654297,
+        "mean": -22.057631853523215,
+        "median": -23.417362213134766,
+        "std": 8.045424946479576,
+        "P1": -36.21454967498779,
+        "P5": -33.32747097015381,
+        "P25": -28.45131015777588,
+        "P50": -23.417362213134766,
+        "P75": -15.743439435958862,
+        "P95": -8.534681797027591,
+        "P99": -2.662701375484498
+      },
+      "band2": {
+        "min": -32.68251037597656,
+        "max": 30.896255493164062,
+        "mean": -14.70184829905402,
+        "median": -16.28154754638672,
+        "std": 7.848860918253246,
+        "P1": -26.0673844909668,
+        "P5": -24.15823440551758,
+        "P25": -21.484705924987793,
+        "P50": -16.28154754638672,
+        "P75": -8.645589828491211,
+        "P95": -1.0568498909473447,
+        "P99": 5.561158328056333
+      }
+    },
+    "band1_vs_band2_pearson_sampled": {
+      "n_files": 7,
+      "mean": 0.2861037926679524,
+      "min": -0.023067665359093787,
+      "max": 0.9256967352261839
+    }
+  }
+}

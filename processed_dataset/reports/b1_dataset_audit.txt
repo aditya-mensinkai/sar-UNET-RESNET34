@@ -1,0 +1,991 @@
+==================================================================
+B1 DATASET + SAR VALIDATION REPORT
+==================================================================
+Generated (UTC): 2026-09-19T16:46:39.595649+00:00
+Dataset root   : C:\Users\datha\Desktop\finaly-try\dataset
+Mode           : READ-ONLY audit (no preprocessing/modification)
+
+1. DATASET STRUCTURE
+  .
+  Lookalike
+  Mask
+  Mask\Lookalike
+  Mask\No oil
+  Mask\Oil
+  Mask_lookalike
+  Mask_no_oil
+  Mask_oil
+  No_oil
+  Oil
+  Test_Images
+  Test_Images\Lookalike
+  Test_Images\No oil
+  Test_Images\Oil
+Empty dirs: none
+
+2. FILE COUNTS
+Total files: 6040; by ext: {'.tif': 6040}
+  Oil: images=1200 flat_masks=1200 nested_masks=150 test=150
+  No_oil: images=685 flat_masks=685 nested_masks=150 test=150
+  Lookalike: images=685 flat_masks=685 nested_masks=150 test=150
+
+3. IMAGE COUNTS
+{
+  "Oil": {
+    "n_ok": 1200,
+    "n_fail": 0,
+    "band_counts": {
+      "2": 1200
+    },
+    "dtypes": [
+      "float32+float32"
+    ],
+    "dims": {
+      "2048x2048": 1200
+    },
+    "per_band": {
+      "band1": {
+        "n_files": 1200,
+        "global_min": -112.27774047851562,
+        "global_max": 22.7972469329834,
+        "mean_of_file_means": -33.15804588437081,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 1200,
+        "global_min": -114.67024993896484,
+        "global_max": 29.93988037109375,
+        "mean_of_file_means": -19.8835418065389,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    }
+  },
+  "No_oil": {
+    "n_ok": 685,
+    "n_fail": 0,
+    "band_counts": {
+      "2": 685
+    },
+    "dtypes": [
+      "float32+float32"
+    ],
+    "dims": {
+      "2048x2048": 685
+    },
+    "per_band": {
+      "band1": {
+        "n_files": 685,
+        "global_min": -128.447509765625,
+        "global_max": 19.456151962280273,
+        "mean_of_file_means": -28.43063700042502,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 685,
+        "global_min": -109.73365020751953,
+        "global_max": 30.032840728759766,
+        "mean_of_file_means": -16.999950963041208,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    }
+  },
+  "Lookalike": {
+    "n_ok": 685,
+    "n_fail": 0,
+    "band_counts": {
+      "2": 685
+    },
+    "dtypes": [
+      "float32+float32"
+    ],
+    "dims": {
+      "2048x2048": 681,
+      "2048x2148": 1,
+      "2049x2048": 1,
+      "2048x2047": 1,
+      "2048x2248": 1
+    },
+    "per_band": {
+      "band1": {
+        "n_files": 685,
+        "global_min": -121.24373626708984,
+        "global_max": 28.29137420654297,
+        "mean_of_file_means": -30.87863875549205,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 685,
+        "global_min": -105.68071746826172,
+        "global_max": 30.896255493164062,
+        "mean_of_file_means": -22.24792649415288,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    }
+  }
+}
+
+4. MASK COUNTS
+{
+  "flat": {
+    "Oil": {
+      "n_ok": 1200,
+      "n_fail": 0,
+      "global_unique_values": [
+        0,
+        1
+      ],
+      "n_empty": 0,
+      "n_nonempty": 1200,
+      "total_fg": 149967879,
+      "fg_pct_mean": 2.979594051837921,
+      "fg_pct_median": 1.7626047134399414,
+      "fg_pct_min": 0.122833251953125,
+      "fg_pct_max": 57.374000549316406
+    },
+    "No_oil": {
+      "n_ok": 685,
+      "n_fail": 0,
+      "global_unique_values": [
+        0
+      ],
+      "n_empty": 685,
+      "n_nonempty": 0,
+      "total_fg": 0,
+      "fg_pct_mean": 0.0,
+      "fg_pct_median": 0.0,
+      "fg_pct_min": 0.0,
+      "fg_pct_max": 0.0
+    },
+    "Lookalike": {
+      "n_ok": 685,
+      "n_fail": 0,
+      "global_unique_values": [
+        0
+      ],
+      "n_empty": 685,
+      "n_nonempty": 0,
+      "total_fg": 0,
+      "fg_pct_mean": 0.0,
+      "fg_pct_median": 0.0,
+      "fg_pct_min": 0.0,
+      "fg_pct_max": 0.0
+    }
+  },
+  "nested_Mask_dir": {
+    "Oil": {
+      "n_ok": 150,
+      "n_fail": 0,
+      "global_unique_values": [
+        0,
+        1
+      ],
+      "n_empty": 0,
+      "n_nonempty": 150,
+      "total_fg": 62501987,
+      "fg_pct_mean": 9.934423287709555,
+      "fg_pct_median": 4.270720481872559,
+      "fg_pct_min": 0.2667427062988281,
+      "fg_pct_max": 78.31730842590332
+    },
+    "No_oil": {
+      "n_ok": 150,
+      "n_fail": 0,
+      "global_unique_values": [
+        0
+      ],
+      "n_empty": 150,
+      "n_nonempty": 0,
+      "total_fg": 0,
+      "fg_pct_mean": 0.0,
+      "fg_pct_median": 0.0,
+      "fg_pct_min": 0.0,
+      "fg_pct_max": 0.0
+    },
+    "Lookalike": {
+      "n_ok": 150,
+      "n_fail": 0,
+      "global_unique_values": [
+        0
+      ],
+      "n_empty": 150,
+      "n_nonempty": 0,
+      "total_fg": 0,
+      "fg_pct_mean": 0.0,
+      "fg_pct_median": 0.0,
+      "fg_pct_min": 0.0,
+      "fg_pct_max": 0.0
+    }
+  }
+}
+
+6. IMAGE DIMENSIONS
+{
+  "Oil": {
+    "2048x2048": 1200
+  },
+  "No_oil": {
+    "2048x2048": 685
+  },
+  "Lookalike": {
+    "2048x2048": 681,
+    "2048x2148": 1,
+    "2049x2048": 1,
+    "2048x2047": 1,
+    "2048x2248": 1
+  }
+}
+
+7. SAR BAND INFORMATION
+{
+  "Oil": {
+    "band1": {
+      "n_files": 1200,
+      "global_min": -112.27774047851562,
+      "global_max": 22.7972469329834,
+      "mean_of_file_means": -33.15804588437081,
+      "nan_total": 0,
+      "posinf_total": 0,
+      "neginf_total": 0,
+      "constant_files": 0
+    },
+    "band2": {
+      "n_files": 1200,
+      "global_min": -114.67024993896484,
+      "global_max": 29.93988037109375,
+      "mean_of_file_means": -19.8835418065389,
+      "nan_total": 0,
+      "posinf_total": 0,
+      "neginf_total": 0,
+      "constant_files": 0
+    }
+  },
+  "No_oil": {
+    "band1": {
+      "n_files": 685,
+      "global_min": -128.447509765625,
+      "global_max": 19.456151962280273,
+      "mean_of_file_means": -28.43063700042502,
+      "nan_total": 0,
+      "posinf_total": 0,
+      "neginf_total": 0,
+      "constant_files": 0
+    },
+    "band2": {
+      "n_files": 685,
+      "global_min": -109.73365020751953,
+      "global_max": 30.032840728759766,
+      "mean_of_file_means": -16.999950963041208,
+      "nan_total": 0,
+      "posinf_total": 0,
+      "neginf_total": 0,
+      "constant_files": 0
+    }
+  },
+  "Lookalike": {
+    "band1": {
+      "n_files": 685,
+      "global_min": -121.24373626708984,
+      "global_max": 28.29137420654297,
+      "mean_of_file_means": -30.87863875549205,
+      "nan_total": 0,
+      "posinf_total": 0,
+      "neginf_total": 0,
+      "constant_files": 0
+    },
+    "band2": {
+      "n_files": 685,
+      "global_min": -105.68071746826172,
+      "global_max": 30.896255493164062,
+      "mean_of_file_means": -22.24792649415288,
+      "nan_total": 0,
+      "posinf_total": 0,
+      "neginf_total": 0,
+      "constant_files": 0
+    }
+  }
+}
+
+10. SAR VALUE STATISTICS (train, per-band file-mean aggregates)
+{
+  "train": {
+    "Oil": {
+      "band1": {
+        "n_files": 1200,
+        "global_min": -112.27774047851562,
+        "global_max": 22.7972469329834,
+        "mean_of_file_means": -33.15804588437081,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 1200,
+        "global_min": -114.67024993896484,
+        "global_max": 29.93988037109375,
+        "mean_of_file_means": -19.8835418065389,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    },
+    "No_oil": {
+      "band1": {
+        "n_files": 685,
+        "global_min": -128.447509765625,
+        "global_max": 19.456151962280273,
+        "mean_of_file_means": -28.43063700042502,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 685,
+        "global_min": -109.73365020751953,
+        "global_max": 30.032840728759766,
+        "mean_of_file_means": -16.999950963041208,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    },
+    "Lookalike": {
+      "band1": {
+        "n_files": 685,
+        "global_min": -121.24373626708984,
+        "global_max": 28.29137420654297,
+        "mean_of_file_means": -30.87863875549205,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 685,
+        "global_min": -105.68071746826172,
+        "global_max": 30.896255493164062,
+        "mean_of_file_means": -22.24792649415288,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    }
+  },
+  "test": {
+    "Oil": {
+      "band1": {
+        "n_files": 150,
+        "global_min": -65.29588317871094,
+        "global_max": 10.216421127319336,
+        "mean_of_file_means": -29.078467229207355,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 150,
+        "global_min": -58.59730911254883,
+        "global_max": 29.60947608947754,
+        "mean_of_file_means": -20.962945950826008,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    },
+    "No_oil": {
+      "band1": {
+        "n_files": 150,
+        "global_min": -76.7834243774414,
+        "global_max": 16.09172248840332,
+        "mean_of_file_means": -22.40981541387271,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 2
+      },
+      "band2": {
+        "n_files": 150,
+        "global_min": -73.84025573730469,
+        "global_max": 25.81907844543457,
+        "mean_of_file_means": -13.81684157165854,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 2
+      }
+    },
+    "Lookalike": {
+      "band1": {
+        "n_files": 150,
+        "global_min": -81.30903625488281,
+        "global_max": 29.84739112854004,
+        "mean_of_file_means": -26.569171410401662,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 150,
+        "global_min": -84.02115631103516,
+        "global_max": 28.1333065032959,
+        "mean_of_file_means": -21.358210510412853,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    }
+  },
+  "global_reservoir_percentiles": {
+    "Oil_band1": {
+      "P1": -44.202195472717285,
+      "P5": -40.82146587371826,
+      "P25": -36.53669357299805,
+      "P50": -33.6359977722168,
+      "P75": -30.897997856140137,
+      "P95": -27.0591103553772,
+      "P99": 0.0
+    },
+    "Oil_band2": {
+      "P1": -28.50806037902832,
+      "P5": -25.201471900939
+
+12. MASK ENCODING
+{
+  "Oil": {
+    "flat_unique": [
+      0,
+      1
+    ],
+    "nested_unique": [
+      0,
+      1
+    ]
+  },
+  "No_oil": {
+    "flat_unique": [
+      0
+    ],
+    "nested_unique": [
+      0
+    ]
+  },
+  "Lookalike": {
+    "flat_unique": [
+      0
+    ],
+    "nested_unique": [
+      0
+    ]
+  }
+}
+
+13. EMPTY MASKS
+{
+  "Oil": {
+    "flat": {
+      "n_empty": 0,
+      "n_nonempty": 1200
+    },
+    "nested": {
+      "n_empty": 0,
+      "n_nonempty": 150
+    }
+  },
+  "No_oil": {
+    "flat": {
+      "n_empty": 685,
+      "n_nonempty": 0
+    },
+    "nested": {
+      "n_empty": 150,
+      "n_nonempty": 0
+    }
+  },
+  "Lookalike": {
+    "flat": {
+      "n_empty": 685,
+      "n_nonempty": 0
+    },
+    "nested": {
+      "n_empty": 150,
+      "n_nonempty": 0
+    }
+  }
+}
+
+14. CLASS DISTRIBUTION
+{
+  "Oil": {
+    "images": 1200,
+    "masks_flat": 1200,
+    "masks_nested": 150,
+    "mask_fg_stats": {
+      "n_ok": 1200,
+      "n_fail": 0,
+      "global_unique_values": [
+        0,
+        1
+      ],
+      "n_empty": 0,
+      "n_nonempty": 1200,
+      "total_fg": 149967879,
+      "fg_pct_mean": 2.979594051837921,
+      "fg_pct_median": 1.7626047134399414,
+      "fg_pct_min": 0.122833251953125,
+      "fg_pct_max": 57.374000549316406
+    }
+  },
+  "No_oil": {
+    "images": 685,
+    "masks_flat": 685,
+    "masks_nested": 150,
+    "mask_fg_stats": {
+      "n_ok": 685,
+      "n_fail": 0,
+      "global_unique_values": [
+        0
+      ],
+      "n_empty": 685,
+      "n_nonempty": 0,
+      "total_fg": 0,
+      "fg_pct_mean": 0.0,
+      "fg_pct_median": 0.0,
+      "fg_pct_min": 0.0,
+      "fg_pct_max": 0.0
+    }
+  },
+  "Lookalike": {
+    "images": 685,
+    "masks_flat": 685,
+    "masks_nested": 150,
+    "mask_fg_stats": {
+      "n_ok": 685,
+      "n_fail": 0,
+      "global_unique_values": [
+        0
+      ],
+      "n_empty": 685,
+      "n_nonempty": 0,
+      "total_fg": 0,
+      "fg_pct_mean": 0.0,
+      "fg_pct_median": 0.0,
+      "fg_pct_min": 0.0,
+      "fg_pct_max": 0.0
+    }
+  }
+}
+
+15. GEOSPATIAL METADATA
+{
+  "images": {
+    "Oil": {
+      "crs_values": {
+        "EPSG:4326": 1200
+      },
+      "resolutions": {
+        "(8.983152841195215e-05, 8.983152841195215e-05)": 1200
+      },
+      "nodata_values": {
+        "None": 1200
+      },
+      "identity_transform": {
+        "false": 1200
+      }
+    },
+    "No_oil": {
+      "crs_values": {
+        "EPSG:4326": 685
+      },
+      "resolutions": {
+        "(8.983152841195215e-05, 8.983152841195215e-05)": 685
+      },
+      "nodata_values": {
+        "None": 685
+      },
+      "identity_transform": {
+        "false": 685
+      }
+    },
+    "Lookalike": {
+      "crs_values": {
+        "EPSG:4326": 685
+      },
+      "resolutions": {
+        "(8.983152841195215e-05, 8.983152841195215e-05)": 685
+      },
+      "nodata_values": {
+        "None": 685
+      },
+      "identity_transform": {
+        "false": 685
+      }
+    }
+  },
+  "masks_flat_sample_crs_none": true,
+  "test": {
+    "Oil": {
+      "crs_values": {
+        "EPSG:4326": 150
+      },
+      "resolutions": {
+        "(8.983152841195218e-05, 8.983152841195218e-05)": 22,
+        "(8.983152841195204e-05, 8.983152841195204e-05)": 7,
+        "(8.983152841195208e-05, 8.983152841195208e-05)": 47,
+        "(8.983152841195207e-05, 8.983152841195207e-05)": 10,
+        "(8.983152841195215e-05, 8.983152841195215e-05)": 5,
+        "(8.983152841195216e-05, 8.983152841195216e-05)": 6,
+        "(8.983152841195212e-05, 8.983152841195212e-05)": 11,
+        "(8.983152841195213e-05, 8.983152841195213e-05)": 6,
+        "(8.983152841195222e-05, 8.983152841195222e-05)": 3,
+        "(8.9831528411952e-05, 8.9831528411952e-05)": 10,
+        "(8.983152841195192e-05, 8.983152841195192e-05)": 3,
+        "(8.983152841195211e-05, 8.983152841195211e-05)": 10,
+        "(8.98315284119521e-05, 8.98315284119521e-05)": 6,
+        "(8.983152841195197e-05, 8.983152841195197e-05)": 4
+      },
+      "nodata_values": {
+        "None": 150
+      },
+      "identity_transform": {
+        "false": 150
+      }
+    },
+    "No_oil": {
+      "crs_values": {
+        "EPSG:4326": 150
+      },
+      "resolutions": {
+        "(8.983152841195215e-05, 8.983152841195215e-05)": 30,
+        "(8.983152841195218e-05, 8.983152841195218e-05)": 40,
+        "(8.983152841195205e-05, 8.983152841195205e-05)": 8,
+        "(8.983152841195212e-05, 8.983152841195212e-05)": 18,
+        "(8.983152841195208e-05, 8.983152841195208e-05)": 17,
+        "(8.983152841195207e-05, 8.983152841195207e-05)": 8,
+        "(8.983152841195211e-05, 8.983152841195211e-05)": 4,
+        "(8.983152841195199e-05, 8.983152841195199e-05)": 10,
+        "(8.983152841195213e-05, 8.983152841195213e-05)": 2,
+        "(8.983152841195204e-05, 8.983152841195204e-05)": 9,
+        "(8.98315284119521e-05, 8.98315284119521e-05)": 4
+      },
+      "nodata_values": {
+        "None": 150
+      },
+      "identity_transform": {
+        "false": 150
+      }
+    },
+    "Lookalike": {
+      "crs_values": {
+        "EPSG:4326": 150
+      },
+      "resolutions": {
+        "(8.983152841195208e-05, 8.983152841195208e-05)": 66,
+        "(8.983152841195218e-05, 8.983152841195218e-05)": 12,
+        "(8.983152841195216e-05, 8.983152841195216e-05)": 20,
+        "(8.983152841195211e-05, 8.983152841195211e-05)": 32,
+        "(8.983152841195199e-05, 8.983152841195199e-05)": 5,
+        "(8.983152841195212e-05, 8.983152841195212e-05)": 8,
+        "(8.983152841195215e-05, 8.983152841195215e-05)": 1,
+        "(8.983152841195207e-05, 8.983152841195207e-05)": 6
+      },
+      "nodata_values": {
+        "None": 150
+      },
+      "identity_transform": {
+        "false": 150
+      }
+    }
+  }
+}
+
+19. TEST DATA
+{
+  "Oil": {
+    "count": 150,
+    "stats": {
+      "n_ok": 150,
+      "n_fail": 0,
+      "band_counts": {
+        "2": 150
+      },
+      "dtypes": [
+        "float32+float32"
+      ],
+      "dims": {
+        "2048x2048": 150
+      },
+      "per_band": {
+        "band1": {
+          "n_files": 150,
+          "global_min": -65.29588317871094,
+          "global_max": 10.216421127319336,
+          "mean_of_file_means": -29.078467229207355,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 150,
+          "global_min": -58.59730911254883,
+          "global_max": 29.60947608947754,
+          "mean_of_file_means": -20.962945950826008,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    }
+  },
+  "No_oil": {
+    "count": 150,
+    "stats": {
+      "n_ok": 150,
+      "n_fail": 0,
+      "band_counts": {
+        "2": 150
+      },
+      "dtypes": [
+        "float32+float32"
+      ],
+      "dims": {
+        "2048x2048": 150
+      },
+      "per_band": {
+        "band1": {
+          "n_files": 150,
+          "global_min": -76.7834243774414,
+          "global_max": 16.09172248840332,
+          "mean_of_file_means": -22.40981541387271,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 2
+        },
+        "band2": {
+          "n_files": 150,
+          "global_min": -73.84025573730469,
+          "global_max": 25.81907844543457,
+          "mean_of_file_means": -13.81684157165854,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 2
+        }
+      }
+    }
+  },
+  "Lookalike": {
+    "count": 150,
+    "stats": {
+      "n_ok": 150,
+      "n_fail": 0,
+      "band_counts": {
+        "2": 150
+      },
+      "dtypes": [
+        "float32+float32"
+      ],
+      "dims": {
+        "2048x2048": 150
+      },
+      "per_band": {
+        "band1": {
+          "n_files": 150,
+          "global_min": -81.30903625488281,
+          "global_max": 29.84739112854004,
+          "mean_of_file_means": -26.569171410401662,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 150,
+          "global_min": -84.02115631103516,
+          "global_max": 28.1333065032959,
+          "mean_of_file_means": -21.358210510412853,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    }
+  }
+}
+
+5. IMAGE <-> MASK PAIRING
+  PASS pairs: 2570; issues: 0
+  Full table: processed_dataset/reports/pairing_table.csv (2573 rows)
+
+8. SAR POLARIZATION: POLARIZATION UNKNOWN
+  2 x float32 bands, no VV/VH/HH/HV tags in TIFF metadata; band_tags empty; see band_tags sample in per-file records. metadata hits: []
+9. SAR VALUE REPRESENTATION: REPRESENTATION COULD NOT BE CONFIRMED
+  float32 values, strongly negative (approx -55..0 dB-like) in train Oil/No_oil/Lookalike; test Oil shows positives up to ~+7. No sigma0/gamma0/amplitude/dB tags found; range alone is insufficient evidence. See per-band stats.
+
+11. NaN / Inf / NoData
+{
+  "Oil": {
+    "band1": {
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "constant_files": 0
+    },
+    "band2": {
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "constant_files": 0
+    }
+  },
+  "No_oil": {
+    "band1": {
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "constant_files": 0
+    },
+    "band2": {
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "constant_files": 0
+    }
+  },
+  "Lookalike": {
+    "band1": {
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "constant_files": 0
+    },
+    "band2": {
+      "nan": 0,
+      "posinf": 0,
+      "neginf": 0,
+      "constant_files": 0
+    }
+  }
+}
+
+16. IMAGE/MASK ALIGNMENT
+  Masks carry no CRS/transform (identity); pixel-level alignment validated via paired dimensions; geospatial alignment cannot be independently verified from mask metadata.
+
+17. DUPLICATES
+  duplicate basenames: 1443; thumbnail collisions: 3
+18. DATA LEAKAGE
+  test-basename overlaps: 450; cross-class dupes: 685
+
+20. VISUAL QC: processed_dataset/reports/visual_qc/
+  Oil: reports/visual_qc/Oil_00000.png err=None
+  Oil: reports/visual_qc/Oil_00694.png err=None
+  Oil: reports/visual_qc/Oil_01339.png err=None
+  No_oil: reports/visual_qc/No_oil_00000.png err=None
+  No_oil: reports/visual_qc/No_oil_00342.png err=None
+  No_oil: reports/visual_qc/No_oil_00684.png err=None
+  Lookalike: reports/visual_qc/Lookalike_00000.png err=None
+  Lookalike: reports/visual_qc/Lookalike_00342.png err=None
+  Lookalike: reports/visual_qc/Lookalike_00684.png err=None
+
+21. ERRORS
+  unreadable files: 0
+22. WARNINGS
+
+23. ITEMS REQUIRING MANUAL REVIEW
+  - 1443 basenames exist in >1 location (flat train vs nested Mask/ vs test) -> expected by layout, verify split hygiene later
+  - 450 test files share basenames with train -> REQUIRES REVIEW (possible leakage)
+  - 3 thumbnail-collision groups (same size+downsampled hash) -> REQUIRES REVIEW
+  - SAR representation: REPRESENTATION COULD NOT BE CONFIRMED from metadata
+  - SAR polarization: POLARIZATION UNKNOWN (no tags)
+  - Nested Mask/<class>/*_segmentation.tif (150/class) foreground rates differ strongly from flat masks; confirm which mask set is authoritative before training
+
+24. FINAL VALIDATION STATUS
+  IMAGE_FILE_INTEGRITY: PASS
+  IMAGE_MASK_PAIRING_FLAT: PASS
+  SAR_BAND_CONSISTENCY: PASS
+  SAR_REPRESENTATION: REQUIRES REVIEW
+  SAR_POLARIZATION: REQUIRES REVIEW
+  MASK_ENCODING: PASS
+  EMPTY_MASKS: PASS
+  GEOSPATIAL_METADATA: WARNING
+  DUPLICATES: WARNING
+  LEAKAGE: WARNING
+  TEST_DATA: PASS
+==================================================================
+25. EXACT-DUPLICATE VERIFICATION (supplement)
+{
+  "method": "exact np.array_equal on full float32 rasters (read-only)",
+  "exact_duplicates": [
+    {
+      "a": "Oil/00007.tif",
+      "b": "Oil/01339.tif",
+      "images_identical": true,
+      "masks_identical": false,
+      "mask_fg_a": 70772,
+      "mask_fg_b": 74906,
+      "verdict": "SAME IMAGE, DIFFERENT MASKS - REQUIRES REVIEW (label inconsistency / leakage risk)"
+    },
+    {
+      "a": "Oil/00356.tif",
+      "b": "Oil/00357.tif",
+      "images_identical": true,
+      "masks_identical": true,
+      "verdict": "FULL DUPLICATE PAIR (image+mask) - REQUIRES REVIEW"
+    },
+    {
+      "a": "No_oil/00542.tif",
+      "b": "No_oil/00543.tif",
+      "images_identical": true,
+      "verdict": "EXACT IMAGE DUPLICATE - REQUIRES REVIEW"
+    }
+  ],
+  "near_duplicates_not_exact": [
+    "Lookalike/00087 vs 00088 (shared max 28.29, not identical)",
+    "No_oil/00027 vs 00028 (shared min -114.02, not identical)"
+  ],
+  "odd_dimensions": [
+    "Lookalike/00140.tif 2048x2148",
+    "Lookalike/00166.tif 2049x2048",
+    "Lookalike/00288.tif 2048x2047",
+    "Lookalike/00390.tif 2048x2248"
+  ],
+  "extreme_value_files_band1_min": [
+    "No_oil/00048.tif -128.45 max 0.0",
+    "Lookalike/00046.tif -121.24",
+    "Lookalike/00677.tif -114.19 max 0.0",
+    "No_oil/00027.tif -114.02 max 0.0",
+    "Oil/00371.tif -112.28 max 0.0"
+  ],
+  "note_zeros": "~49% of train images contain some >=0 px (bright scatterers up to +29); reservoir P99~=0 reflects heavy-tailed positives. Files with max exactly 0.0 + extreme negative minima suggest dark/outlier scenes."
+}
+
+UPDATED STATUS: DUPLICATES: FAIL (exact duplicates verified)

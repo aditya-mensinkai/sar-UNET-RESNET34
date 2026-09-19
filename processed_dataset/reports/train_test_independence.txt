@@ -1,0 +1,16 @@
+TRAIN/TEST INDEPENDENCE (read-only, pixel-hash evidence)
+
+Exact duplicates (train image <-> test image, full-array md5): 0
+  none found
+Same geographic scene (identical bounds+transform train vs test): 0
+  none found
+Exact mask duplicates train vs test: N/A (test set ships no masks)
+Same acquisition / source scene IDs: NO IDENTIFIERS PRESENT (filenames are bare
+  sequential IDs; no scene/acquisition metadata in TIFF tags)
+Basename collisions: 450 test files reuse train basenames (00000.tif-style per-folder
+  numbering in every class folder) - numbering artefact, NOT leakage evidence.
+Scene-level verification: pixel-identity check covers exact leakage; near-duplicate /
+  same-scene-different-chip verification is UNVERIFIABLE_FROM_AVAILABLE_METADATA
+  (no scene IDs, bounds are per-chip georeferencing of 2048px windows).
+Confidence: HIGH for 'no exact pixel duplicates'; LOW/UNVERIFIABLE for scene independence.
+Limitations: adjacent chips of one acquisition would pass all available checks.

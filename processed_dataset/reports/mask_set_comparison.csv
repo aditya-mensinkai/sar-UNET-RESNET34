@@ -1,0 +1,451 @@
+mask_set,class,filename,corresponding_image,image_match,mask_match,foreground_pixels,foreground_percentage,duplicate_of_flat_mask,relationship,confidence,evidence
+nested,Oil,00000_segmentation.tif,00000.tif,True,,2015200,48.0461,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=2015200 vs flat fg=14539
+nested,Oil,00001_segmentation.tif,00001.tif,True,,151004,3.6002,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=151004 vs flat fg=56225
+nested,Oil,00002_segmentation.tif,00002.tif,True,,578074,13.7824,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=578074 vs flat fg=16314
+nested,Oil,00003_segmentation.tif,00003.tif,True,,427852,10.2008,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=427852 vs flat fg=24791
+nested,Oil,00004_segmentation.tif,00004.tif,True,,1783092,42.5122,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1783092 vs flat fg=44049
+nested,Oil,00005_segmentation.tif,00005.tif,True,,2527264,60.2547,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=2527264 vs flat fg=55530
+nested,Oil,00006_segmentation.tif,00006.tif,True,,1898515,45.2641,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1898515 vs flat fg=89378
+nested,Oil,00007_segmentation.tif,00007.tif,True,,235070,5.6045,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=235070 vs flat fg=70772
+nested,Oil,00008_segmentation.tif,00008.tif,True,,105027,2.504,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=105027 vs flat fg=100549
+nested,Oil,00009_segmentation.tif,00009.tif,True,,76643,1.8273,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=76643 vs flat fg=44991
+nested,Oil,00010_segmentation.tif,00010.tif,True,,463290,11.0457,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=463290 vs flat fg=62520
+nested,Oil,00011_segmentation.tif,00011.tif,True,,195884,4.6702,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=195884 vs flat fg=49967
+nested,Oil,00012_segmentation.tif,00012.tif,True,,878780,20.9517,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=878780 vs flat fg=168158
+nested,Oil,00013_segmentation.tif,00013.tif,True,,1268664,30.2473,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1268664 vs flat fg=169200
+nested,Oil,00014_segmentation.tif,00014.tif,True,,1248489,29.7663,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1248489 vs flat fg=30809
+nested,Oil,00015_segmentation.tif,00015.tif,True,,2286232,54.508,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=2286232 vs flat fg=69326
+nested,Oil,00016_segmentation.tif,00016.tif,True,,123188,2.937,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=123188 vs flat fg=80306
+nested,Oil,00017_segmentation.tif,00017.tif,True,,287098,6.8449,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=287098 vs flat fg=85664
+nested,Oil,00018_segmentation.tif,00018.tif,True,,64996,1.5496,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=64996 vs flat fg=128371
+nested,Oil,00019_segmentation.tif,00019.tif,True,,295877,7.0543,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=295877 vs flat fg=88665
+nested,Oil,00020_segmentation.tif,00020.tif,True,,59091,1.4088,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=59091 vs flat fg=82831
+nested,Oil,00021_segmentation.tif,00021.tif,True,,135389,3.2279,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=135389 vs flat fg=100357
+nested,Oil,00022_segmentation.tif,00022.tif,True,,1316067,31.3775,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1316067 vs flat fg=33396
+nested,Oil,00023_segmentation.tif,00023.tif,True,,281098,6.7019,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=281098 vs flat fg=33266
+nested,Oil,00024_segmentation.tif,00024.tif,True,,76799,1.831,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=76799 vs flat fg=33268
+nested,Oil,00025_segmentation.tif,00025.tif,True,,630760,15.0385,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=630760 vs flat fg=101928
+nested,Oil,00026_segmentation.tif,00026.tif,True,,252969,6.0313,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=252969 vs flat fg=149042
+nested,Oil,00027_segmentation.tif,00027.tif,True,,233777,5.5737,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=233777 vs flat fg=45476
+nested,Oil,00028_segmentation.tif,00028.tif,True,,220920,5.2671,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=220920 vs flat fg=98768
+nested,Oil,00029_segmentation.tif,00029.tif,True,,343278,8.1844,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=343278 vs flat fg=16235
+nested,Oil,00030_segmentation.tif,00030.tif,True,,319274,7.6121,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=319274 vs flat fg=15122
+nested,Oil,00031_segmentation.tif,00031.tif,True,,78937,1.882,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=78937 vs flat fg=14840
+nested,Oil,00032_segmentation.tif,00032.tif,True,,286411,6.8286,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=286411 vs flat fg=12581
+nested,Oil,00033_segmentation.tif,,False,,782448,18.655,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00033.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00034_segmentation.tif,,False,,113912,2.7159,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00034.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00035_segmentation.tif,,False,,493850,11.7743,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00035.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00036_segmentation.tif,00036.tif,True,,775142,18.4808,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=775142 vs flat fg=12746
+nested,Oil,00037_segmentation.tif,00037.tif,True,,24761,0.5903,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=24761 vs flat fg=12746
+nested,Oil,00038_segmentation.tif,00038.tif,True,,34085,0.8126,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=34085 vs flat fg=12746
+nested,Oil,00039_segmentation.tif,00039.tif,True,,66837,1.5935,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=66837 vs flat fg=601885
+nested,Oil,00040_segmentation.tif,00040.tif,True,,1142533,27.2401,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1142533 vs flat fg=1100749
+nested,Oil,00041_segmentation.tif,00041.tif,True,,134918,3.2167,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=134918 vs flat fg=1366981
+nested,Oil,00042_segmentation.tif,00042.tif,True,,752903,17.9506,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=752903 vs flat fg=1335813
+nested,Oil,00043_segmentation.tif,00043.tif,True,,106120,2.5301,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=106120 vs flat fg=1043064
+nested,Oil,00044_segmentation.tif,,False,,125970,3.0034,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00044.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00045_segmentation.tif,00045.tif,True,,13737,0.3275,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=13737 vs flat fg=29911
+nested,Oil,00046_segmentation.tif,00046.tif,True,,1172485,27.9542,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1172485 vs flat fg=68289
+nested,Oil,00047_segmentation.tif,00047.tif,True,,162208,3.8673,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=162208 vs flat fg=34935
+nested,Oil,00048_segmentation.tif,00048.tif,True,,52275,1.2463,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=52275 vs flat fg=50734
+nested,Oil,00049_segmentation.tif,,False,,52527,1.2523,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00049.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00050_segmentation.tif,00050.tif,True,,445228,10.6151,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=445228 vs flat fg=137579
+nested,Oil,00051_segmentation.tif,00051.tif,True,,87722,2.0915,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=87722 vs flat fg=1335221
+nested,Oil,00052_segmentation.tif,00052.tif,True,,94273,2.2476,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=94273 vs flat fg=2072810
+nested,Oil,00053_segmentation.tif,00053.tif,True,,948021,22.6026,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=948021 vs flat fg=2406440
+nested,Oil,00054_segmentation.tif,00054.tif,True,,1104092,26.3236,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1104092 vs flat fg=1097578
+nested,Oil,00055_segmentation.tif,00055.tif,True,,112627,2.6852,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=112627 vs flat fg=1007739
+nested,Oil,00056_segmentation.tif,00056.tif,True,,35006,0.8346,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=35006 vs flat fg=1550583
+nested,Oil,00057_segmentation.tif,00057.tif,True,,271924,6.4832,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=271924 vs flat fg=2085247
+nested,Oil,00058_segmentation.tif,00058.tif,True,,706727,16.8497,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=706727 vs flat fg=1325918
+nested,Oil,00059_segmentation.tif,00059.tif,True,,1627944,38.8132,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1627944 vs flat fg=572325
+nested,Oil,00060_segmentation.tif,,False,,12069,0.2877,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00060.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00061_segmentation.tif,00061.tif,True,,1111841,26.5084,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1111841 vs flat fg=22912
+nested,Oil,00062_segmentation.tif,00062.tif,True,,17857,0.4257,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=17857 vs flat fg=24162
+nested,Oil,00063_segmentation.tif,,False,,62227,1.4836,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00063.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00064_segmentation.tif,00064.tif,True,,81910,1.9529,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=81910 vs flat fg=52620
+nested,Oil,00065_segmentation.tif,00065.tif,True,,305445,7.2824,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=305445 vs flat fg=29409
+nested,Oil,00066_segmentation.tif,,False,,92589,2.2075,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00066.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00067_segmentation.tif,00067.tif,True,,3284866,78.3173,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=3284866 vs flat fg=44310
+nested,Oil,00068_segmentation.tif,,False,,1402582,33.4402,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00068.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00069_segmentation.tif,00069.tif,True,,298660,7.1206,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=298660 vs flat fg=52621
+nested,Oil,00070_segmentation.tif,,False,,156036,3.7202,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00070.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00071_segmentation.tif,,False,,94498,2.253,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00071.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00072_segmentation.tif,,False,,474976,11.3243,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00072.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00073_segmentation.tif,00073.tif,True,,408049,9.7286,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=408049 vs flat fg=180003
+nested,Oil,00074_segmentation.tif,00074.tif,True,,99835,2.3803,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=99835 vs flat fg=228492
+nested,Oil,00075_segmentation.tif,00075.tif,True,,318004,7.5818,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=318004 vs flat fg=246648
+nested,Oil,00076_segmentation.tif,00076.tif,True,,92616,2.2081,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=92616 vs flat fg=208701
+nested,Oil,00077_segmentation.tif,00077.tif,True,,804382,19.178,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=804382 vs flat fg=154900
+nested,Oil,00078_segmentation.tif,00078.tif,True,,315400,7.5197,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=315400 vs flat fg=165351
+nested,Oil,00079_segmentation.tif,00079.tif,True,,389731,9.2919,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=389731 vs flat fg=174282
+nested,Oil,00080_segmentation.tif,00080.tif,True,,314865,7.507,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=314865 vs flat fg=128475
+nested,Oil,00081_segmentation.tif,,False,,15586,0.3716,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00081.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00082_segmentation.tif,00082.tif,True,,120582,2.8749,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=120582 vs flat fg=30873
+nested,Oil,00083_segmentation.tif,,False,,310964,7.414,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00083.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00084_segmentation.tif,00084.tif,True,,116983,2.7891,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=116983 vs flat fg=61329
+nested,Oil,00085_segmentation.tif,00085.tif,True,,177045,4.2211,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=177045 vs flat fg=219572
+nested,Oil,00086_segmentation.tif,00086.tif,True,,259003,6.1751,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=259003 vs flat fg=208387
+nested,Oil,00087_segmentation.tif,00087.tif,True,,536086,12.7813,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=536086 vs flat fg=32172
+nested,Oil,00088_segmentation.tif,00088.tif,True,,24762,0.5904,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=24762 vs flat fg=148431
+nested,Oil,00089_segmentation.tif,00089.tif,True,,150683,3.5926,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=150683 vs flat fg=646509
+nested,Oil,00090_segmentation.tif,00090.tif,True,,50541,1.205,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=50541 vs flat fg=437075
+nested,Oil,00091_segmentation.tif,00091.tif,True,,36024,0.8589,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=36024 vs flat fg=303825
+nested,Oil,00092_segmentation.tif,00092.tif,True,,225268,5.3708,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=225268 vs flat fg=381437
+nested,Oil,00093_segmentation.tif,00093.tif,True,,833474,19.8716,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=833474 vs flat fg=56520
+nested,Oil,00094_segmentation.tif,00094.tif,True,,67594,1.6116,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=67594 vs flat fg=55477
+nested,Oil,00095_segmentation.tif,00095.tif,True,,131667,3.1392,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=131667 vs flat fg=56518
+nested,Oil,00096_segmentation.tif,00096.tif,True,,122621,2.9235,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=122621 vs flat fg=21230
+nested,Oil,00097_segmentation.tif,00097.tif,True,,217081,5.1756,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=217081 vs flat fg=84011
+nested,Oil,00098_segmentation.tif,00098.tif,True,,55821,1.3309,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=55821 vs flat fg=59204
+nested,Oil,00099_segmentation.tif,00099.tif,True,,135519,3.231,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=135519 vs flat fg=62266
+nested,Oil,00100_segmentation.tif,00100.tif,True,,240601,5.7364,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=240601 vs flat fg=95335
+nested,Oil,00101_segmentation.tif,00101.tif,True,,169077,4.0311,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=169077 vs flat fg=83492
+nested,Oil,00102_segmentation.tif,00102.tif,True,,69883,1.6661,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=69883 vs flat fg=179650
+nested,Oil,00103_segmentation.tif,00103.tif,True,,181209,4.3204,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=181209 vs flat fg=37941
+nested,Oil,00104_segmentation.tif,00104.tif,True,,2755883,65.7054,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=2755883 vs flat fg=49711
+nested,Oil,00105_segmentation.tif,,False,,27196,0.6484,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00105.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00106_segmentation.tif,,False,,40941,0.9761,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00106.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00107_segmentation.tif,,False,,240072,5.7238,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00107.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00108_segmentation.tif,00108.tif,True,,1143850,27.2715,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1143850 vs flat fg=26514
+nested,Oil,00109_segmentation.tif,,False,,40629,0.9687,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00109.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00110_segmentation.tif,,False,,354159,8.4438,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00110.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00111_segmentation.tif,00111.tif,True,,780485,18.6082,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=780485 vs flat fg=34687
+nested,Oil,00112_segmentation.tif,00112.tif,True,,77823,1.8554,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=77823 vs flat fg=70192
+nested,Oil,00113_segmentation.tif,00113.tif,True,,70802,1.6881,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=70802 vs flat fg=23627
+nested,Oil,00114_segmentation.tif,00114.tif,True,,163792,3.9051,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=163792 vs flat fg=50641
+nested,Oil,00115_segmentation.tif,00115.tif,True,,146570,3.4945,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=146570 vs flat fg=18291
+nested,Oil,00116_segmentation.tif,00116.tif,True,,40256,0.9598,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=40256 vs flat fg=34004
+nested,Oil,00117_segmentation.tif,00117.tif,True,,173000,4.1246,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=173000 vs flat fg=25332
+nested,Oil,00118_segmentation.tif,00118.tif,True,,13890,0.3312,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=13890 vs flat fg=14867
+nested,Oil,00119_segmentation.tif,00119.tif,True,,101635,2.4232,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=101635 vs flat fg=47742
+nested,Oil,00120_segmentation.tif,,False,,242954,5.7925,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00120.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00121_segmentation.tif,00121.tif,True,,195403,4.6588,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=195403 vs flat fg=34303
+nested,Oil,00122_segmentation.tif,,False,,976258,23.2758,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00122.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00123_segmentation.tif,00123.tif,True,,227501,5.424,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=227501 vs flat fg=26234
+nested,Oil,00124_segmentation.tif,,False,,559888,13.3488,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00124.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00125_segmentation.tif,,False,,461751,11.009,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00125.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00126_segmentation.tif,00126.tif,True,,11885,0.2834,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=11885 vs flat fg=58903
+nested,Oil,00127_segmentation.tif,00127.tif,True,,1096623,26.1455,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=1096623 vs flat fg=134000
+nested,Oil,00128_segmentation.tif,,False,,11188,0.2667,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00128.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00129_segmentation.tif,,False,,201166,4.7962,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00129.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00130_segmentation.tif,00130.tif,True,,132046,3.1482,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=132046 vs flat fg=24720
+nested,Oil,00131_segmentation.tif,00131.tif,True,,19369,0.4618,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=19369 vs flat fg=148314
+nested,Oil,00132_segmentation.tif,00132.tif,True,,82855,1.9754,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=82855 vs flat fg=18402
+nested,Oil,00133_segmentation.tif,00133.tif,True,,971552,23.1636,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=971552 vs flat fg=112051
+nested,Oil,00134_segmentation.tif,00134.tif,True,,49988,1.1918,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=49988 vs flat fg=655762
+nested,Oil,00135_segmentation.tif,00135.tif,True,,146539,3.4938,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=146539 vs flat fg=19544
+nested,Oil,00136_segmentation.tif,,False,,287434,6.853,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00136.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00137_segmentation.tif,,False,,62774,1.4966,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00137.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00138_segmentation.tif,,False,,464796,11.0816,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00138.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00139_segmentation.tif,,False,,161987,3.8621,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00139.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00140_segmentation.tif,00140.tif,True,,48118,1.1472,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=48118 vs flat fg=96541
+nested,Oil,00141_segmentation.tif,,False,,21700,0.5174,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00141.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00142_segmentation.tif,00142.tif,True,,392924,9.368,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=392924 vs flat fg=101742
+nested,Oil,00143_segmentation.tif,00143.tif,True,,87005,2.0744,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=87005 vs flat fg=74404
+nested,Oil,00144_segmentation.tif,,False,,1765036,42.0817,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00144.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00145_segmentation.tif,00145.tif,True,,59786,1.4254,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=59786 vs flat fg=39891
+nested,Oil,00146_segmentation.tif,00146.tif,True,,327154,7.8,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=327154 vs flat fg=63896
+nested,Oil,00147_segmentation.tif,,False,,150554,3.5895,,NO_SAME_ID_IN_FLAT_SET(unexplained-subset),MEDIUM,no 00147.tif in flat set; nested IDs are 00000-00149 _segmentation.tif
+nested,Oil,00148_segmentation.tif,00148.tif,True,,97711,2.3296,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=97711 vs flat fg=39697
+nested,Oil,00149_segmentation.tif,00149.tif,True,,45263,1.0792,,SAME_ID.content-differs(alt-annotation-or-different-sample),MEDIUM,same basename ID but arrays differ: nested fg=45263 vs flat fg=30382
+nested,No_oil,00000_segmentation.tif,00000.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00001_segmentation.tif,00001.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00002_segmentation.tif,00002.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00003_segmentation.tif,00003.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00004_segmentation.tif,00004.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00005_segmentation.tif,00005.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00006_segmentation.tif,00006.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00007_segmentation.tif,00007.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00008_segmentation.tif,00008.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00009_segmentation.tif,00009.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00010_segmentation.tif,00010.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00011_segmentation.tif,00011.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00012_segmentation.tif,00012.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00013_segmentation.tif,00013.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00014_segmentation.tif,00014.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00015_segmentation.tif,00015.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00016_segmentation.tif,00016.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00017_segmentation.tif,00017.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00018_segmentation.tif,00018.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00019_segmentation.tif,00019.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00020_segmentation.tif,00020.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00021_segmentation.tif,00021.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00022_segmentation.tif,00022.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00023_segmentation.tif,00023.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00024_segmentation.tif,00024.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00025_segmentation.tif,00025.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00026_segmentation.tif,00026.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00027_segmentation.tif,00027.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00028_segmentation.tif,00028.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00029_segmentation.tif,00029.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00030_segmentation.tif,00030.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00031_segmentation.tif,00031.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00032_segmentation.tif,00032.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00033_segmentation.tif,00033.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00034_segmentation.tif,00034.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00035_segmentation.tif,00035.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00036_segmentation.tif,00036.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00037_segmentation.tif,00037.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00038_segmentation.tif,00038.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00039_segmentation.tif,00039.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00040_segmentation.tif,00040.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00041_segmentation.tif,00041.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00042_segmentation.tif,00042.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00043_segmentation.tif,00043.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00044_segmentation.tif,00044.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00045_segmentation.tif,00045.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00046_segmentation.tif,00046.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00047_segmentation.tif,00047.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00048_segmentation.tif,00048.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00049_segmentation.tif,00049.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00050_segmentation.tif,00050.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00051_segmentation.tif,00051.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00052_segmentation.tif,00052.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00053_segmentation.tif,00053.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00054_segmentation.tif,00054.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00055_segmentation.tif,00055.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00056_segmentation.tif,00056.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00057_segmentation.tif,00057.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00058_segmentation.tif,00058.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00059_segmentation.tif,00059.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00060_segmentation.tif,00060.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00061_segmentation.tif,00061.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00062_segmentation.tif,00062.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00063_segmentation.tif,00063.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00064_segmentation.tif,00064.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00065_segmentation.tif,00065.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00066_segmentation.tif,00066.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00067_segmentation.tif,00067.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00068_segmentation.tif,00068.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00069_segmentation.tif,00069.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00070_segmentation.tif,00070.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00071_segmentation.tif,00071.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00072_segmentation.tif,00072.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00073_segmentation.tif,00073.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00074_segmentation.tif,00074.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00075_segmentation.tif,00075.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00076_segmentation.tif,00076.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00077_segmentation.tif,00077.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00078_segmentation.tif,00078.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00079_segmentation.tif,00079.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00080_segmentation.tif,00080.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00081_segmentation.tif,00081.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00082_segmentation.tif,00082.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00083_segmentation.tif,00083.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00084_segmentation.tif,00084.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00085_segmentation.tif,00085.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00086_segmentation.tif,00086.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00087_segmentation.tif,00087.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00088_segmentation.tif,00088.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00089_segmentation.tif,00089.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00090_segmentation.tif,00090.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00091_segmentation.tif,00091.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00092_segmentation.tif,00092.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00093_segmentation.tif,00093.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00094_segmentation.tif,00094.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00095_segmentation.tif,00095.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00096_segmentation.tif,00096.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00097_segmentation.tif,00097.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00098_segmentation.tif,00098.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00099_segmentation.tif,00099.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00100_segmentation.tif,00100.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00101_segmentation.tif,00101.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00102_segmentation.tif,00102.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00103_segmentation.tif,00103.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00104_segmentation.tif,00104.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00105_segmentation.tif,00105.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00106_segmentation.tif,00106.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00107_segmentation.tif,00107.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00108_segmentation.tif,00108.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00109_segmentation.tif,00109.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00110_segmentation.tif,00110.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00111_segmentation.tif,00111.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00112_segmentation.tif,00112.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00113_segmentation.tif,00113.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00114_segmentation.tif,00114.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00115_segmentation.tif,00115.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00116_segmentation.tif,00116.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00117_segmentation.tif,00117.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00118_segmentation.tif,00118.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00119_segmentation.tif,00119.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00120_segmentation.tif,00120.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00121_segmentation.tif,00121.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00122_segmentation.tif,00122.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00123_segmentation.tif,00123.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00124_segmentation.tif,00124.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00125_segmentation.tif,00125.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00126_segmentation.tif,00126.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00127_segmentation.tif,00127.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00128_segmentation.tif,00128.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00129_segmentation.tif,00129.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00130_segmentation.tif,00130.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00131_segmentation.tif,00131.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00132_segmentation.tif,00132.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00133_segmentation.tif,00133.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00134_segmentation.tif,00134.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00135_segmentation.tif,00135.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00136_segmentation.tif,00136.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00137_segmentation.tif,00137.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00138_segmentation.tif,00138.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00139_segmentation.tif,00139.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00140_segmentation.tif,00140.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00141_segmentation.tif,00141.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00142_segmentation.tif,00142.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00143_segmentation.tif,00143.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00144_segmentation.tif,00144.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00145_segmentation.tif,00145.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00146_segmentation.tif,00146.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00147_segmentation.tif,00147.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00148_segmentation.tif,00148.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,No_oil,00149_segmentation.tif,00149.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_no_oil/00684.tif
+nested,Lookalike,00000_segmentation.tif,00000.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00001_segmentation.tif,00001.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00002_segmentation.tif,00002.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00003_segmentation.tif,00003.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00004_segmentation.tif,00004.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00005_segmentation.tif,00005.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00006_segmentation.tif,00006.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00007_segmentation.tif,00007.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00008_segmentation.tif,00008.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00009_segmentation.tif,00009.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00010_segmentation.tif,00010.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00011_segmentation.tif,00011.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00012_segmentation.tif,00012.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00013_segmentation.tif,00013.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00014_segmentation.tif,00014.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00015_segmentation.tif,00015.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00016_segmentation.tif,00016.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00017_segmentation.tif,00017.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00018_segmentation.tif,00018.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00019_segmentation.tif,00019.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00020_segmentation.tif,00020.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00021_segmentation.tif,00021.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00022_segmentation.tif,00022.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00023_segmentation.tif,00023.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00024_segmentation.tif,00024.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00025_segmentation.tif,00025.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00026_segmentation.tif,00026.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00027_segmentation.tif,00027.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00028_segmentation.tif,00028.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00029_segmentation.tif,00029.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00030_segmentation.tif,00030.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00031_segmentation.tif,00031.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00032_segmentation.tif,00032.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00033_segmentation.tif,00033.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00034_segmentation.tif,00034.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00035_segmentation.tif,00035.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00036_segmentation.tif,00036.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00037_segmentation.tif,00037.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00038_segmentation.tif,00038.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00039_segmentation.tif,00039.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00040_segmentation.tif,00040.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00041_segmentation.tif,00041.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00042_segmentation.tif,00042.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00043_segmentation.tif,00043.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00044_segmentation.tif,00044.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00045_segmentation.tif,00045.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00046_segmentation.tif,00046.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00047_segmentation.tif,00047.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00048_segmentation.tif,00048.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00049_segmentation.tif,00049.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00050_segmentation.tif,00050.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00051_segmentation.tif,00051.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00052_segmentation.tif,00052.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00053_segmentation.tif,00053.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00054_segmentation.tif,00054.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00055_segmentation.tif,00055.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00056_segmentation.tif,00056.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00057_segmentation.tif,00057.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00058_segmentation.tif,00058.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00059_segmentation.tif,00059.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00060_segmentation.tif,00060.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00061_segmentation.tif,00061.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00062_segmentation.tif,00062.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00063_segmentation.tif,00063.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00064_segmentation.tif,00064.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00065_segmentation.tif,00065.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00066_segmentation.tif,00066.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00067_segmentation.tif,00067.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00068_segmentation.tif,00068.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00069_segmentation.tif,00069.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00070_segmentation.tif,00070.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00071_segmentation.tif,00071.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00072_segmentation.tif,00072.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00073_segmentation.tif,00073.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00074_segmentation.tif,00074.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00075_segmentation.tif,00075.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00076_segmentation.tif,00076.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00077_segmentation.tif,00077.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00078_segmentation.tif,00078.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00079_segmentation.tif,00079.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00080_segmentation.tif,00080.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00081_segmentation.tif,00081.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00082_segmentation.tif,00082.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00083_segmentation.tif,00083.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00084_segmentation.tif,00084.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00085_segmentation.tif,00085.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00086_segmentation.tif,00086.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00087_segmentation.tif,00087.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00088_segmentation.tif,00088.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00089_segmentation.tif,00089.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00090_segmentation.tif,00090.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00091_segmentation.tif,00091.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00092_segmentation.tif,00092.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00093_segmentation.tif,00093.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00094_segmentation.tif,00094.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00095_segmentation.tif,00095.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00096_segmentation.tif,00096.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00097_segmentation.tif,00097.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00098_segmentation.tif,00098.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00099_segmentation.tif,00099.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00100_segmentation.tif,00100.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00101_segmentation.tif,00101.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00102_segmentation.tif,00102.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00103_segmentation.tif,00103.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00104_segmentation.tif,00104.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00105_segmentation.tif,00105.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00106_segmentation.tif,00106.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00107_segmentation.tif,00107.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00108_segmentation.tif,00108.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00109_segmentation.tif,00109.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00110_segmentation.tif,00110.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00111_segmentation.tif,00111.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00112_segmentation.tif,00112.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00113_segmentation.tif,00113.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00114_segmentation.tif,00114.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00115_segmentation.tif,00115.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00116_segmentation.tif,00116.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00117_segmentation.tif,00117.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00118_segmentation.tif,00118.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00119_segmentation.tif,00119.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00120_segmentation.tif,00120.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00121_segmentation.tif,00121.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00122_segmentation.tif,00122.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00123_segmentation.tif,00123.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00124_segmentation.tif,00124.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00125_segmentation.tif,00125.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00126_segmentation.tif,00126.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00127_segmentation.tif,00127.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00128_segmentation.tif,00128.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00129_segmentation.tif,00129.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00130_segmentation.tif,00130.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00131_segmentation.tif,00131.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00132_segmentation.tif,00132.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00133_segmentation.tif,00133.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00134_segmentation.tif,00134.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00135_segmentation.tif,00135.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00136_segmentation.tif,00136.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00137_segmentation.tif,00137.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00138_segmentation.tif,00138.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00139_segmentation.tif,00139.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00140_segmentation.tif,00140.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00141_segmentation.tif,00141.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00142_segmentation.tif,00142.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00143_segmentation.tif,00143.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00144_segmentation.tif,00144.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00145_segmentation.tif,00145.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00146_segmentation.tif,00146.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00147_segmentation.tif,00147.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00148_segmentation.tif,00148.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif
+nested,Lookalike,00149_segmentation.tif,00149.tif,True,00684.tif,0,0.0,00684.tif,EXACT_HASH_DUPLICATE_OF_FLAT,HIGH,pixel-hash matches flat Mask_lookalike/00684.tif

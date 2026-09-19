@@ -1,0 +1,4758 @@
+{
+  "title": "B1 DATASET + SAR VALIDATION REPORT",
+  "generated_utc": "2026-09-19T16:46:39.595649+00:00",
+  "tool": "tools/validate_b1_dataset.py",
+  "dataset_root": "C:\\Users\\datha\\Desktop\\finaly-try\\dataset",
+  "read_only": true,
+  "notes": "Per-file percentiles estimated on stride-4 subsample; global percentiles from capped random reservoir (documented sampling). Display stretch in QC figures is display-only; sources untouched.",
+  "1_dataset_structure": {
+    "relative_dirs": [
+      ".",
+      "Lookalike",
+      "Mask",
+      "Mask\\Lookalike",
+      "Mask\\No oil",
+      "Mask\\Oil",
+      "Mask_lookalike",
+      "Mask_no_oil",
+      "Mask_oil",
+      "No_oil",
+      "Oil",
+      "Test_Images",
+      "Test_Images\\Lookalike",
+      "Test_Images\\No oil",
+      "Test_Images\\Oil"
+    ],
+    "empty_dirs": []
+  },
+  "2_file_counts": {
+    "total_files": 6040,
+    "by_extension": {
+      ".tif": 6040
+    },
+    "per_folder": {
+      "Oil": {
+        "images": 1200,
+        "masks_flat": 1200,
+        "masks_nested": 150
+      },
+      "No_oil": {
+        "images": 685,
+        "masks_flat": 685,
+        "masks_nested": 150
+      },
+      "Lookalike": {
+        "images": 685,
+        "masks_flat": 685,
+        "masks_nested": 150
+      }
+    },
+    "test_per_folder": {
+      "Oil": 150,
+      "No_oil": 150,
+      "Lookalike": 150
+    }
+  },
+  "3_image_counts": {
+    "Oil": {
+      "n_ok": 1200,
+      "n_fail": 0,
+      "band_counts": {
+        "2": 1200
+      },
+      "dtypes": [
+        "float32+float32"
+      ],
+      "dims": {
+        "2048x2048": 1200
+      },
+      "per_band": {
+        "band1": {
+          "n_files": 1200,
+          "global_min": -112.27774047851562,
+          "global_max": 22.7972469329834,
+          "mean_of_file_means": -33.15804588437081,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 1200,
+          "global_min": -114.67024993896484,
+          "global_max": 29.93988037109375,
+          "mean_of_file_means": -19.8835418065389,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    },
+    "No_oil": {
+      "n_ok": 685,
+      "n_fail": 0,
+      "band_counts": {
+        "2": 685
+      },
+      "dtypes": [
+        "float32+float32"
+      ],
+      "dims": {
+        "2048x2048": 685
+      },
+      "per_band": {
+        "band1": {
+          "n_files": 685,
+          "global_min": -128.447509765625,
+          "global_max": 19.456151962280273,
+          "mean_of_file_means": -28.43063700042502,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 685,
+          "global_min": -109.73365020751953,
+          "global_max": 30.032840728759766,
+          "mean_of_file_means": -16.999950963041208,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    },
+    "Lookalike": {
+      "n_ok": 685,
+      "n_fail": 0,
+      "band_counts": {
+        "2": 685
+      },
+      "dtypes": [
+        "float32+float32"
+      ],
+      "dims": {
+        "2048x2048": 681,
+        "2048x2148": 1,
+        "2049x2048": 1,
+        "2048x2047": 1,
+        "2048x2248": 1
+      },
+      "per_band": {
+        "band1": {
+          "n_files": 685,
+          "global_min": -121.24373626708984,
+          "global_max": 28.29137420654297,
+          "mean_of_file_means": -30.87863875549205,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 685,
+          "global_min": -105.68071746826172,
+          "global_max": 30.896255493164062,
+          "mean_of_file_means": -22.24792649415288,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    }
+  },
+  "4_mask_counts": {
+    "flat": {
+      "Oil": {
+        "n_ok": 1200,
+        "n_fail": 0,
+        "global_unique_values": [
+          0,
+          1
+        ],
+        "n_empty": 0,
+        "n_nonempty": 1200,
+        "total_fg": 149967879,
+        "fg_pct_mean": 2.979594051837921,
+        "fg_pct_median": 1.7626047134399414,
+        "fg_pct_min": 0.122833251953125,
+        "fg_pct_max": 57.374000549316406
+      },
+      "No_oil": {
+        "n_ok": 685,
+        "n_fail": 0,
+        "global_unique_values": [
+          0
+        ],
+        "n_empty": 685,
+        "n_nonempty": 0,
+        "total_fg": 0,
+        "fg_pct_mean": 0.0,
+        "fg_pct_median": 0.0,
+        "fg_pct_min": 0.0,
+        "fg_pct_max": 0.0
+      },
+      "Lookalike": {
+        "n_ok": 685,
+        "n_fail": 0,
+        "global_unique_values": [
+          0
+        ],
+        "n_empty": 685,
+        "n_nonempty": 0,
+        "total_fg": 0,
+        "fg_pct_mean": 0.0,
+        "fg_pct_median": 0.0,
+        "fg_pct_min": 0.0,
+        "fg_pct_max": 0.0
+      }
+    },
+    "nested_Mask_dir": {
+      "Oil": {
+        "n_ok": 150,
+        "n_fail": 0,
+        "global_unique_values": [
+          0,
+          1
+        ],
+        "n_empty": 0,
+        "n_nonempty": 150,
+        "total_fg": 62501987,
+        "fg_pct_mean": 9.934423287709555,
+        "fg_pct_median": 4.270720481872559,
+        "fg_pct_min": 0.2667427062988281,
+        "fg_pct_max": 78.31730842590332
+      },
+      "No_oil": {
+        "n_ok": 150,
+        "n_fail": 0,
+        "global_unique_values": [
+          0
+        ],
+        "n_empty": 150,
+        "n_nonempty": 0,
+        "total_fg": 0,
+        "fg_pct_mean": 0.0,
+        "fg_pct_median": 0.0,
+        "fg_pct_min": 0.0,
+        "fg_pct_max": 0.0
+      },
+      "Lookalike": {
+        "n_ok": 150,
+        "n_fail": 0,
+        "global_unique_values": [
+          0
+        ],
+        "n_empty": 150,
+        "n_nonempty": 0,
+        "total_fg": 0,
+        "fg_pct_mean": 0.0,
+        "fg_pct_median": 0.0,
+        "fg_pct_min": 0.0,
+        "fg_pct_max": 0.0
+      }
+    }
+  },
+  "5_pairing": {
+    "convention": "flat masks share exact basename with images (00000.tif <-> 00000.tif); nested Mask/<class>/*_segmentation.tif is a separate 150-file subset, NOT filename-matched to flat images",
+    "total_paired_rows": 2570,
+    "issues": [],
+    "n_issues": 0,
+    "sample_rows": [
+      {
+        "image": "Oil/00000.tif",
+        "mask": "Mask_oil/00000.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00001.tif",
+        "mask": "Mask_oil/00001.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00002.tif",
+        "mask": "Mask_oil/00002.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00003.tif",
+        "mask": "Mask_oil/00003.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00004.tif",
+        "mask": "Mask_oil/00004.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00005.tif",
+        "mask": "Mask_oil/00005.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00006.tif",
+        "mask": "Mask_oil/00006.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00007.tif",
+        "mask": "Mask_oil/00007.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00008.tif",
+        "mask": "Mask_oil/00008.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      },
+      {
+        "image": "Oil/00009.tif",
+        "mask": "Mask_oil/00009.tif",
+        "class": "Oil",
+        "image_shape": "2048x2048",
+        "mask_shape": "2048x2048",
+        "shape_match": "PASS",
+        "pair_status": "PASS"
+      }
+    ]
+  },
+  "6_image_dimensions": {
+    "Oil": {
+      "2048x2048": 1200
+    },
+    "No_oil": {
+      "2048x2048": 685
+    },
+    "Lookalike": {
+      "2048x2048": 681,
+      "2048x2148": 1,
+      "2049x2048": 1,
+      "2048x2047": 1,
+      "2048x2248": 1
+    }
+  },
+  "7_sar_bands": {
+    "Oil": {
+      "band1": {
+        "n_files": 1200,
+        "global_min": -112.27774047851562,
+        "global_max": 22.7972469329834,
+        "mean_of_file_means": -33.15804588437081,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 1200,
+        "global_min": -114.67024993896484,
+        "global_max": 29.93988037109375,
+        "mean_of_file_means": -19.8835418065389,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    },
+    "No_oil": {
+      "band1": {
+        "n_files": 685,
+        "global_min": -128.447509765625,
+        "global_max": 19.456151962280273,
+        "mean_of_file_means": -28.43063700042502,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 685,
+        "global_min": -109.73365020751953,
+        "global_max": 30.032840728759766,
+        "mean_of_file_means": -16.999950963041208,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    },
+    "Lookalike": {
+      "band1": {
+        "n_files": 685,
+        "global_min": -121.24373626708984,
+        "global_max": 28.29137420654297,
+        "mean_of_file_means": -30.87863875549205,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "n_files": 685,
+        "global_min": -105.68071746826172,
+        "global_max": 30.896255493164062,
+        "mean_of_file_means": -22.24792649415288,
+        "nan_total": 0,
+        "posinf_total": 0,
+        "neginf_total": 0,
+        "constant_files": 0
+      }
+    }
+  },
+  "8_sar_polarization": {
+    "result": "POLARIZATION UNKNOWN",
+    "evidence": "2 x float32 bands, no VV/VH/HH/HV tags in TIFF metadata; band_tags empty; see band_tags sample in per-file records. metadata hits: []"
+  },
+  "9_sar_representation": {
+    "result": "REPRESENTATION COULD NOT BE CONFIRMED",
+    "evidence": "float32 values, strongly negative (approx -55..0 dB-like) in train Oil/No_oil/Lookalike; test Oil shows positives up to ~+7. No sigma0/gamma0/amplitude/dB tags found; range alone is insufficient evidence. See per-band stats."
+  },
+  "10_sar_statistics": {
+    "train": {
+      "Oil": {
+        "band1": {
+          "n_files": 1200,
+          "global_min": -112.27774047851562,
+          "global_max": 22.7972469329834,
+          "mean_of_file_means": -33.15804588437081,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 1200,
+          "global_min": -114.67024993896484,
+          "global_max": 29.93988037109375,
+          "mean_of_file_means": -19.8835418065389,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      },
+      "No_oil": {
+        "band1": {
+          "n_files": 685,
+          "global_min": -128.447509765625,
+          "global_max": 19.456151962280273,
+          "mean_of_file_means": -28.43063700042502,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 685,
+          "global_min": -109.73365020751953,
+          "global_max": 30.032840728759766,
+          "mean_of_file_means": -16.999950963041208,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      },
+      "Lookalike": {
+        "band1": {
+          "n_files": 685,
+          "global_min": -121.24373626708984,
+          "global_max": 28.29137420654297,
+          "mean_of_file_means": -30.87863875549205,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 685,
+          "global_min": -105.68071746826172,
+          "global_max": 30.896255493164062,
+          "mean_of_file_means": -22.24792649415288,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    },
+    "test": {
+      "Oil": {
+        "band1": {
+          "n_files": 150,
+          "global_min": -65.29588317871094,
+          "global_max": 10.216421127319336,
+          "mean_of_file_means": -29.078467229207355,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 150,
+          "global_min": -58.59730911254883,
+          "global_max": 29.60947608947754,
+          "mean_of_file_means": -20.962945950826008,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      },
+      "No_oil": {
+        "band1": {
+          "n_files": 150,
+          "global_min": -76.7834243774414,
+          "global_max": 16.09172248840332,
+          "mean_of_file_means": -22.40981541387271,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 2
+        },
+        "band2": {
+          "n_files": 150,
+          "global_min": -73.84025573730469,
+          "global_max": 25.81907844543457,
+          "mean_of_file_means": -13.81684157165854,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 2
+        }
+      },
+      "Lookalike": {
+        "band1": {
+          "n_files": 150,
+          "global_min": -81.30903625488281,
+          "global_max": 29.84739112854004,
+          "mean_of_file_means": -26.569171410401662,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        },
+        "band2": {
+          "n_files": 150,
+          "global_min": -84.02115631103516,
+          "global_max": 28.1333065032959,
+          "mean_of_file_means": -21.358210510412853,
+          "nan_total": 0,
+          "posinf_total": 0,
+          "neginf_total": 0,
+          "constant_files": 0
+        }
+      }
+    },
+    "global_reservoir_percentiles": {
+      "Oil_band1": {
+        "P1": -44.202195472717285,
+        "P5": -40.82146587371826,
+        "P25": -36.53669357299805,
+        "P50": -33.6359977722168,
+        "P75": -30.897997856140137,
+        "P95": -27.0591103553772,
+        "P99": 0.0
+      },
+      "Oil_band2": {
+        "P1": -28.50806037902832,
+        "P5": -25.201471900939943,
+        "P25": -22.40368890762329,
+        "P50": -20.542378425598145,
+        "P75": -18.55354642868042,
+        "P95": -14.306410074234016,
+        "P99": 0.0
+      },
+      "No_oil_band1": {
+        "P1": -43.37348297119141,
+        "P5": -40.09341869354248,
+        "P25": -35.77994251251221,
+        "P50": -32.651939392089844,
+        "P75": -28.147435665130615,
+        "P95": -13.167855215072635,
+        "P99": 0.0
+      },
+      "No_oil_band2": {
+        "P1": -26.512369689941405,
+        "P5": -24.701263523101808,
+        "P25": -21.590324878692627,
+        "P50": -19.038043975830078,
+        "P75": -15.154770374298096,
+        "P95": -7.3094593048095735,
+        "P99": 0.0
+      },
+      "Lookalike_band1": {
+        "P1": -45.664717025756836,
+        "P5": -42.312905883789064,
+        "P25": -38.07575702667236,
+        "P50": -35.33776092529297,
+        "P75": -32.50243377685547,
+        "P95": -23.74668321609503,
+        "P99": 0.0
+      },
+      "Lookalike_band2": {
+        "P1": -40.478645973205566,
+        "P5": -36.7606782913208,
+        "P25": -30.766239643096924,
+        "P50": -26.698355674743652,
+        "P75": -22.92635154724121,
+        "P95": -12.22802991867067,
+        "P99": 0.0
+      },
+      "TEST_Oil_band1": {
+        "P1": -33.75731658935547,
+        "P5": -32.88609733581543,
+        "P25": -31.215067386627197,
+        "P50": -29.55484962463379,
+        "P75": -27.752851486206055,
+        "P95": -26.057742977142333,
+        "P99": 0.0
+      },
+      "TEST_Oil_band2": {
+        "P1": -31.258120403289794,
+        "P5": -27.39134063720703,
+        "P25": -22.822179794311523,
+        "P50": -20.838905334472656,
+        "P75": -18.795934200286865,
+        "P95": -15.927713632583632,
+        "P99": 0.0
+      },
+      "TEST_No_oil_band1": {
+        "P1": -33.03019351959229,
+        "P5": -31.8235915184021,
+        "P25": -29.21541452407837,
+        "P50": -26.78037166595459,
+        "P75": -18.004980087280273,
+        "P95": 0.0,
+        "P99": 0.0
+      },
+      "TEST_No_oil_band2": {
+        "P1": -24.305605754852294,
+        "P5": -21.784990119934083,
+        "P25": -17.787298679351807,
+        "P50": -14.597187995910645,
+        "P75": -10.343053817749023,
+        "P95": 0.0,
+        "P99": 0.0
+      },
+      "TEST_Lookalike_band1": {
+        "P1": -34.734081420898434,
+        "P5": -33.81435050964355,
+        "P25": -31.284282207489014,
+        "P50": -29.479135513305664,
+        "P75": -27.7063889503479,
+        "P95": 0.0,
+        "P99": 0.0
+      },
+      "TEST_Lookalike_band2": {
+        "P1": -33.59605461120606,
+        "P5": -32.26442928314209,
+        "P25": -27.978923320770264,
+        "P50": -23.14449977874756,
+        "P75": -18.618395805358887,
+        "P95": 0.0,
+        "P99": 0.0
+      }
+    }
+  },
+  "11_nan_inf_nodata": {
+    "Oil": {
+      "band1": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0,
+        "constant_files": 0
+      }
+    },
+    "No_oil": {
+      "band1": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0,
+        "constant_files": 0
+      }
+    },
+    "Lookalike": {
+      "band1": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0,
+        "constant_files": 0
+      },
+      "band2": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0,
+        "constant_files": 0
+      }
+    }
+  },
+  "12_mask_encoding": {
+    "Oil": {
+      "flat_unique": [
+        0,
+        1
+      ],
+      "nested_unique": [
+        0,
+        1
+      ]
+    },
+    "No_oil": {
+      "flat_unique": [
+        0
+      ],
+      "nested_unique": [
+        0
+      ]
+    },
+    "Lookalike": {
+      "flat_unique": [
+        0
+      ],
+      "nested_unique": [
+        0
+      ]
+    }
+  },
+  "13_empty_masks": {
+    "Oil": {
+      "flat": {
+        "n_empty": 0,
+        "n_nonempty": 1200
+      },
+      "nested": {
+        "n_empty": 0,
+        "n_nonempty": 150
+      }
+    },
+    "No_oil": {
+      "flat": {
+        "n_empty": 685,
+        "n_nonempty": 0
+      },
+      "nested": {
+        "n_empty": 150,
+        "n_nonempty": 0
+      }
+    },
+    "Lookalike": {
+      "flat": {
+        "n_empty": 685,
+        "n_nonempty": 0
+      },
+      "nested": {
+        "n_empty": 150,
+        "n_nonempty": 0
+      }
+    }
+  },
+  "14_class_distribution": {
+    "Oil": {
+      "images": 1200,
+      "masks_flat": 1200,
+      "masks_nested": 150,
+      "mask_fg_stats": {
+        "n_ok": 1200,
+        "n_fail": 0,
+        "global_unique_values": [
+          0,
+          1
+        ],
+        "n_empty": 0,
+        "n_nonempty": 1200,
+        "total_fg": 149967879,
+        "fg_pct_mean": 2.979594051837921,
+        "fg_pct_median": 1.7626047134399414,
+        "fg_pct_min": 0.122833251953125,
+        "fg_pct_max": 57.374000549316406
+      }
+    },
+    "No_oil": {
+      "images": 685,
+      "masks_flat": 685,
+      "masks_nested": 150,
+      "mask_fg_stats": {
+        "n_ok": 685,
+        "n_fail": 0,
+        "global_unique_values": [
+          0
+        ],
+        "n_empty": 685,
+        "n_nonempty": 0,
+        "total_fg": 0,
+        "fg_pct_mean": 0.0,
+        "fg_pct_median": 0.0,
+        "fg_pct_min": 0.0,
+        "fg_pct_max": 0.0
+      }
+    },
+    "Lookalike": {
+      "images": 685,
+      "masks_flat": 685,
+      "masks_nested": 150,
+      "mask_fg_stats": {
+        "n_ok": 685,
+        "n_fail": 0,
+        "global_unique_values": [
+          0
+        ],
+        "n_empty": 685,
+        "n_nonempty": 0,
+        "total_fg": 0,
+        "fg_pct_mean": 0.0,
+        "fg_pct_median": 0.0,
+        "fg_pct_min": 0.0,
+        "fg_pct_max": 0.0
+      }
+    }
+  },
+  "15_geospatial": {
+    "images": {
+      "Oil": {
+        "crs_values": {
+          "EPSG:4326": 1200
+        },
+        "resolutions": {
+          "(8.983152841195215e-05, 8.983152841195215e-05)": 1200
+        },
+        "nodata_values": {
+          "None": 1200
+        },
+        "identity_transform": {
+          "false": 1200
+        }
+      },
+      "No_oil": {
+        "crs_values": {
+          "EPSG:4326": 685
+        },
+        "resolutions": {
+          "(8.983152841195215e-05, 8.983152841195215e-05)": 685
+        },
+        "nodata_values": {
+          "None": 685
+        },
+        "identity_transform": {
+          "false": 685
+        }
+      },
+      "Lookalike": {
+        "crs_values": {
+          "EPSG:4326": 685
+        },
+        "resolutions": {
+          "(8.983152841195215e-05, 8.983152841195215e-05)": 685
+        },
+        "nodata_values": {
+          "None": 685
+        },
+        "identity_transform": {
+          "false": 685
+        }
+      }
+    },
+    "masks_flat_sample_crs_none": true,
+    "test": {
+      "Oil": {
+        "crs_values": {
+          "EPSG:4326": 150
+        },
+        "resolutions": {
+          "(8.983152841195218e-05, 8.983152841195218e-05)": 22,
+          "(8.983152841195204e-05, 8.983152841195204e-05)": 7,
+          "(8.983152841195208e-05, 8.983152841195208e-05)": 47,
+          "(8.983152841195207e-05, 8.983152841195207e-05)": 10,
+          "(8.983152841195215e-05, 8.983152841195215e-05)": 5,
+          "(8.983152841195216e-05, 8.983152841195216e-05)": 6,
+          "(8.983152841195212e-05, 8.983152841195212e-05)": 11,
+          "(8.983152841195213e-05, 8.983152841195213e-05)": 6,
+          "(8.983152841195222e-05, 8.983152841195222e-05)": 3,
+          "(8.9831528411952e-05, 8.9831528411952e-05)": 10,
+          "(8.983152841195192e-05, 8.983152841195192e-05)": 3,
+          "(8.983152841195211e-05, 8.983152841195211e-05)": 10,
+          "(8.98315284119521e-05, 8.98315284119521e-05)": 6,
+          "(8.983152841195197e-05, 8.983152841195197e-05)": 4
+        },
+        "nodata_values": {
+          "None": 150
+        },
+        "identity_transform": {
+          "false": 150
+        }
+      },
+      "No_oil": {
+        "crs_values": {
+          "EPSG:4326": 150
+        },
+        "resolutions": {
+          "(8.983152841195215e-05, 8.983152841195215e-05)": 30,
+          "(8.983152841195218e-05, 8.983152841195218e-05)": 40,
+          "(8.983152841195205e-05, 8.983152841195205e-05)": 8,
+          "(8.983152841195212e-05, 8.983152841195212e-05)": 18,
+          "(8.983152841195208e-05, 8.983152841195208e-05)": 17,
+          "(8.983152841195207e-05, 8.983152841195207e-05)": 8,
+          "(8.983152841195211e-05, 8.983152841195211e-05)": 4,
+          "(8.983152841195199e-05, 8.983152841195199e-05)": 10,
+          "(8.983152841195213e-05, 8.983152841195213e-05)": 2,
+          "(8.983152841195204e-05, 8.983152841195204e-05)": 9,
+          "(8.98315284119521e-05, 8.98315284119521e-05)": 4
+        },
+        "nodata_values": {
+          "None": 150
+        },
+        "identity_transform": {
+          "false": 150
+        }
+      },
+      "Lookalike": {
+        "crs_values": {
+          "EPSG:4326": 150
+        },
+        "resolutions": {
+          "(8.983152841195208e-05, 8.983152841195208e-05)": 66,
+          "(8.983152841195218e-05, 8.983152841195218e-05)": 12,
+          "(8.983152841195216e-05, 8.983152841195216e-05)": 20,
+          "(8.983152841195211e-05, 8.983152841195211e-05)": 32,
+          "(8.983152841195199e-05, 8.983152841195199e-05)": 5,
+          "(8.983152841195212e-05, 8.983152841195212e-05)": 8,
+          "(8.983152841195215e-05, 8.983152841195215e-05)": 1,
+          "(8.983152841195207e-05, 8.983152841195207e-05)": 6
+        },
+        "nodata_values": {
+          "None": 150
+        },
+        "identity_transform": {
+          "false": 150
+        }
+      }
+    }
+  },
+  "16_alignment": "Masks carry no CRS/transform (identity); pixel-level alignment validated via paired dimensions; geospatial alignment cannot be independently verified from mask metadata.",
+  "17_duplicates": {
+    "duplicate_basenames_n": 1443,
+    "duplicate_basenames_sample": {
+      "00000.tif": [
+        "Lookalike\\00000.tif",
+        "Mask_lookalike\\00000.tif",
+        "Mask_no_oil\\00000.tif",
+        "Mask_oil\\00000.tif",
+        "No_oil\\00000.tif",
+        "Oil\\00000.tif",
+        "Test_Images\\Lookalike\\00000.tif",
+        "Test_Images\\No oil\\00000.tif",
+        "Test_Images\\Oil\\00000.tif"
+      ],
+      "00001.tif": [
+        "Lookalike\\00001.tif",
+        "Mask_lookalike\\00001.tif",
+        "Mask_no_oil\\00001.tif",
+        "Mask_oil\\00001.tif",
+        "No_oil\\00001.tif",
+        "Oil\\00001.tif",
+        "Test_Images\\Lookalike\\00001.tif",
+        "Test_Images\\No oil\\00001.tif",
+        "Test_Images\\Oil\\00001.tif"
+      ],
+      "00002.tif": [
+        "Lookalike\\00002.tif",
+        "Mask_lookalike\\00002.tif",
+        "Mask_no_oil\\00002.tif",
+        "Mask_oil\\00002.tif",
+        "No_oil\\00002.tif",
+        "Oil\\00002.tif",
+        "Test_Images\\Lookalike\\00002.tif",
+        "Test_Images\\No oil\\00002.tif",
+        "Test_Images\\Oil\\00002.tif"
+      ],
+      "00003.tif": [
+        "Lookalike\\00003.tif",
+        "Mask_lookalike\\00003.tif",
+        "Mask_no_oil\\00003.tif",
+        "Mask_oil\\00003.tif",
+        "No_oil\\00003.tif",
+        "Oil\\00003.tif",
+        "Test_Images\\Lookalike\\00003.tif",
+        "Test_Images\\No oil\\00003.tif",
+        "Test_Images\\Oil\\00003.tif"
+      ],
+      "00004.tif": [
+        "Lookalike\\00004.tif",
+        "Mask_lookalike\\00004.tif",
+        "Mask_no_oil\\00004.tif",
+        "Mask_oil\\00004.tif",
+        "No_oil\\00004.tif",
+        "Oil\\00004.tif",
+        "Test_Images\\Lookalike\\00004.tif",
+        "Test_Images\\No oil\\00004.tif",
+        "Test_Images\\Oil\\00004.tif"
+      ],
+      "00005.tif": [
+        "Lookalike\\00005.tif",
+        "Mask_lookalike\\00005.tif",
+        "Mask_no_oil\\00005.tif",
+        "Mask_oil\\00005.tif",
+        "No_oil\\00005.tif",
+        "Oil\\00005.tif",
+        "Test_Images\\Lookalike\\00005.tif",
+        "Test_Images\\No oil\\00005.tif",
+        "Test_Images\\Oil\\00005.tif"
+      ],
+      "00006.tif": [
+        "Lookalike\\00006.tif",
+        "Mask_lookalike\\00006.tif",
+        "Mask_no_oil\\00006.tif",
+        "Mask_oil\\00006.tif",
+        "No_oil\\00006.tif",
+        "Oil\\00006.tif",
+        "Test_Images\\Lookalike\\00006.tif",
+        "Test_Images\\No oil\\00006.tif",
+        "Test_Images\\Oil\\00006.tif"
+      ],
+      "00007.tif": [
+        "Lookalike\\00007.tif",
+        "Mask_lookalike\\00007.tif",
+        "Mask_no_oil\\00007.tif",
+        "Mask_oil\\00007.tif",
+        "No_oil\\00007.tif",
+        "Oil\\00007.tif",
+        "Test_Images\\Lookalike\\00007.tif",
+        "Test_Images\\No oil\\00007.tif",
+        "Test_Images\\Oil\\00007.tif"
+      ],
+      "00008.tif": [
+        "Lookalike\\00008.tif",
+        "Mask_lookalike\\00008.tif",
+        "Mask_no_oil\\00008.tif",
+        "Mask_oil\\00008.tif",
+        "No_oil\\00008.tif",
+        "Oil\\00008.tif",
+        "Test_Images\\Lookalike\\00008.tif",
+        "Test_Images\\No oil\\00008.tif",
+        "Test_Images\\Oil\\00008.tif"
+      ],
+      "00009.tif": [
+        "Lookalike\\00009.tif",
+        "Mask_lookalike\\00009.tif",
+        "Mask_no_oil\\00009.tif",
+        "Mask_oil\\00009.tif",
+        "No_oil\\00009.tif",
+        "Oil\\00009.tif",
+        "Test_Images\\Lookalike\\00009.tif",
+        "Test_Images\\No oil\\00009.tif",
+        "Test_Images\\Oil\\00009.tif"
+      ]
+    },
+    "thumbnail_collision_groups": 3,
+    "thumbnail_collision_sample": {
+      "41857591|bd713c76a47b5fb2a28dc8a312b69964": [
+        "Oil/Oil/00007.tif",
+        "Oil/Oil/01339.tif"
+      ],
+      "42988308|35091af449bc8c3e3bb52a0a3d419c88": [
+        "Oil/Oil/00356.tif",
+        "Oil/Oil/00357.tif"
+      ],
+      "43636700|57f071bd9b4b664e043d6e5b8caeb58b": [
+        "No_oil/No_oil/00542.tif",
+        "No_oil/No_oil/00543.tif"
+      ]
+    },
+    "method": "basename match + (file-size, 32x32 stride-64 band-1 thumbnail md5)"
+  },
+  "18_leakage": {
+    "test_basename_overlap_with_train": [
+      "TEST Oil/Test_Images/Oil/00000.tif",
+      "TEST Oil/Test_Images/Oil/00001.tif",
+      "TEST Oil/Test_Images/Oil/00002.tif",
+      "TEST Oil/Test_Images/Oil/00003.tif",
+      "TEST Oil/Test_Images/Oil/00004.tif",
+      "TEST Oil/Test_Images/Oil/00005.tif",
+      "TEST Oil/Test_Images/Oil/00006.tif",
+      "TEST Oil/Test_Images/Oil/00007.tif",
+      "TEST Oil/Test_Images/Oil/00008.tif",
+      "TEST Oil/Test_Images/Oil/00009.tif",
+      "TEST Oil/Test_Images/Oil/00010.tif",
+      "TEST Oil/Test_Images/Oil/00011.tif",
+      "TEST Oil/Test_Images/Oil/00012.tif",
+      "TEST Oil/Test_Images/Oil/00013.tif",
+      "TEST Oil/Test_Images/Oil/00014.tif",
+      "TEST Oil/Test_Images/Oil/00015.tif",
+      "TEST Oil/Test_Images/Oil/00016.tif",
+      "TEST Oil/Test_Images/Oil/00017.tif",
+      "TEST Oil/Test_Images/Oil/00018.tif",
+      "TEST Oil/Test_Images/Oil/00019.tif",
+      "TEST Oil/Test_Images/Oil/00020.tif",
+      "TEST Oil/Test_Images/Oil/00021.tif",
+      "TEST Oil/Test_Images/Oil/00022.tif",
+      "TEST Oil/Test_Images/Oil/00023.tif",
+      "TEST Oil/Test_Images/Oil/00024.tif",
+      "TEST Oil/Test_Images/Oil/00025.tif",
+      "TEST Oil/Test_Images/Oil/00026.tif",
+      "TEST Oil/Test_Images/Oil/00027.tif",
+      "TEST Oil/Test_Images/Oil/00028.tif",
+      "TEST Oil/Test_Images/Oil/00029.tif",
+      "TEST Oil/Test_Images/Oil/00030.tif",
+      "TEST Oil/Test_Images/Oil/00031.tif",
+      "TEST Oil/Test_Images/Oil/00032.tif",
+      "TEST Oil/Test_Images/Oil/00033.tif",
+      "TEST Oil/Test_Images/Oil/00034.tif",
+      "TEST Oil/Test_Images/Oil/00035.tif",
+      "TEST Oil/Test_Images/Oil/00036.tif",
+      "TEST Oil/Test_Images/Oil/00037.tif",
+      "TEST Oil/Test_Images/Oil/00038.tif",
+      "TEST Oil/Test_Images/Oil/00039.tif",
+      "TEST Oil/Test_Images/Oil/00040.tif",
+      "TEST Oil/Test_Images/Oil/00041.tif",
+      "TEST Oil/Test_Images/Oil/00042.tif",
+      "TEST Oil/Test_Images/Oil/00043.tif",
+      "TEST Oil/Test_Images/Oil/00044.tif",
+      "TEST Oil/Test_Images/Oil/00045.tif",
+      "TEST Oil/Test_Images/Oil/00046.tif",
+      "TEST Oil/Test_Images/Oil/00047.tif",
+      "TEST Oil/Test_Images/Oil/00048.tif",
+      "TEST Oil/Test_Images/Oil/00049.tif"
+    ],
+    "n_test_overlaps": 450,
+    "cross_class_same_basename": {
+      "00000.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00001.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00002.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00003.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00004.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00005.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00006.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00007.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00008.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00009.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00010.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00011.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00012.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00013.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00014.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00015.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00016.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00017.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00018.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00019.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00020.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00021.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00022.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00023.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00024.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00025.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00026.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00027.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00028.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00029.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00030.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00031.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00032.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00036.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00037.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00038.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00039.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00040.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00041.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00042.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00043.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00045.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00046.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00047.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00048.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00050.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00051.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00052.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00053.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00054.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00055.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00056.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00057.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00058.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00059.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00061.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00062.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00064.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00065.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00067.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00069.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00073.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00074.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00075.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00076.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00077.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00078.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00079.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00080.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00082.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00084.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00085.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00086.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00087.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00088.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00089.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00090.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00091.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00092.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00093.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00094.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00095.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00096.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00097.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00098.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00099.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00100.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00101.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00102.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00103.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00104.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00108.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00111.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00112.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00113.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00114.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00115.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00116.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00117.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00118.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00119.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00121.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00123.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00126.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00127.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00130.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00131.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00132.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00133.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00134.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00135.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00140.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00142.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00143.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00145.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00146.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00148.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00149.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00150.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00151.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00152.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00153.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00154.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00155.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00156.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00157.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00158.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00160.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00161.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00162.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00164.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00165.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00167.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00168.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00169.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00171.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00172.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00173.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00174.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00175.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00176.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00177.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00178.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00180.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00181.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00183.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00184.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00185.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00186.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00188.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00189.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00190.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00191.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00192.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00193.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00194.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00195.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00196.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00197.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00198.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00199.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00200.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00201.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00202.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00203.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00204.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00206.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00207.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00208.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00210.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00211.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00212.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00213.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00214.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00215.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00216.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00217.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00218.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00219.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00220.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00223.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00224.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00227.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00228.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00231.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00232.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00233.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00234.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00235.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00236.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00237.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00238.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00240.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00241.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00244.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00245.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00246.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00247.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00248.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00249.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00250.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00251.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00252.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00253.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00254.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00255.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00256.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00257.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00258.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00259.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00260.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00261.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00263.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00264.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00265.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00266.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00267.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00268.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00269.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00270.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00273.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00274.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00275.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00276.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00277.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00278.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00279.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00280.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00281.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00282.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00283.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00284.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00285.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00286.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00287.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00288.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00289.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00290.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00291.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00293.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00294.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00295.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00296.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00297.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00299.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00300.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00302.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00303.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00304.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00305.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00306.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00307.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00308.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00309.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00317.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00318.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00319.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00320.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00321.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00322.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00323.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00324.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00325.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00326.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00327.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00328.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00329.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00330.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00331.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00332.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00333.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00334.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00335.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00336.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00337.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00339.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00340.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00341.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00342.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00344.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00345.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00346.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00347.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00348.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00349.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00350.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00351.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00352.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00353.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00354.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00355.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00356.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00357.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00358.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00361.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00362.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00363.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00364.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00365.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00366.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00368.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00369.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00370.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00371.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00372.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00373.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00374.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00375.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00376.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00377.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00378.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00379.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00382.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00384.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00385.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00386.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00387.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00388.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00389.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00391.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00392.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00393.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00394.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00395.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00396.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00398.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00399.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00400.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00401.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00402.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00403.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00404.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00405.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00406.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00407.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00408.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00409.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00410.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00411.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00412.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00413.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00414.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00415.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00416.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00417.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00418.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00419.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00421.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00422.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00423.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00424.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00425.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00426.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00427.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00428.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00429.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00430.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00431.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00432.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00433.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00434.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00435.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00436.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00437.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00438.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00439.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00440.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00441.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00442.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00443.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00444.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00445.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00446.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00447.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00448.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00449.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00450.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00451.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00452.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00453.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00454.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00455.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00456.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00457.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00458.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00459.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00460.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00461.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00462.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00463.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00464.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00465.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00466.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00467.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00468.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00469.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00470.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00471.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00472.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00473.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00474.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00475.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00476.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00477.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00478.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00479.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00480.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00481.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00484.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00485.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00486.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00487.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00488.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00489.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00490.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00491.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00492.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00493.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00494.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00495.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00496.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00497.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00498.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00499.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00500.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00501.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00502.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00503.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00504.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00505.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00506.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00507.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00508.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00509.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00511.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00512.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00513.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00514.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00515.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00516.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00517.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00518.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00519.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00520.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00521.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00522.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00523.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00524.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00525.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00526.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00527.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00528.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00530.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00531.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00532.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00533.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00534.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00535.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00536.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00537.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00538.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00539.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00540.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00541.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00542.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00543.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00544.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00545.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00546.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00548.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00549.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00550.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00551.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00552.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00553.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00554.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00555.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00556.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00557.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00558.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00559.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00560.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00561.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00562.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00563.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00564.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00565.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00566.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00567.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00568.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00569.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00570.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00571.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00572.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00573.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00574.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00575.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00577.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00579.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00580.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00582.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00583.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00584.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00585.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00586.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00591.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00592.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00593.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00594.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00595.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00596.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00597.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00598.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00599.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00600.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00601.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00603.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00604.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00605.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00606.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00607.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00608.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00609.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00610.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00611.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00612.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00613.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00614.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00615.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00616.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00617.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00618.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00619.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00620.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00621.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00622.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00624.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00625.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00626.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00627.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00628.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00629.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00630.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00631.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00632.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00633.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00634.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00635.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00636.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00637.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00638.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00639.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00640.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00641.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00642.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00643.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00644.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00645.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00646.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00647.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00648.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00649.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00650.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00651.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00652.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00653.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00654.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00655.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00656.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00657.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00658.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00659.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00660.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00661.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00662.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00663.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00664.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00665.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00666.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00667.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00668.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00670.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00674.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00675.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00676.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00677.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00678.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00679.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00680.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00681.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00682.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00684.tif": [
+        "Lookalike",
+        "No_oil",
+        "Oil"
+      ],
+      "00033.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00034.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00035.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00044.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00049.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00060.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00063.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00066.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00068.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00070.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00071.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00072.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00081.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00083.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00105.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00106.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00107.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00109.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00110.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00120.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00122.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00124.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00125.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00128.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00129.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00136.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00137.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00138.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00139.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00141.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00144.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00147.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00159.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00163.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00166.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00170.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00179.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00182.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00187.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00205.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00209.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00221.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00222.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00225.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00226.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00229.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00230.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00239.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00242.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00243.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00262.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00271.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00272.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00292.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00298.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00301.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00310.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00311.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00312.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00313.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00314.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00315.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00316.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00338.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00343.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00359.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00360.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00367.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00380.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00381.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00383.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00390.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00397.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00420.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00482.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00483.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00510.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00529.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00547.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00576.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00578.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00581.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00587.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00588.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00589.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00590.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00602.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00623.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00669.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00671.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00672.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00673.tif": [
+        "Lookalike",
+        "No_oil"
+      ],
+      "00683.tif": [
+        "Lookalike",
+        "No_oil"
+      ]
+    },
+    "note": "No split performed; scene-level IDs unavailable in metadata."
+  },
+  "19_test_data": {
+    "Oil": {
+      "count": 150,
+      "stats": {
+        "n_ok": 150,
+        "n_fail": 0,
+        "band_counts": {
+          "2": 150
+        },
+        "dtypes": [
+          "float32+float32"
+        ],
+        "dims": {
+          "2048x2048": 150
+        },
+        "per_band": {
+          "band1": {
+            "n_files": 150,
+            "global_min": -65.29588317871094,
+            "global_max": 10.216421127319336,
+            "mean_of_file_means": -29.078467229207355,
+            "nan_total": 0,
+            "posinf_total": 0,
+            "neginf_total": 0,
+            "constant_files": 0
+          },
+          "band2": {
+            "n_files": 150,
+            "global_min": -58.59730911254883,
+            "global_max": 29.60947608947754,
+            "mean_of_file_means": -20.962945950826008,
+            "nan_total": 0,
+            "posinf_total": 0,
+            "neginf_total": 0,
+            "constant_files": 0
+          }
+        }
+      }
+    },
+    "No_oil": {
+      "count": 150,
+      "stats": {
+        "n_ok": 150,
+        "n_fail": 0,
+        "band_counts": {
+          "2": 150
+        },
+        "dtypes": [
+          "float32+float32"
+        ],
+        "dims": {
+          "2048x2048": 150
+        },
+        "per_band": {
+          "band1": {
+            "n_files": 150,
+            "global_min": -76.7834243774414,
+            "global_max": 16.09172248840332,
+            "mean_of_file_means": -22.40981541387271,
+            "nan_total": 0,
+            "posinf_total": 0,
+            "neginf_total": 0,
+            "constant_files": 2
+          },
+          "band2": {
+            "n_files": 150,
+            "global_min": -73.84025573730469,
+            "global_max": 25.81907844543457,
+            "mean_of_file_means": -13.81684157165854,
+            "nan_total": 0,
+            "posinf_total": 0,
+            "neginf_total": 0,
+            "constant_files": 2
+          }
+        }
+      }
+    },
+    "Lookalike": {
+      "count": 150,
+      "stats": {
+        "n_ok": 150,
+        "n_fail": 0,
+        "band_counts": {
+          "2": 150
+        },
+        "dtypes": [
+          "float32+float32"
+        ],
+        "dims": {
+          "2048x2048": 150
+        },
+        "per_band": {
+          "band1": {
+            "n_files": 150,
+            "global_min": -81.30903625488281,
+            "global_max": 29.84739112854004,
+            "mean_of_file_means": -26.569171410401662,
+            "nan_total": 0,
+            "posinf_total": 0,
+            "neginf_total": 0,
+            "constant_files": 0
+          },
+          "band2": {
+            "n_files": 150,
+            "global_min": -84.02115631103516,
+            "global_max": 28.1333065032959,
+            "mean_of_file_means": -21.358210510412853,
+            "nan_total": 0,
+            "posinf_total": 0,
+            "neginf_total": 0,
+            "constant_files": 0
+          }
+        }
+      }
+    }
+  },
+  "20_visual_qc": {
+    "dir": "processed_dataset/reports/visual_qc",
+    "figures": [
+      {
+        "class": "Oil",
+        "image": "Oil/00000.tif",
+        "mask": "Mask_oil/00000.tif",
+        "figure": "reports/visual_qc/Oil_00000.png",
+        "error": null
+      },
+      {
+        "class": "Oil",
+        "image": "Oil/00694.tif",
+        "mask": "Mask_oil/00694.tif",
+        "figure": "reports/visual_qc/Oil_00694.png",
+        "error": null
+      },
+      {
+        "class": "Oil",
+        "image": "Oil/01339.tif",
+        "mask": "Mask_oil/01339.tif",
+        "figure": "reports/visual_qc/Oil_01339.png",
+        "error": null
+      },
+      {
+        "class": "No_oil",
+        "image": "No_oil/00000.tif",
+        "mask": "Mask_no_oil/00000.tif",
+        "figure": "reports/visual_qc/No_oil_00000.png",
+        "error": null
+      },
+      {
+        "class": "No_oil",
+        "image": "No_oil/00342.tif",
+        "mask": "Mask_no_oil/00342.tif",
+        "figure": "reports/visual_qc/No_oil_00342.png",
+        "error": null
+      },
+      {
+        "class": "No_oil",
+        "image": "No_oil/00684.tif",
+        "mask": "Mask_no_oil/00684.tif",
+        "figure": "reports/visual_qc/No_oil_00684.png",
+        "error": null
+      },
+      {
+        "class": "Lookalike",
+        "image": "Lookalike/00000.tif",
+        "mask": "Mask_lookalike/00000.tif",
+        "figure": "reports/visual_qc/Lookalike_00000.png",
+        "error": null
+      },
+      {
+        "class": "Lookalike",
+        "image": "Lookalike/00342.tif",
+        "mask": "Mask_lookalike/00342.tif",
+        "figure": "reports/visual_qc/Lookalike_00342.png",
+        "error": null
+      },
+      {
+        "class": "Lookalike",
+        "image": "Lookalike/00684.tif",
+        "mask": "Mask_lookalike/00684.tif",
+        "figure": "reports/visual_qc/Lookalike_00684.png",
+        "error": null
+      }
+    ]
+  },
+  "21_errors": [],
+  "22_warnings": [],
+  "23_manual_review": [
+    "1443 basenames exist in >1 location (flat train vs nested Mask/ vs test) -> expected by layout, verify split hygiene later",
+    "450 test files share basenames with train -> REQUIRES REVIEW (possible leakage)",
+    "SAR representation: REPRESENTATION COULD NOT BE CONFIRMED from metadata",
+    "SAR polarization: POLARIZATION UNKNOWN (no tags)",
+    "Nested Mask/<class>/*_segmentation.tif (150/class) foreground rates differ strongly from flat masks; confirm which mask set is authoritative before training",
+    "EXACT duplicates verified: Oil/00007==Oil/01339 (same image, DIFFERENT masks fg 70772 vs 74906) -> REQUIRES REVIEW",
+    "EXACT duplicates verified: Oil/00356==Oil/00357 (image+mask identical); No_oil/00542==00543 -> REQUIRES REVIEW",
+    "Odd dims: 4 Lookalike files differ from 2048x2048 (00140, 00166, 00288, 00390) -> handle before tiling",
+    "Extreme minima (band1 <= -112, several with max exactly 0.0) -> REQUIRES REVIEW"
+  ],
+  "24_status": {
+    "IMAGE_FILE_INTEGRITY": "PASS",
+    "IMAGE_MASK_PAIRING_FLAT": "PASS",
+    "SAR_BAND_CONSISTENCY": "PASS",
+    "SAR_REPRESENTATION": "REQUIRES REVIEW",
+    "SAR_POLARIZATION": "REQUIRES REVIEW",
+    "MASK_ENCODING": "PASS",
+    "EMPTY_MASKS": "PASS",
+    "GEOSPATIAL_METADATA": "WARNING",
+    "DUPLICATES": "FAIL",
+    "LEAKAGE": "WARNING",
+    "TEST_DATA": "PASS"
+  },
+  "25_exact_duplicate_verification": {
+    "method": "exact np.array_equal on full float32 rasters (read-only)",
+    "exact_duplicates": [
+      {
+        "a": "Oil/00007.tif",
+        "b": "Oil/01339.tif",
+        "images_identical": true,
+        "masks_identical": false,
+        "mask_fg_a": 70772,
+        "mask_fg_b": 74906,
+        "verdict": "SAME IMAGE, DIFFERENT MASKS - REQUIRES REVIEW (label inconsistency / leakage risk)"
+      },
+      {
+        "a": "Oil/00356.tif",
+        "b": "Oil/00357.tif",
+        "images_identical": true,
+        "masks_identical": true,
+        "verdict": "FULL DUPLICATE PAIR (image+mask) - REQUIRES REVIEW"
+      },
+      {
+        "a": "No_oil/00542.tif",
+        "b": "No_oil/00543.tif",
+        "images_identical": true,
+        "verdict": "EXACT IMAGE DUPLICATE - REQUIRES REVIEW"
+      }
+    ],
+    "near_duplicates_not_exact": [
+      "Lookalike/00087 vs 00088 (shared max 28.29, not identical)",
+      "No_oil/00027 vs 00028 (shared min -114.02, not identical)"
+    ],
+    "odd_dimensions": [
+      "Lookalike/00140.tif 2048x2148",
+      "Lookalike/00166.tif 2049x2048",
+      "Lookalike/00288.tif 2048x2047",
+      "Lookalike/00390.tif 2048x2248"
+    ],
+    "extreme_value_files_band1_min": [
+      "No_oil/00048.tif -128.45 max 0.0",
+      "Lookalike/00046.tif -121.24",
+      "Lookalike/00677.tif -114.19 max 0.0",
+      "No_oil/00027.tif -114.02 max 0.0",
+      "Oil/00371.tif -112.28 max 0.0"
+    ],
+    "note_zeros": "~49% of train images contain some >=0 px (bright scatterers up to +29); reservoir P99~=0 reflects heavy-tailed positives. Files with max exactly 0.0 + extreme negative minima suggest dark/outlier scenes."
+  }
+}

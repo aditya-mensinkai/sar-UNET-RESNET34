@@ -1,0 +1,147 @@
+========================================
+SAR RADIOMETRY INVESTIGATION
+========================================
+(Read-only audit. No file in dataset/ was modified, rescaled, converted or rewritten.)
+
+Dataset:
+Local folders Oil/ (1200), No_oil/ (685), Lookalike/ (685) + flat masks + nested
+Mask/<class>/*_segmentation.tif (150/class) + Test_Images/<class>/ (150/class).
+Identified (Part 1, file counts + layout match) as the Trujillo-Acatitla et al.
+IPICYT Sentinel-1 SAR oil-spill dataset, Zenodo Parts I-III.
+
+Original source:
+Zenodo official archives 10.5281/zenodo.8346860 (Part I, Oil),
+10.5281/zenodo.8253899 (Part II, No Oil + Lookalike),
+10.5281/zenodo.13761290 (Part III, test images + ground truth).
+
+Paper:
+Trujillo-Acatitla, Tuxpan-Vargas, Ovando-Vazquez, Monterrubio-Martinez (2024),
+"Marine oil spill detection and segmentation in SAR data with two steps Deep
+Learning framework", Marine Pollution Bulletin 204, 116549.
+
+DOI:
+Dataset: 10.5281/zenodo.8346860 / 10.5281/zenodo.8253899 / 10.5281/zenodo.13761290
+Paper: 10.1016/j.marpolbul.2024.116549
+
+Official dataset source:
+https://zenodo.org/records/8346860, https://zenodo.org/records/8253899,
+https://zenodo.org/records/13761290 (CC BY 4.0, authors = paper authors).
+
+----------------------------------------
+BAND INFORMATION
+----------------------------------------
+
+Number of bands:
+2 (float32 + float32 in every train and test image; verified in B1 audit)
+
+Band 1:
+First channel of the 2048x2048x2 Sigma0-dB stack. Polarization assignment UNKNOWN
+(see POLARIZATION conflict report below).
+
+Band 2:
+Second channel of the 2048x2048x2 Sigma0-dB stack. Polarization assignment UNKNOWN.
+
+----------------------------------------
+POLARIZATION
+----------------------------------------
+
+Band 1 polarization:
+UNKNOWN (member of {VV, VH}; order unresolved)
+
+Band 2 polarization:
+UNKNOWN (member of {VV, VH}; order unresolved)
+
+Confidence:
+HIGH that the polarization set is {VV, VH} (stated verbatim by the dataset authors
+in the notes of all three Zenodo records). UNKNOWN for the per-band order.
+
+Evidence:
+FOR set {VV, VH}: author notes on all three records: "Sigma0 images in decibels (db)
+with two polarizations (VV, VH)". AGAINST any other set (HH/HV/other): Sentinel-1 IW
+dual-pol over ocean is VV+VH and authors state VV,VH explicitly. FOR band1=VV/band2=VH:
+one unrelated third-party Kaggle pipeline claims "band0=VV, band1=VH" (LOW, explicitly
+non-authoritative). AGAINST trusting that claim: physical-consistency check on local
+files shows band 2 systematically STRONGER than band 1 (e.g. Oil file-means approx
+-33.2 vs -19.9 dB; sample medians band1 ~-33.6 / band2 ~-20.5), whereas cross-pol VH
+ocean backscatter is canonically WEAKER than co-pol VV - i.e. the observed order is
+more consistent with [VH, VV] stacking (e.g. alphabetical export) than with [VV, VH].
+This contradiction is documented, NOT resolved: numerical behavior must not determine
+polarization, so the order stays UNKNOWN until the authors' paper/code states it.
+
+----------------------------------------
+RADIOMETRIC REPRESENTATION
+----------------------------------------
+
+Stored representation:
+sigma0 (calibrated normalized radar cross-section) in decibels (dB)
+
+Physical quantity:
+sigma0 (sigma-nought)
+
+Unit:
+dB (10*log10 of linear sigma0)
+
+Scale:
+logarithmic
+
+Confidence:
+HIGH (stated verbatim by the dataset authors: "Sentinel-1 SAR images in Sigma0,
+in decibels (db)" on all three records; consistent 2048x2048x2 float32 TIFFs).
+
+Evidence:
+Authoritative: three Zenodo descriptions + notes quoted above. Supporting (only):
+strongly negative float32 values with a positive bright-target tail (Oil band1
+min -112.3 / max +22.8 / mean -33.2; band2 min -114.7 / max +29.9 / mean -19.9),
+no NaN/Inf/NoData - compatible with, but not proof of, log-scaled backscatter.
+Band1/band2 Pearson on the read-only sample: 0.2861 (positive, oil and sea
+structure shared across channels; supporting only).
+
+----------------------------------------
+DATA GENERATION PIPELINE
+----------------------------------------
+
+Original product:
+Sentinel-1 SAR (authors do not state mode/level in the Zenodo text; IW GRD
+dual-pol is the standard source for this kind of product but that is unconfirmed
+for THESE files -> UNKNOWN specifics).
+
+Radiometric calibration:
+YES (HIGH) - "Sigma0" stated by authors; sigma0 exists only after calibration.
+
+Terrain correction:
+UNKNOWN - images are georeferenced (EPSG:4326, verified) so SOME geocoding was
+applied, but the authors do not state Range-Doppler terrain vs ellipsoid correction.
+
+Speckle filtering:
+UNKNOWN - no statement, no detectable signature asserted (no analysis performed
+that could decide this; must not be guessed).
+
+Linear -> dB:
+YES (HIGH) - authors state the stored Sigma0 IS in decibels.
+
+dB -> linear:
+NO (HIGH) - stored values are already dB; no linear data present.
+
+Other transformations:
+Tiling/chipping to 2048x2048x2 windows + TIFF export (HIGH, evident); resampling
+details, orbit files, border-noise removal: UNKNOWN (paper full text paywalled).
+
+----------------------------------------
+CONCLUSION
+----------------------------------------
+
+SAR representation:
+sigma0 in dB (HIGH confidence, author-stated).
+
+Polarization:
+set {VV, VH} (HIGH); per-band order UNKNOWN (conflict documented, not guessed).
+
+Confidence:
+HIGH for representation + polarization set; UNKNOWN for band order, terrain
+correction method, speckle filtering, exact source product level.
+
+Remaining uncertainty:
+1. Band order (VV/VH vs VH/VV) - needs author paper/code statement.
+2. Terrain-correction method, speckle filtering, exact S1 product/mode.
+3. Origin of extreme minima (down to -128) and max==0.0 files (fill vs real).
+Paper full text (Elsevier, paywalled, TDM 429) should be consulted for 1-2.

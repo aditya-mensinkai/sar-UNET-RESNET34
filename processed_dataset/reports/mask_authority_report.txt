@@ -1,0 +1,26 @@
+MASK AUTHORITY REPORT (evidence-only)
+
+1. FLAT MASKS (Mask_oil 1200 / Mask_no_oil 685 / Mask_lookalike 685):
+   exact-basename paired with train images (00000.tif <-> 00000.tif), same 2048 dims,
+   Oil fg mean 2.98%. Primary supervised-training candidate.
+2. NESTED MASKS (Mask/<class>/*_segmentation.tif, 150/class):
+   SCIFIO-tagged single-band uint8 {0,1}; nested Oil fg mean 9.93%.
+3. OVERLAP: 300/450 nested masks pixel-identical to a flat mask (hash match).
+   same-basename-but-different-content: 118; no same-ID counterpart: 32.
+   (full per-file table: mask_set_comparison.csv)
+4. DUPLICATES: 300 exact hash duplicates.
+5. DIFFERENT ANNOTATIONS: supported by
+   differing foreground content under reused sequential IDs.
+6. EVIDENCE: hash comparison of all 3020 masks; SCIFIO vs plain TIFF tags;
+   fg statistics from B1 audit; no dataset README to arbitrate.
+7. USE: FLAT masks as ground truth for the B1 image<->mask pairs (dimension-paired).
+   DO NOT merge nested masks into training without provider clarification.
+8. UNCERTAIN: provenance/version of Mask/ subset; why sequential IDs collide across
+   sets; which annotation round is newer.
+AUTHORITATIVE_MASK_SET = FLAT_MASKS_AUTHORITATIVE (for the B1 paired dataset only)
+
+CORRECTION: the 300 hash overlaps are vacuous (all-zero masks match by construction).
+Oil-only result: 0/150 overlaps; same-ID nested-vs-flat IoU mean 0.0215 median 0.0028
+(41 zero-overlap, 0 identical); 32 nested IDs absent from flat set.
+CONCLUSION: nested Oil masks belong to a different sample/version (E/D), not alternative
+annotations of the same scenes. QUARANTINE the nested set; FLAT masks authoritative for B1 pairs.

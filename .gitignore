@@ -1,0 +1,29 @@
+# Large files: raw SAR dataset, linked/copied imagery, caches — never commit these.
+
+# Raw dataset (136 GB, external source: Zenodo 8346860 / 8253899 / 13761290)
+/dataset/
+
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# TIFF imagery anywhere (processed_dataset train/val/test hold hard links of dataset/)
+*.tif
+*.tiff
+*.7z
+
+# Derived image-data directories (reproducible via tools/create_dataset_split.py)
+processed_dataset/train/
+processed_dataset/val/
+processed_dataset/test/
+processed_dataset/tiled/
+processed_dataset/augmented/
+processed_dataset/stitched/
+
+# OS / editor noise
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/

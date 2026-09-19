@@ -1,0 +1,5 @@
+file,mask,reason
+Oil/00007.tif,Mask_oil/00007.tif,"G1 contradictory labels (dup of Oil/01339, masks differ)"
+Oil/00357.tif,Mask_oil/00357.tif,exact duplicate of Oil/00356 (keep first copy)
+Oil/01339.tif,Mask_oil/01339.tif,"G1 contradictory labels (dup of Oil/00007, masks differ)"
+No_oil/00543.tif,Mask_no_oil/00543.tif,exact duplicate of No_oil/00542 (keep first copy)

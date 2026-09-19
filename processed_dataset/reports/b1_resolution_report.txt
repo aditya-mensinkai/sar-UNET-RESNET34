@@ -1,0 +1,104 @@
+==================================================================
+B1 DATASET RESOLUTION REPORT
+==================================================================
+Generated: 2026-09-19T17:08:40.151133+00:00 (READ-ONLY)
+
+ISSUE_1_DUPLICATES
+Status: PARTIALLY_RESOLVED__G1_MANUAL_REVIEW_REQUIRED
+Findings: [{"duplicate_group": "G1_oil_label_conflict", "image_1": "Oil/00007.tif", "image_2": "Oil/01339.tif", "image_identical": true, "mask_1": "Mask_oil/00007.tif", "mask_2": "Mask_oil/01339.tif", "mask_identical": false, "mask_foreground_1": 70772, "mask_foreground_2": 74906, "mask_unique_1": [0, 1], "mask_unique_2": [0, 1], "metadata_identical": true, "label_conflict": true, "resolution_status": "MANUAL REVIEW REQUIRED", "reason": "pixel-identical images, different masks (fg 70772 vs 74906); no TIFF/doc evidence identifies authoritative annotation"}, {"duplicate_group": "G2_oil_full_duplicate", "image_1": "Oil/00356.tif", "image_2": "Oil/00357.tif", "image_identical": true, "mask_1": "Mask_oil/00356.tif", "mask_2": "Mask_oil/00357.tif", "mask_identical": true, "mask_foreground_1": 284854, "mask_foreground_2": 284854, "mask_unique_1": [0, 1], "mask_unique_2": [0, 1], "metadata_identical": true, "label_conflict": false, "resolution_status": "DUPLICATE_SAMPLE", "reason": "image+mask pixel-identical; recommend excluding Oil/00357 from future train pool"}, {"duplicate_group": "G3_nooil_duplicate", "image_1": "No_oil/00542.tif", "image_2": "No_oil/00543.tif", "image_identical": true, "mask_1": "Mask_no_oil/00542.tif", "mask_2": "Mask_no_oil/00543.tif", "mask_identical": true, "mask_foreground_1": 0, "mask_foreground_2": 0, "mask_unique_1": [0], "mask_unique_2": [0], "metadata_identical": true, "label_conflict": false, "resolution_status": "DUPLICATE_SAMPLE", "reason": "image pixel-identical, masks identical (both empty); recommend excluding No_oil/00543 (higher ID, likely packaging repeat) from future train pool"}]
+Evidence: {"G1": {"img1_meta": "{'mtime': '2023-01-13T18:25:04.871666+00:00', 'size': 41857591, 'ok': True, 'width': 2048, 'height': 2048, 'count': 2, 'dtypes': ['float32', 'float32'], 'crs': 'EPSG:4326', 'transform': (8.983152841195215e-05, 0.0, 30.625126448259813, 0.0, -8.983152841195215e-05, 32.269626175898125, 0.0, 0.0, 1.0), 'bounds': (30.625126448259813, 32.08565120571045, 30.80910141844749, 32.269626175898125), 'nodata': None, 'compression': 'lzw', 'tags': {'TIFFTAG_XRESOLUTION': '1', 'TIFFTAG_YRESOLUTION': '1', 'TIFFTAG_RESOLUTIONUNIT': '1 (unitless)', 'AREA_OR_POINT': 'Area'}, 'band_tags': {1: {}, 2: {}}}", "img2_meta": "{'mtime': '2023-01-13T18:25:04.871666+00:00', 'size': 41857591, 'ok': True, 'width': 2048, 'height': 2048, 'count': 2, 'dtypes': ['float32', 'float32'], 'crs': 'EPSG:4326', 'transform': (8.983152841195215e-05, 0.0, 30.625126448259813, 0.0, -8.983152841195215e-05, 32.269626175898125, 0.0, 0.0, 1.0), 'bounds': (30.625126448259813, 32.08565120571045, 30.80910141844749, 32.269626175898125), 'nodata': None, 'compression': 'lzw', 'tags': {'TIFFTAG_XRESOLUTION': '1', 'TIFFTAG_YRESOLUTION': '1', 'TIFFTAG_RESOLUTIONUNIT': '1 (unitless)', 'AREA_OR_POINT': 'Area'}, 'band_tags': {1: {}, 2: {}}}", "img1_sha256": "927b382ebffc2f84447a17b80b30e6c3f1f6758fcb8d6e7a13e7c4de70932405", "img2_sha256": "927b382ebffc2f84447a17b80b30e6c3f1f6758fcb8d6e7a13e7c4de70932405", "img1_pxmd5": "aa03188a43574ab1e89db477ec580eff", "img2_pxmd5": "aa03188a43574ab1e89db477ec580eff", "mask1_meta": 
+Resolution: G1 MANUAL REVIEW REQUIRED (label conflict, no authoritative signal). G2/G3 DUPLICATE_SAMPLE: recommend excluding Oil/00357 and No_oil/00543 from future train pool; nothing deleted.
+Confidence: HIGH (identity), LOW (authority - no evidence exists in repo)
+
+ISSUE_2_MASK_AUTHORITY
+Status: RESOLVED_FOR_B1_PAIRS__NESTED_SET_UNRESOLVED
+Findings: {"exact_hash_overlaps": 300, "same_id_differs": 118, "no_same_id": 32}
+Evidence: "mask_set_comparison.csv (450 rows); SCIFIO tags on nested masks"
+Resolution: FLAT_MASKS_AUTHORITATIVE for B1 paired training; nested set quarantined (do not merge). Nested provenance: UNRESOLVED.
+Confidence: HIGH (pairing), MEDIUM (nested characterisation)
+
+ISSUE_3_SAR
+Status: UNCONFIRMED__PROVIDER_EVIDENCE_MISSING
+Findings: "2x float32; NO polarization/sigma0/dB tags; no docs in dataset/"
+Evidence: "sar_representation_report.txt"
+Resolution: POLARIZATION=UNKNOWN; REPRESENTATION=UNCONFIRMED (dB-like hypothesis, LOW confidence). Normalization stats MUST NOT be computed yet.
+Confidence: UNKNOWN
+
+ISSUE_4_ODD_DIMS
+Status: RESOLVED_KEEP_AS_IS_WITH_TILING_CONSTRAINT
+Findings: [{"file": "Lookalike/00140.tif", "image_shape": "2048x2148", "mask_shape": "2048x2148", "bands": 2, "dtype": "float32+float32", "crs": "EPSG:4326", "nodata": null, "mask_unique": [0], "mask_fg": 0, "dimensionally_aligned": "YES", "corrupt": false, "decision": "KEEP_AS_IS"}, {"file": "Lookalike/00166.tif", "image_shape": "2049x2048", "mask_shape": "2049x2048", "bands": 2, "dtype": "float32+float32", "crs": "EPSG:4326", "nodata": null, "mask_unique": [0], "mask_fg": 0, "dimensionally_aligned": "YES", "corrupt": false, "decision": "KEEP_AS_IS"}, {"file": "Lookalike/00288.tif", "image_shape": "2048x2047", "mask_shape": "2048x2047", "bands": 2, "dtype": "float32+float32", "crs": "EPSG:4326", "nodata": null, "mask_unique": [0], "mask_fg": 0, "dimensionally_aligned": "YES", "corrupt": false, "decision": "KEEP_AS_IS"}, {"file": "Lookalike/00390.tif", "image_shape": "2048x2248", "mask_shape": "2048x2248", "bands": 2, "dtype": "float32+float32", "crs": "EPSG:4326", "nodata": null, "mask_unique": [0], "mask_fg": 0, "dimensionally_aligned": "YES", "corrupt": false, "decision": "KEEP_AS_IS"}]
+Evidence: "all 4 files fully readable, valid 2x float32, EPSG:4326, masks present and dimensionally aligned (YES x4); geometry differs => legitimate source sizes, not corruption"
+Resolution: KEEP_AS_IS x4; exclude from fixed 2048 tiling assumptions / filter at split stage
+Confidence: HIGH
+
+ISSUE_5_TEST_INDEPENDENCE
+Status: VERIFIED_NO_EXACT_DUPLICATES__SCENE_INDEPENDENCE_UNVERIFIABLE
+Findings: {"exact_train_test_image_dupes": 0, "geo_overlaps": 0}
+Evidence: "train_test_independence.txt (full-array md5 of 2570 train + 450 test)"
+Resolution: no exact leakage; basename reuse = numbering artefact; scene-level independence UNVERIFIABLE_FROM_AVAILABLE_METADATA
+Confidence: HIGH (exact), UNVERIFIABLE (scene)
+
+DATASET_STATUS: NOT_READY
+REASON: G1 label conflict unresolved (contradictory ground truth); SAR representation unconfirmed (preprocessing depends on it).
+NEXT: Quarantine G1 pair + G2/G3 second copies + 4 odd-dim files at split time (no deletion); use FLAT masks only; obtain provider confirmation of radiometry/polarization before normalization.
+==================================================================
+CORRECTION ISSUE 2 (post-analysis):
+{
+  "correction": "The 300 exact-hash overlaps are VACUOUS: every flat No_oil/Lookalike mask is an identical all-zero array, so any all-zero nested mask hash-matches by construction. Meaningful comparison is Oil only: 0/150 hash overlaps.",
+  "oil_nested_vs_flat_same_id_IoU": {
+    "n_pairs": 118,
+    "mean": 0.0215,
+    "median": 0.0028,
+    "zero_overlap_pairs": 41,
+    "identical_pairs": 0,
+    "histogram_bins_[0,0.01,0.1,0.3,0.5,0.7,0.9,1.0]": [
+      74,
+      38,
+      5,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "oil_ids_with_no_flat_counterpart": 32,
+  "oil_ids_missing_list": [
+    "00033",
+    "00034",
+    "00035",
+    "00044",
+    "00049",
+    "00060",
+    "00063",
+    "00066",
+    "00068",
+    "00070",
+    "00071",
+    "00072",
+    "00081",
+    "00083",
+    "00105",
+    "00106",
+    "00107",
+    "00109",
+    "00110",
+    "00120",
+    "00122",
+    "00124",
+    "00125",
+    "00128",
+    "00129",
+    "00136",
+    "00137",
+    "00138",
+    "00139",
+    "00141",
+    "00144",
+    "00147"
+  ],
+  "nested_oil_dims": "all 2048x2048",
+  "illustration": "processed_dataset/reports/visual_qc/REVIEW_Oil_00000_flat_vs_nested.png (flat fg 14539 vs nested fg 2015200 on same image)",
+  "conclusion": "Nested Oil masks are NOT annotations of the paired flat Oil images (median IoU 0.003, 41 zero-overlap, 32 IDs absent from flat set) -> category E/D: masks from a different sample/version. QUARANTINE nested set; FLAT_MASKS_AUTHORITATIVE for B1 pairs."
+}
+
+G1 MTIME FORENSICS: image mtimes identical (same packaging batch); masks ~2 days apart (divergent annotation batches). Mechanism explained; authority still MANUAL REVIEW.

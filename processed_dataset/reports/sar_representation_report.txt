@@ -1,0 +1,39 @@
+SAR REPRESENTATION INVESTIGATION (read-only)
+
+SAR BAND COUNT: 2 (every train + test image; float32 + float32)
+SAR DTYPE: float32
+BAND 1 MEANING: UNKNOWN band index (no band description / polarization tag)
+BAND 2 MEANING: UNKNOWN band index (no band description / polarization tag)
+POLARIZATION: UNKNOWN
+  Evidence FOR VV/VH: none found in files.
+  Evidence FOR HH/HV: none found in files.
+  Evidence AGAINST any assignment: TIFF tags contain only resolution/AREA_OR_POINT
+    keys; band_tags are empty dicts; filenames are bare sequential IDs (00000.tif);
+    directories carry only class names; no README/sidecar/XML/CSV in dataset/
+    (non-TIFF file count in dataset: 0).
+  Confidence: UNKNOWN (nothing to infer from; numerical comparison of the two
+    bands must NOT be used to assign polarization).
+RADIOMETRIC REPRESENTATION: UNCONFIRMED (candidate: log-scaled/dB-like backscatter)
+  Evidence FOR dB/log-scaled backscatter: strongly negative float32 values
+    (Oil b1 file-means ~ -33, b2 ~ -20; reservoir P50 -33.6/-20.5); uint-like,
+    linear power/intensity would be non-negative, but ~half the files contain
+    no >=0 pixels at all and global minima reach -128 — inconsistent with raw
+    linear power/amplitude; test Oil reaches +29.6 (bright targets) consistent
+    with a log scale's positive tail.
+  Evidence AGAINST confirming dB: no tag states dB/sigma0/gamma0/beta0; minima
+    (-128) and files with max exactly 0.0 are atypical of clean sigma0-dB and
+    suggest undocumented fill/clipping; visual similarity of range is explicitly
+    NOT confirmation.
+  amplitude/intensity/power/sigma0/gamma0/beta0/linear: each LOW-or-UNKNOWN
+    confidence; no supporting tag or doc for any of them.
+  Confidence: LOW (dB-like hypothesis only) / UNKNOWN (authoritative value).
+EVIDENCE: per-file CSVs in this reports dir; TIFF tag dump scanned 10 sample files,
+  keyword hits for ['VV', 'VH', 'HH', 'HV', 'POLAR', 'SIGMA', 'GAMMA', 'BETA', 'DB', 'DECIBEL', 'AMPLITUDE', 'INTENSITY', 'CALIB', 'SENTINEL', 'PROVIDER', 'SOURCE', 'MISSION', 'COPERNICUS', 'GRD', 'SLC']: NONE; dataset docs: none present.
+CONFIDENCE: band count HIGH; dtype HIGH; everything semantic UNKNOWN/LOW.
+UNRESOLVED QUESTIONS:
+  1. Which physical quantity (sigma0/gamma0/beta0/dn?) and scaling (dB/linear)?
+  2. Which polarization per band (provider annotation needed)?
+  3. Meaning of extreme minima (<= -112) and max==0.0 files (fill vs real)?
+  4. Why test Oil stats differ (mean -29.1 vs train -33.2)?
+NEXT STAGE IMPACT: normalization/despeckling parameters depend on Q1; do NOT
+  compute normalization stats until representation is confirmed by the provider.
