@@ -27,3 +27,11 @@ Thumbs.db
 Desktop.ini
 .vscode/
 .idea/
+
+# Scratch verification scripts (never committed)
+tools/tmp_*.py
+
+# Investigation artifacts: reservoir pools, census dumps (live in %TEMP%, must
+# never be committed if copied into the repo)
+*.npy
+audit_out*.json

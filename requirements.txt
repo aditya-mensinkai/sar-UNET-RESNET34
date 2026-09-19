@@ -1,6 +1,9 @@
-# Direct dependencies for tools/validate_b1_dataset.py,
-// tools/resolve_b1_issues.py, tools/investigate_sar_radiometry.py,
-// tools/create_dataset_split.py  (install: pip install -r requirements.txt)
+# Direct dependencies for tools/*.py and preprocessing/*.py
+# (install: pip install -r requirements.txt)
+# preprocessing/ is intentionally numpy+rasterio+matplotlib only: no scipy,
+# torch, cv2, or albumentations, so the same 16 GB Windows box runs it.
+# The zero-value investigations (local + source-level) used this same set
+# plus stdlib only; downloaded/source-analysis artifacts go to %TEMP%.
 rasterio==1.5.1
 numpy==2.5.3
 matplotlib==3.11.2

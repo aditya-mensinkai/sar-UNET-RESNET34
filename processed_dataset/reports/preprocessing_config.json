@@ -1,0 +1,70 @@
+{
+  "random_seed": 42,
+  "calibration_applied": false,
+  "calibration_type": "none (input is author-calibrated Sigma0 dB; see processed_dataset/reports/sar_radiometry_report.txt)",
+  "source_units": "sigma0_dB",
+  "output_units": "sigma0_dB",
+  "db_epsilon": 1e-10,
+  "LEE_FILTER_ENABLED": true,
+  "LEE_WINDOW_SIZE": 5,
+  "LEE_ALLOWED_WINDOWS": [
+    3,
+    5,
+    7
+  ],
+  "LEE_NOISE_VAR": null,
+  "NORMALIZATION_ENABLED": true,
+  "NORMALIZATION_METHOD": "percentile",
+  "NORMALIZATION_LOW": 1,
+  "NORMALIZATION_HIGH": 99,
+  "channels": [
+    "band1 (VV or VH - UNKNOWN order)",
+    "band2 (VH or VV - UNKNOWN order)"
+  ],
+  "n_channels": 2,
+  "TILE_SIZE": 256,
+  "TILE_STRIDE": 192,
+  "AUG_HFLIP": true,
+  "AUG_VFLIP": true,
+  "AUG_ROT90": true,
+  "AUG_SMALL_ROTATIONS": false,
+  "AUG_SPECKLE_INJECTION": false,
+  "AUG_SPECKLE_STD": 0.05,
+  "STITCH_OVERLAP": "probability_average",
+  "PRED_THRESHOLD": 0.5,
+  "NORMALIZATION_BOUNDS": {
+    "method": "global-percentile-reservoir",
+    "low": 1.0,
+    "high": 99.0,
+    "bands": [
+      [
+        -41.22778857146995,
+        0.0
+      ],
+      [
+        -34.39919176014351,
+        0.0
+      ]
+    ],
+    "band_0": {
+      "p1": -41.22778857146995,
+      "p99": 0.0
+    },
+    "band_1": {
+      "p1": -34.39919176014351,
+      "p99": 0.0
+    },
+    "provenance": {
+      "split": "train",
+      "n_scenes": 2053,
+      "n_bands": 2,
+      "per_file": 4000,
+      "cap_per_band": 4000000,
+      "stride": 4,
+      "seed": 42,
+      "lee_enabled": true,
+      "lee_window": 5,
+      "note": "deterministic seeded reservoir over post-Lee dB pixels; sample quantiles of the pooled train distribution"
+    }
+  }
+}

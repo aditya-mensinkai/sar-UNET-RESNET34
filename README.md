@@ -39,6 +39,35 @@ Validation/audit record for the Sentinel-1 SAR oil-spill segmentation dataset
    0 physical copies) → `processed_dataset/{train,val,test}/images|masks/<class>/`,
    `metadata/split_index.csv`, `metadata/quarantine/quarantine.csv`,
    `reports/dataset_split_report.txt`.
+5. **Preprocessing** (`preprocessing/`, numpy-only): inspect → calibration-gate
+   (SKIPPED — input already Sigma0 dB, `calibration_applied=false`) → dB→linear →
+   Lee 5×5 (configurable 3/5/7, linear domain only) → linear→dB → percentile
+   (P1–P99) normalization → train-only exact flips/rot90 (masks stay binary) →
+   deterministic 256/192 tiling → overlap-average stitching, threshold after
+   reconstruction. Outputs: `reports/preprocessing_config.json`,
+   `reports/preprocessing_qc/` (8-panel QC figures + stats).
+6. **Preprocessing audit** (read-only, no repo writes): full verification of the
+   `preprocessing/` implementation — Lee math, windows, conversions, tiling,
+   stitching, augmentation, split hygiene all PASS with measured evidence.
+   Two FAILs found and fixed (see 7). Verdict: YES, WITH SPECIFIC FIXES.
+7. **Preprocessing fixes** (minimal, Lee/tiling/augmentation untouched):
+   - Global frozen normalization bounds from the 2053-scene train split
+     (deterministic seeded reservoir over post-Lee dB; one scene in RAM):
+     **band 0 P1 = −41.2278, P99 = 0.0; band 1 P1 = −34.3992, P99 = 0.0**,
+     saved as `NORMALIZATION_BOUNDS` in `preprocessing_config.json`.
+   - `process_scene(..., bounds=None)` now **requires** frozen bounds for every
+     split (train/val/test/inference) — missing bounds raise `ValueError`;
+     per-scene refitting is impossible through the pipeline.
+   - `db_to_linear` is now exactly `10**(dB/10)` (additive eps removed);
+     zero-protection lives only in `linear_to_db` (`max(lin, eps)`, 0 → −100 dB).
+8. **Zero-value investigations** (read-only, local + source-level, config untouched):
+   ~2.6% of train pixels are exact 0.0, forming single edge-anchored rectangles
+   with 100% inter-band coincidence (e.g. `Oil/01034` 60.8% zeros, rows 663–2047;
+   two 100%-blank test scenes). No tag/doc declares NoData; author code paywalled
+   or absent; SNAP terrain-correction sources confirm no-coverage areas are written
+   as 0. P99 = 0 is mathematically forced and verified. Classification:
+   **LIKELY FILL / NODATA — NOT PROVEN**; recommendation PATH D (confirm with
+   authors before any masking/normalization change).
 
 ## Key findings
 
@@ -53,11 +82,21 @@ Validation/audit record for the Sentinel-1 SAR oil-spill segmentation dataset
 - **Odd dimensions:** 4 Lookalike files (00140/00166/00288/00390) are valid, aligned, kept as-is.
 - **Split:** train 2053 (958/547/548) · val 513 (239/137/137) · test 450 (150×3); 0 hash
   mismatches, 0 cross-split overlaps. No NaN/Inf/NoData anywhere.
+- **Normalization (frozen):** train-only global P1/P99 — band 0 [−41.2278, 0.0],
+  band 1 [−34.3992, 0.0]; 2.66%/2.70% of pixels saturate at 1.0 (zeros + rare
+  bright scatterers). Val/test/inference reuse these bounds; refitting raises.
+- **Zero pixels:** ~2.6% exact zeros (edge-anchored fill-like blocks, both bands
+  identical); test mean 7.8%. Treated as ordinary pixels until authors confirm
+  fill semantics — no masking, no P99 change.
 
 ## DATASET_STATUS: NOT_READY
 
-Blockers: G1 contradictory ground truth; per-band polarization order unconfirmed.
+Blockers: G1 contradictory ground truth; per-band polarization order unconfirmed;
+zero fill-semantics unconfirmed by authors (PATH D pending).
 (Missing mask CRS is accepted — pixel alignment verified via dimensions.)
+No model code exists in this repo yet: any future LinkNet+ResNet34 training must
+use the `preprocessing/` chain exactly as recorded in `preprocessing_config.json`
+(train≡inference); Lee-window ablations (A: off, B: 3, C: 5, D: 7) require retraining.
 
 ## Reproduce
 
@@ -66,6 +105,8 @@ Blockers: G1 contradictory ground truth; per-band polarization order unconfirmed
 .venv\Scripts\python.exe tools\resolve_b1_issues.py  --dataset dataset --out processed_dataset
 .venv\Scripts\python.exe tools\investigate_sar_radiometry.py --dataset dataset --out processed_dataset
 .venv\Scripts\python.exe tools\create_dataset_split.py --dataset dataset --out processed_dataset --seed 42
+$env:PYTHONPATH = "<root>"
+.venv\Scripts\python.exe -m preprocessing.visualize --image <sar.tif> --mask <mask.tif> --out <qc.png> [--lee-window 5] [--no-lee]
 ```
 
 `dataset/` is the immutable source (newest write May 2023). Do not delete it until
