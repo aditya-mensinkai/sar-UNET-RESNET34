@@ -36,7 +36,7 @@ def compute_metrics(pred, truth):
 
 
 def process_scene(image_path, mask_path=None, cfg=None, rng=None, split="train",
-                  bounds=None):
+                  bounds=None, augment_override=None, compute_stats=True):
     """Full chain for one scene. Returns dict of stage arrays + stats. Raises on bad data.
 
     Normalization uses FROZEN GLOBAL TRAINING bounds (normalization.apply with
@@ -45,6 +45,18 @@ def process_scene(image_path, mask_path=None, cfg=None, rng=None, split="train",
     normalization.fit_global_bounds over the train split (or the
     "normalization_bounds" config entry). Use fit_global_bounds() explicitly to
     (re)fit; never fit inside scene processing.
+
+    Augmentation follows the split convention (train augments iff rng given,
+    val/test never) unless augment_override is set: True forces augmentation
+    (requires rng+mask), False disables it (e.g. tile materialization stores
+    unaugmented tiles; augmentation stays dynamic at train time).
+
+    compute_stats : bool, default True
+        When False, the 'stats' dict in the returned output is set to None
+        instead of being computed. This skips ~24 numpy percentile/median calls
+        on 2048x2048 float64 arrays per scene, giving a substantial speedup
+        during training where stats are never consumed. QC scripts that need the
+        stats dict must pass compute_stats=True (the default, backward-compatible).
     """
     cfg = validate_cfg(cfg or {})
     if bounds is None:
@@ -85,23 +97,27 @@ def process_scene(image_path, mask_path=None, cfg=None, rng=None, split="train",
             raise ValueError("image/mask dimension mismatch")
         if not set(np.unique(mask).tolist()) <= {0, 1}:
             raise ValueError("mask not binary {0,1}")
-    stats = {k: {"min": float(np.min(v)), "max": float(np.max(v)),
-                 "mean": float(np.mean(v)), "std": float(np.std(v)),
-                 "median": float(np.median(v)),
-                 "P1": float(np.percentile(v, 1)), "P99": float(np.percentile(v, 99))}
-             for k, v in (("linear", lin_f), ("db", db_f), ("normalized", norm))}
+    stats = None
+    if compute_stats:
+        stats = {k: {"min": float(np.min(v)), "max": float(np.max(v)),
+                     "mean": float(np.mean(v)), "std": float(np.std(v)),
+                     "median": float(np.median(v)),
+                     "P1": float(np.percentile(v, 1)), "P99": float(np.percentile(v, 99))}
+                 for k, v in (("linear", lin_f), ("db", db_f), ("normalized", norm))}
     out = {"calibrated_db": cal["values"], "linear": lin, "linear_filtered": lin_f,
            "db_filtered": db_f, "normalized": norm, "mask": mask,
            "bounds": bounds, "stats": stats, "meta": meta,
            "calibration": {k: cal[k] for k in ("calibration_applied", "calibration_type",
                                               "source_units", "output_units")}}
-    if mask is not None and split == "train":
+    if mask is not None and (augment_override or (augment_override is None and split == "train")):
         if rng is None:
-            raise ValueError("train split requires rng for augmentation")
+            raise ValueError("augmentation requires rng (train split or augment_override=True)")
         out["normalized"], out["mask"] = augmentation.augment(
             norm, mask, rng, hflip=cfg["AUG_HFLIP"], vflip=cfg["AUG_VFLIP"],
             rot90=cfg["AUG_ROT90"], speckle=cfg["AUG_SPECKLE_INJECTION"],
-            speckle_std=cfg["AUG_SPECKLE_STD"], enable=True)
+            speckle_std=cfg["AUG_SPECKLE_STD"],
+            hflip_p=cfg.get("AUG_HFLIP_P", 0.5), vflip_p=cfg.get("AUG_VFLIP_P", 0.5),
+            rot_choices=tuple(cfg.get("AUG_ROT_CHOICES", (0, 1, 2, 3))), enable=True)
     return out
 
 

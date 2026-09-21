@@ -1,0 +1,66 @@
+{
+ "experiment": "UNet-ResNet34-SAR",
+ "seed": 42,
+ "device": "cuda",
+ "model": {
+  "architecture": "UNet + ResNet34",
+  "encoder": "ResNet34",
+  "input_channels": 2,
+  "output_channels": 1,
+  "pretrained": false,
+  "params": 24426145
+ },
+ "dataset": {
+  "train_scenes": 2053,
+  "val_scenes": 513,
+  "test_scenes": 450,
+  "train_tiles": 32860,
+  "val_tiles": 8208,
+  "tile_size": 512,
+  "train_stride": 512,
+  "augmentation": false
+ },
+ "training": {
+  "epochs": 50,
+  "batch_size": 2,
+  "effective_batch_size": 2,
+  "learning_rate": 0.0001,
+  "optimizer": "Adam",
+  "weight_decay": 0.0,
+  "momentum": 0.9,
+  "scheduler": "none",
+  "scheduler_params": {
+   "step_size": 30,
+   "gamma": 0.1,
+   "tmax": 0,
+   "patience": 5,
+   "factor": 0.1
+  },
+  "gradient_accumulation": 1,
+  "mixed_precision": true,
+  "num_workers": 1,
+  "sampler": "scene_major",
+  "log_every": 500,
+  "early_stop_patience": 8,
+  "early_stop_min_delta": 0.0001
+ },
+ "loss": {
+  "name": "BCEDiceLoss",
+  "bce_weight": 0.5,
+  "dice_weight": 0.5,
+  "smooth": 1.0
+ },
+ "checkpoint": {
+  "directory": "checkpoints",
+  "best_metric": "val_dice",
+  "best_mode": "max"
+ },
+ "runtime": {
+  "torch": "2.14.0+cu126",
+  "torchvision": "0.29.0+cpu",
+  "cuda_version": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "vram_mb": 6442,
+  "timestamp": "2026-09-21T01:59:05"
+ }
+}

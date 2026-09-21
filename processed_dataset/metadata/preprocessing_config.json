@@ -1,0 +1,122 @@
+{
+  "augmentation": {
+    "color_jitter": false,
+    "elastic_deformation": false,
+    "enabled": false,
+    "horizontal_flip": false,
+    "note": "Library augmentation code (preprocessing/augmentation.py) is retained but never invoked: OilSpillTileDataset passes augment_override=False and the smoke test performs no RNG.",
+    "random_brightness": false,
+    "random_contrast": false,
+    "random_crop": false,
+    "random_noise": false,
+    "random_scaling": false,
+    "rotation": false,
+    "speckle_noise": false,
+    "vertical_flip": false
+  },
+  "band_order": {
+    "band_0": "unresolved",
+    "band_1": "unresolved",
+    "note": "Array order preserved exactly as stored; no VV/VH assignment (project decision pending)."
+  },
+  "calibration": {
+    "behavior": "pass-through gate: calibration.apply() returns input unchanged for sigma0_dB; raises for anything else (no invented constants)",
+    "current_dataset_status": "already calibrated Sigma0-dB",
+    "enabled": false,
+    "source_units": "sigma0_dB"
+  },
+  "experiment": {
+    "deterministic": true,
+    "model": "UNet-ResNet34 (future task; not implemented here)",
+    "name": "UNet-ResNet34-SAR"
+  },
+  "lee_filter": {
+    "enabled": true,
+    "kernel_size": 5,
+    "noise_variance": "estimated per band (LEE_NOISE_VAR=null)",
+    "type": "Lee"
+  },
+  "normalization": {
+    "lower_percentile": 1,
+    "method": "percentile",
+    "per_band": true,
+    "scope": "scene-level frozen bounds applied identically to every tile; no per-tile fitting",
+    "upper_percentile": 99
+  },
+  "preprocessing": {
+    "implementation": "preprocessing/pipeline.py::process_scene (reused, not duplicated)",
+    "operations": [
+      "calibration_gate",
+      "db_to_linear",
+      "lee_filter",
+      "linear_to_db",
+      "frozen_normalization"
+    ]
+  },
+  "reproducibility": {
+    "deterministic": true,
+    "random_augmentation": false,
+    "stride": 512,
+    "tile_size": 512
+  },
+  "split_behavior": {
+    "test": {
+      "augmentation": false,
+      "normalization_statistics": "frozen_training_statistics"
+    },
+    "train": {
+      "augmentation": false,
+      "normalization_statistics": "frozen_training_statistics"
+    },
+    "val": {
+      "augmentation": false,
+      "normalization_statistics": "frozen_training_statistics"
+    }
+  },
+  "statistics": {
+    "frozen": true,
+    "source": "Existing frozen project configuration (reports/preprocessing_config.json NORMALIZATION_BOUNDS); values preserved exactly, NOT recalculated in this task.",
+    "source_split": "train",
+    "test_uses_training_statistics": true,
+    "validation_uses_training_statistics": true,
+    "bands": [
+      [
+        -41.22778857146995,
+        0.0
+      ],
+      [
+        -34.39919176014351,
+        0.0
+      ]
+    ],
+    "provenance": {
+      "cap_per_band": 4000000,
+      "lee_enabled": true,
+      "lee_window": 5,
+      "method": "global-percentile-reservoir",
+      "n_bands": 2,
+      "n_scenes": 2053,
+      "per_file": 4000,
+      "seed": 42,
+      "stride": 4
+    },
+    "band_order_note": "positional: index 0 = band_0, index 1 = band_1; consumed directly by normalization.apply(bounds[\"bands\"])",
+    "band_0": {
+      "lower": -41.22778857146995,
+      "upper": 0.0
+    },
+    "band_1": {
+      "lower": -34.39919176014351,
+      "upper": 0.0
+    }
+  },
+  "tile": {
+    "tile_size": 512,
+    "train_stride": 512
+  },
+  "tiling": {
+    "edge_behavior": "existing tile_grid shifts final window to image boundary; no padding; full windows only; no dropped pixels (verified: skipped_edge_regions=[])",
+    "stride": 512,
+    "tile_size": 512
+  }
+}

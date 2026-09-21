@@ -1,0 +1,787 @@
+{
+ "experiment": {
+  "name": "UNet-ResNet34-SAR",
+  "tile_size": 512,
+  "augmentation": false,
+  "seed": 42
+ },
+ "output_directory": "processed_dataset/reports/visual_sanity/",
+ "display_mapping": "per-panel 2-98 percentile stretch, display only; tensors unmodified",
+ "overlay_channel": "Band 0 (band order unresolved; neutral naming)",
+ "selected_tiles": {
+  "Oil": [
+   "train_Oil_00924_x0000_y1536",
+   "train_Oil_00188_x0000_y0000",
+   "train_Oil_00031_x0512_y1024",
+   "train_Oil_00000_x0512_y0512"
+  ],
+  "No_oil": [
+   "train_No_oil_00347_x1024_y1024",
+   "train_No_oil_00312_x0000_y1536",
+   "train_No_oil_00283_x0512_y1024"
+  ],
+  "Lookalike": [
+   "train_Lookalike_00169_x1024_y0512",
+   "train_Lookalike_00125_x1536_y1536",
+   "train_Lookalike_00108_x0000_y0000"
+  ]
+ },
+ "checks": {
+  "image_mask_alignment": "PASS",
+  "coordinate_bounds": "PASS",
+  "xy_orientation": "PASS",
+  "mask_binary": "PASS",
+  "spatial_shift": "PASS",
+  "transpose": "PASS",
+  "resize": "PASS",
+  "normalization": "PASS",
+  "nan": "PASS",
+  "inf": "PASS",
+  "orientation_check": {
+   "spatial_axes": "H=y, W=x",
+   "transposed": false,
+   "resized": false,
+   "status": "PASS"
+  }
+ },
+ "samples": [
+  {
+   "tile_id": "train_Oil_00924_x0000_y1536",
+   "split": "train",
+   "class": "Oil",
+   "image_id": "Oil/00924.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 0,
+    "y": 1536,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.0,
+     "max": 1.0,
+     "mean": 0.1756,
+     "std": 0.06327,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.33453,
+     "max": 1.0,
+     "mean": 0.50201,
+     "std": 0.04002,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -49.422,
+     "max": 9.196
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_Oil_00188_x0000_y0000",
+   "split": "train",
+   "class": "Oil",
+   "image_id": "Oil/00188.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 0,
+    "y": 0,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.0,
+     "max": 0.54614,
+     "mean": 0.25751,
+     "std": 0.04552,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.33365,
+     "max": 0.6597,
+     "mean": 0.45771,
+     "std": 0.032,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -48.448,
+     "max": -11.674
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_Oil_00031_x0512_y1024",
+   "split": "train",
+   "class": "Oil",
+   "image_id": "Oil/00031.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 512,
+    "y": 1024,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.0,
+     "max": 0.48907,
+     "mean": 0.18591,
+     "std": 0.05295,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.18974,
+     "max": 0.72964,
+     "mean": 0.34506,
+     "std": 0.03545,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -48.156,
+     "max": -9.298
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_No_oil_00347_x1024_y1024",
+   "split": "train",
+   "class": "No_oil",
+   "image_id": "No_oil/00347.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 1024,
+    "y": 1024,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.4594,
+     "max": 0.82113,
+     "mean": 0.65241,
+     "std": 0.03328,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.51485,
+     "max": 0.98598,
+     "mean": 0.75817,
+     "std": 0.04047,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -23.318,
+     "max": -0.464
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_No_oil_00312_x0000_y1536",
+   "split": "train",
+   "class": "No_oil",
+   "image_id": "No_oil/00312.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 0,
+    "y": 1536,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.0,
+     "max": 0.47248,
+     "mean": 0.2374,
+     "std": 0.04842,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.38444,
+     "max": 0.66993,
+     "mean": 0.51144,
+     "std": 0.03092,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -48.635,
+     "max": -11.28
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_No_oil_00283_x0512_y1024",
+   "split": "train",
+   "class": "No_oil",
+   "image_id": "No_oil/00283.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 512,
+    "y": 1024,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.07308,
+     "max": 0.89951,
+     "mean": 0.43473,
+     "std": 0.12384,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.37014,
+     "max": 1.0,
+     "mean": 0.57458,
+     "std": 0.08333,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -43.392,
+     "max": 2.704
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_Lookalike_00169_x1024_y0512",
+   "split": "train",
+   "class": "Lookalike",
+   "image_id": "Lookalike/00169.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 1024,
+    "y": 512,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.0,
+     "max": 0.40558,
+     "mean": 0.24419,
+     "std": 0.04596,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.0,
+     "max": 0.47402,
+     "mean": 0.26633,
+     "std": 0.06124,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -48.123,
+     "max": -18.061
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_Lookalike_00125_x1536_y1536",
+   "split": "train",
+   "class": "Lookalike",
+   "image_id": "Lookalike/00125.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 1536,
+    "y": 1536,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.43153,
+     "max": 0.92841,
+     "mean": 0.66505,
+     "std": 0.06876,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.47339,
+     "max": 1.0,
+     "mean": 0.78322,
+     "std": 0.08707,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -25.765,
+     "max": 3.988
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_Lookalike_00108_x0000_y0000",
+   "split": "train",
+   "class": "Lookalike",
+   "image_id": "Lookalike/00108.tif",
+   "selection_reason": "seeded_random",
+   "coordinates": {
+    "x": 0,
+    "y": 0,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.30431,
+     "max": 0.83549,
+     "mean": 0.65616,
+     "std": 0.05195,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.28601,
+     "max": 0.98431,
+     "mean": 0.73928,
+     "std": 0.06819,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -31.073,
+     "max": -0.518
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0
+    ],
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 0,
+    "oil_fraction": 0.0,
+    "bbox": null
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  },
+  {
+   "tile_id": "train_Oil_00000_x0512_y0512",
+   "split": "train",
+   "class": "Oil",
+   "image_id": "Oil/00000.tif",
+   "selection_reason": "oil_positive_required",
+   "coordinates": {
+    "x": 512,
+    "y": 512,
+    "tile_width": 512,
+    "tile_height": 512,
+    "original_width": 2048,
+    "original_height": 2048
+   },
+   "image": {
+    "shape": [
+     2,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "band_0": {
+     "min": 0.0,
+     "max": 0.43659,
+     "mean": 0.23018,
+     "std": 0.05564,
+     "nan": 0,
+     "inf": 0
+    },
+    "band_1": {
+     "min": 0.0,
+     "max": 0.56277,
+     "mean": 0.39226,
+     "std": 0.04256,
+     "nan": 0,
+     "inf": 0
+    },
+    "raw_source_window_stats": {
+     "min": -48.939,
+     "max": -14.962
+    }
+   },
+   "mask": {
+    "shape": [
+     1,
+     512,
+     512
+    ],
+    "dtype": "float32",
+    "unique_values": [
+     0.0,
+     1.0
+    ],
+    "oil_pixel_count": 6260,
+    "oil_fraction": 0.02388
+   },
+   "mask_geometry": {
+    "oil_pixel_count": 6260,
+    "oil_fraction": 0.02388,
+    "bbox": {
+     "x_min": 252,
+     "y_min": 440,
+     "x_max": 511,
+     "y_max": 511
+    }
+   },
+   "checks": {
+    "alignment": "PASS",
+    "coordinates": "PASS",
+    "orientation": "PASS",
+    "binary_mask": "PASS",
+    "no_shift": "PASS",
+    "no_transpose": "PASS",
+    "no_resize": "PASS",
+    "finite_values": "PASS"
+   }
+  }
+ ],
+ "problems": [],
+ "overall_status": "PASS"
+}

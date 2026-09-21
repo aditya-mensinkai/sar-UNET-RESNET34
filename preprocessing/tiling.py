@@ -44,6 +44,32 @@ def tile_image(image, source_id, transform, crs, size=256, stride=192):
                "transform": tuple(t), "crs": str(crs), "source_shape": (h, w)}
 
 
+def tile_pair(image, mask, source_id, transform, crs, size=256, stride=192):
+    """Tile image (C,H,W) and mask (H,W) with the EXACT same coordinates.
+
+    Yields dicts with both arrays plus shared geospatial bookkeeping. Mask is
+    never resized or resampled - pure slicing, so labels stay {0,1} by construction.
+    """
+    if transform is None or crs is None:
+        raise ValueError("tiling requires georeferencing (transform+CRS); refusing to fake it")
+    img = np.asarray(image)
+    m = np.asarray(mask)
+    if img.shape[-2:] != m.shape[-2:]:
+        raise ValueError(f"image/mask spatial mismatch {img.shape} vs {m.shape}")
+    if img.ndim != 3 or m.ndim != 2:
+        raise ValueError(f"expected image (C,H,W) + mask (H,W), got {img.shape} / {m.shape}")
+    h, w = img.shape[-2:]
+    for n, (r, c) in enumerate(tile_grid(h, w, size, stride)):
+        t = list(transform)
+        t[2] = transform[2] + c * transform[0]  # xoff shift (affine a,e order assumed)
+        t[5] = transform[5] + r * transform[4]
+        yield {"source_id": source_id, "tile_index": n, "row": r // stride, "col": c // stride,
+               "offset_y": r, "offset_x": c,
+               "image": np.array(img[:, r:r + size, c:c + size], copy=True),
+               "mask": np.array(m[r:r + size, c:c + size], copy=True),
+               "transform": tuple(t), "crs": str(crs), "source_shape": (h, w)}
+
+
 def stitch(tiles, shape, size=256, method="probability_average", threshold=0.5):
     """Reconstruct (H, W) probabilities by overlap averaging, then threshold."""
     if method != "probability_average":

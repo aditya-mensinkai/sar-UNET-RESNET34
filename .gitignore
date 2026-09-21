@@ -31,6 +31,27 @@ Desktop.ini
 # Scratch verification scripts (never committed)
 tools/tmp_*.py
 
+# Model checkpoints / training outputs (large, regenerable)
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+lightning_logs/
+runs/
+
+# Run outputs (regenerable — rerun the tool to reproduce)
+results/
+evaluation/
+run_logs/
+processed_dataset/tile_cache/
+
+# Per-scene analysis cache (regenerable via tools/val_analysis.py)
+*.npz
+
+# One-off benchmark / smoke logs at repo root
+smoke_results.txt
+bench_results*.txt
+
 # Investigation artifacts: reservoir pools, census dumps (live in %TEMP%, must
 # never be committed if copied into the repo)
 *.npy

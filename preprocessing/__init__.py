@@ -37,10 +37,18 @@ DEFAULTS = {
     # --- tiling ---
     "TILE_SIZE": 256,
     "TILE_STRIDE": 192,
+    # --- tile selection: every oil tile retained; background kept at BG_KEEP_FRACTION
+    # (deterministic seeded subsample when < 1.0); thresholds explicit, recorded per tile
+    "MIN_OIL_FRACTION": 0.0,       # oil tiles are NEVER rejected for low fraction
+    "BG_KEEP_FRACTION": 1.0,       # 1.0 = keep all background tiles
+    "BG_SEED": 42,
     # --- augmentation (train only; geometric, mask = nearest/exact) ---
     "AUG_HFLIP": True,
     "AUG_VFLIP": True,
     "AUG_ROT90": True,             # 90/180/270 via exact rot90 (no interpolation)
+    "AUG_HFLIP_P": 0.5,
+    "AUG_VFLIP_P": 0.5,
+    "AUG_ROT_CHOICES": [0, 1, 2, 3],
     "AUG_SMALL_ROTATIONS": False,  # off: would need interpolation (mask risk)
     "AUG_SPECKLE_INJECTION": False,
     "AUG_SPECKLE_STD": 0.05,
@@ -72,6 +80,16 @@ def validate(cfg):
         errs.append("TILE_STRIDE > TILE_SIZE leaves coverage gaps")
     if cfg.get("n_channels") != 2:
         errs.append("this dataset provides exactly 2 SAR bands; channel fabrication is forbidden")
+    for k in ("AUG_HFLIP_P", "AUG_VFLIP_P"):
+        p = cfg.get(k)
+        if not (isinstance(p, (int, float)) and 0.0 <= p <= 1.0):
+            errs.append(f"{k} must be in [0,1], got {p!r}")
+    if not set(cfg.get("AUG_ROT_CHOICES", [])) <= {0, 1, 2, 3}:
+        errs.append(f"AUG_ROT_CHOICES must be subset of {{0,1,2,3}}")
+    if not (0.0 <= cfg.get("MIN_OIL_FRACTION", -1) <= 1.0):
+        errs.append("MIN_OIL_FRACTION must be in [0,1]")
+    if not (0.0 < cfg.get("BG_KEEP_FRACTION", 0) <= 1.0):
+        errs.append("BG_KEEP_FRACTION must be in (0,1]")
     if errs:
         raise ValueError("preprocessing config invalid: " + "; ".join(errs))
     return dict(cfg)

@@ -1,0 +1,22 @@
+TILE DATASET STATISTICS (measured, no target ratios imposed)
+tile=256 stride=256 overlap=0; filtering: keep every valid tile (MIN_OIL_FRACTION=0.0, BG_KEEP_FRACTION=1.0); reject only invalid.
+train/Oil: scenes=958 tiles_gen=61312 retained=61312 rejected=0 oil_tiles=12506 bg_tiles=48806 oilfrac(min/max/mean/med)=0.00002/1.00000/0.14339/0.07269
+  tiles/scene: 64.0
+train/No_oil: scenes=547 tiles_gen=35008 retained=35008 rejected=0 oil_tiles=0 bg_tiles=35008 oilfrac(min/max/mean/med)=0.00000/0.00000/0.00000/0.00000
+  tiles/scene: 64.0
+train/Lookalike: scenes=548 tiles_gen=35096 retained=35096 rejected=0 oil_tiles=0 bg_tiles=35096 oilfrac(min/max/mean/med)=0.00000/0.00000/0.00000/0.00000
+  tiles/scene: 64.0
+val/Oil: scenes=239 tiles_gen=15296 retained=15296 rejected=0 oil_tiles=3265 bg_tiles=12031 oilfrac(min/max/mean/med)=0.00002/1.00000/0.14962/0.07617
+  tiles/scene: 64.0
+val/No_oil: scenes=137 tiles_gen=8768 retained=8768 rejected=0 oil_tiles=0 bg_tiles=8768 oilfrac(min/max/mean/med)=0.00000/0.00000/0.00000/0.00000
+  tiles/scene: 64.0
+val/Lookalike: scenes=137 tiles_gen=8768 retained=8768 rejected=0 oil_tiles=0 bg_tiles=8768 oilfrac(min/max/mean/med)=0.00000/0.00000/0.00000/0.00000
+  tiles/scene: 64.0
+test/Oil: scenes=150 tiles_gen=9600 retained=9600 rejected=0 oil_tiles=2807 bg_tiles=6793 oilfrac(min/max/mean/med)=0.00002/1.00000/0.33976/0.19821
+  tiles/scene: 64.0
+test/No_oil: scenes=150 tiles_gen=9600 retained=9600 rejected=0 oil_tiles=0 bg_tiles=9600 oilfrac(min/max/mean/med)=0.00000/0.00000/0.00000/0.00000
+  tiles/scene: 64.0
+test/Lookalike: scenes=150 tiles_gen=9600 retained=9600 rejected=0 oil_tiles=0 bg_tiles=9600 oilfrac(min/max/mean/med)=0.00000/0.00000/0.00000/0.00000
+  tiles/scene: 64.0
+TOTAL kept=193048 oil=18578 bg=174470 rejected=0
+scene_ids spanning >1 split label: 417 (known per-folder basename reuse, e.g. train Oil/00005 vs test Oil/00005 are different source scenes; source-level cross-split leakage = 0, verified by TEST 12 + B1 pixel-MD5)

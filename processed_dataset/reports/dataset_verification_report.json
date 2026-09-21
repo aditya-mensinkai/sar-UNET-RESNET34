@@ -1,0 +1,36 @@
+{
+ "total_images": 3016,
+ "valid_images": 3016,
+ "invalid_images": 0,
+ "missing_masks": 0,
+ "missing_images": 0,
+ "dimension_mismatches": 0,
+ "channel_counts": {
+  "2": 3016
+ },
+ "dtypes": {
+  "float32+float32": 3016
+ },
+ "dims": {
+  "2048x2048": 3012,
+  "2048x2248": 1,
+  "2049x2048": 1,
+  "2048x2047": 1,
+  "2048x2148": 1
+ },
+ "mask_values_global": [
+  0,
+  1
+ ],
+ "mask_empty_count": 1669,
+ "nan_total": 0,
+ "inf_total": 0,
+ "duplicate_sources_cross_split": [],
+ "split_counts": {
+  "train": 2053,
+  "val": 513,
+  "test": 450,
+  "quarantined": 0
+ },
+ "problems": []
+}
