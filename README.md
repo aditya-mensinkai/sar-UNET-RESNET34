@@ -1,189 +1,174 @@
-# Sentinel-1 SAR Oil-Spill Segmentation — Dataset & SAR Validation
+# SAR Oil-Spill Segmentation — U-Net / ResNet34
 
-Validation/audit record for the Sentinel-1 SAR oil-spill segmentation dataset
-(Trujillo-Acatitla et al., IPICYT). All validation is **read-only**: no script in
-`tools/` ever modifies, rewrites, or deletes files under `dataset/`.
+Semantic segmentation of possible oil-spill regions in Sentinel-1 SAR imagery.
+The model identifies pixels predicted to belong to oil-spill regions (`1 = predicted oil`, `0 = background`). It does **not** prove a spill: SAR dark regions can also be look-alikes (low-wind areas, biogenic slicks, wakes). Outputs are candidate polygons + files for downstream fusion; there is no database, API, or Docker integration in this repository.
 
-## Dataset identity (established from authoritative sources)
-
-| Item | Value |
-|---|---|
-| Source | Zenodo official archives, CC BY 4.0 |
-| Part I (Oil, 1200) | `10.5281/zenodo.8346860` |
-| Part II (No_oil + Lookalike, 685 + 685) | `10.5281/zenodo.8253899` |
-| Part III (test, 150/class + ground truth) | `10.5281/zenodo.13761290` |
-| Paper | Trujillo-Acatitla et al. (2024), *Mar. Pollut. Bull.* 204, 116549 — `10.1016/j.marpolbul.2024.116549` |
-| Stored values | **Sigma0 backscatter in decibels (dB)**, 2-band `float32` TIFFs (HIGH confidence, author-stated) |
-| Polarization set | **{VV, VH}** (HIGH confidence, author-stated) |
-| Per-band order | **UNKNOWN** — band1=VV/band2=VH is *not* established (see conflict note below) |
-
-> **Band-order conflict (unresolved, not guessed):** an unrelated third-party
-> pipeline claims band0=VV/band1=VH, but local statistics show band 2
-> systematically *stronger* than band 1 (Oil means ≈ −19.9 vs −33.2 dB), which is
-> opposite to the canonical VV > VH ocean ordering. Numerical behavior must not
-> decide polarization, so the order stays UNKNOWN pending an author statement.
-
-## Validation stages completed
-
-1. **B1 audit** (`tools/validate_b1_dataset.py` → `processed_dataset/reports/b1_dataset_audit.json/.txt`):
-   full read-only scan of all 6040 files — structure, headers, per-band stats,
-   masks, pairing (2570/2570 flat pairs PASS), CRS (EPSG:4326), duplicates,
-   test independence, 9 visual-QC figures.
-2. **Issue resolution** (`tools/resolve_b1_issues.py` → `b1_resolution_report.json/.txt`,
-   `duplicate_resolution.csv`, `mask_set_comparison.csv`, `mask_authority_report.txt`,
-   `sar_representation_report.txt`, `train_test_independence.txt`).
-3. **SAR radiometry** (`tools/investigate_sar_radiometry.py` → `sar_radiometry_report.txt/.json`,
-   `sar_sources.txt`): Sigma0-dB CONFIRMED, {VV,VH} CONFIRMED, band order + speckle/
-   terrain-correction details UNKNOWN. Overall: **PARTIALLY CONFIRMED**.
-4. **Split construction** (`tools/create_dataset_split.py`, seed 42, NTFS **hard links**,
-   0 physical copies) → `processed_dataset/{train,val,test}/images|masks/<class>/`,
-   `metadata/split_index.csv`, `metadata/quarantine/quarantine.csv`,
-   `reports/dataset_split_report.txt`.
-5. **Preprocessing** (`preprocessing/`, numpy-only): inspect → calibration-gate
-   (SKIPPED — input already Sigma0 dB, `calibration_applied=false`) → dB→linear →
-   Lee 5×5 (configurable 3/5/7, linear domain only) → linear→dB → frozen global
-   percentile normalization → train-only exact flips/rot90 (masks stay binary) →
-   deterministic tiling (256/256 materialized; 256/192 overlap available for
-   inference stitching) → overlap-average stitching, threshold after
-   reconstruction. Outputs: `reports/preprocessing_config.json`,
-   `reports/preprocessing_qc/` (8-panel QC figures + stats).
-6. **Preprocessing audit** (read-only, no repo writes): full verification of the
-   `preprocessing/` implementation — Lee math, windows, conversions, tiling,
-   stitching, augmentation, split hygiene all PASS with measured evidence.
-   Two FAILs found and fixed (see 7). Verdict: YES, WITH SPECIFIC FIXES.
-7. **Preprocessing fixes** (minimal, Lee/tiling/augmentation untouched):
-   - Global frozen normalization bounds from the 2053-scene train split
-     (deterministic seeded reservoir over post-Lee dB; one scene in RAM):
-     **band 0 P1 = −41.2278, P99 = 0.0; band 1 P1 = −34.3992, P99 = 0.0**,
-     saved as `NORMALIZATION_BOUNDS` in `preprocessing_config.json`.
-   - `process_scene(..., bounds=None)` now **requires** frozen bounds for every
-     split (train/val/test/inference) — missing bounds raise `ValueError`;
-     per-scene refitting is impossible through the pipeline.
-   - `db_to_linear` is now exactly `10**(dB/10)` (additive eps removed);
-     zero-protection lives only in `linear_to_db` (`max(lin, eps)`, 0 → −100 dB).
-8. **Zero-value investigations** (read-only, local + source-level, config untouched):
-   ~2.6% of train pixels are exact 0.0, forming single edge-anchored rectangles
-   with 100% inter-band coincidence (e.g. `Oil/01034` 60.8% zeros, rows 663–2047;
-   two 100%-blank test scenes). No tag/doc declares NoData; author code paywalled
-   or absent; SNAP terrain-correction sources confirm no-coverage areas are written
-   as 0. P99 = 0 is mathematically forced and verified. Classification:
-   **LIKELY FILL / NODATA — NOT PROVEN**; recommendation PATH D (confirm with
-   authors before any masking/normalization change).
-9. **Tiling + augmentation materialization** (`preprocessing/make_tiles.py`,
-   `tools/build_tiles.py`, `tools/test_augmentation_tiling.py`):
-   scene-level split → frozen-bounds preprocessing → paired 256×256 tiling
-   (materialized **stride 256** — stride-192 materialization needs ~216 GB vs
-   ~117 GB free; recorded per-tile, overlap stitching path unchanged) →
-   validation → keep-every-valid-tile filtering (MIN_OIL_FRACTION=0.0,
-   BG_KEEP_FRACTION=1.0; reject only corrupt) → `tiled/{train,val,test}/`,
-   `metadata/tile_index.csv` (**193,048 tiles**: train 131,416 / val 32,832 /
-   test 28,800; 18,578 positive), `tiles_balance_report.txt`. Augmentation is
-   dynamic train-only (single sampled param-set, exact ops, masks binary);
-   `augmented/` intentionally empty. TESTs 1–14: **14/14 pass**.
-10. **Pre-training smoke test** (`tools/smoke_dataloader.py`, no aug, no resize):
-    batches [4,2,256,256]/[4,1,256,256], float32, finite, binary masks on all
-    splits; U-Net + ResNet34 (`segmentation-models-pytorch`, `in_channels=2`,
-    `classes=1`, first conv [64,2,7,7], 24.43M params) forward → [4,1,256,256],
-   BCEWithLogits loss computed, weights untouched. RTX 3050 6 GB: peak
-   254 MB, no OOM (AMP verified). Status: **READY FOR TRAINING**.
-11. **Training** (`training/`, `training_config.json` → `checkpoints/`):
-    U-Net + ResNet34 (2ch→1ch, 24.43M params, random init), BCEDiceLoss
-    0.5/0.5, Adam lr 1e-4, batch 2, 512×512 tiles, AMP on, early-stop
-    patience 8 on val loss. Ran 24/50 epochs (8.65 h, RTX 3050); best epoch 20,
-    tile-level val_dice 0.55826 @0.5 → `checkpoints/best_model.pth`
-    (`last_model.pth` kept). Curve: `training_history.csv`, summary:
-    `training_summary.json`.
-12. **Full-scene inference** (`inference/`, CLI defaults stride 384 /
-    threshold 0.5 — do not retune here): preprocess whole scene once →
-    sliding-window forward (sigmoid exactly once) → overlap-average stitching
-    → threshold AFTER reconstruction → `<stem>_prob.tif` / `<stem>_mask.tif` /
-    `<stem>_inference.json`. Test split is refused without `--allow-test`.
-13. **Val-only analysis** (`tools/val_analysis.py` → `results/val_analysis/`,
-    val split only, nothing frozen): each of the 513 val scenes processed
-    EXACTLY ONCE (preprocessed array reused for strides 512/384/256 + fp32
-    control); only 1000-bin pos/neg probability histograms + integer counts
-    retained. Items: stride×threshold grid (0.50–0.95) · per-category FA/
-    detection · Oil Dice by spill-area tercile · min-area sweep (analysis
-    only) · paired bootstrap (1000×) · stride-256 diagnosis · 10-bin
-    calibration · fp32-vs-AMP (exact per-pixel). Verification: 3078
-   histogram-vs-direct pairs, 0 mismatches — PASS. Best grid point
-   512@0.80 (Dice 0.61114) is a text-only suggestion; the decision is human.
-14. **Final test evaluation** (`evaluation/` → `evaluation/test_results.csv`,
-    `test_summary.json`, `qualitative/`, test split only, canonical protocol
-    for all future model comparisons): `best_model.pth` (val-selected, never
-    test-tuned) on the fixed 450 test scenes (150×3) at full-scene level —
-    dynamic 512 windows (stride 384), training-identical preprocessing, AMP
-    inference, overlap-mean stitching, protocol-fixed threshold 0.5 (NOT tuned
-    on test; the val 0.80 observation was never frozen). Per-scene TP/FP/TN/FN
-    + IoU/Dice/Precision/Recall/F1/specificity with NaN (never silent 0) for
-    undefined positive-class metrics; mean/median/sample-std over valid scenes
-    + micro-averaged global metrics; Oil/No-oil/Lookalike groups from the
-    `class` manifest column. Integrity: manifest = 450 distinct scenes, no
-    train/val ID overlap, checkpoint strict-loaded, GT SHA-256 identical
-    450/450 before/after. Result (MEASURED): 450/450 success; scene-mean
-    IoU 0.254 / Dice 0.316; global IoU 0.150 / Dice 0.261 / precision 0.776 /
-    recall 0.157. Test is much harder than val at 0.5 (35/150 Oil scenes get
-    zero predicted pixels) — that is the measurement, not a bug.
-
-## Key findings
-
-- **G1 label conflict (MANUAL REVIEW REQUIRED):** `Oil/00007 == Oil/01339` pixel-identical,
-  masks differ (fg 70772 vs 74906). Both quarantined from train/val. Mtime forensics:
-  identical image timestamps (packaging duplication), masks ~2 days apart.
-- **Exact duplicates:** `Oil/00356 == 00357`, `No_oil/00542 == 00543` (second copies excluded);
-  intra-test `Test_Images/No oil/00005 == 00087` (official test set kept intact, flagged for eval).
-- **Mask authority:** flat `Mask_oil/` etc. are authoritative for train/val. Nested `Mask/`
-  is Part III test ground truth (`*_segmentation.tif`, IDs match `Test_Images` 1:1);
-  nested Oil masks provably belong to a different sample (median same-ID IoU 0.003) — never merged.
-- **Odd dimensions:** 4 Lookalike files (00140/00166/00288/00390) are valid, aligned, kept as-is.
-- **Split:** train 2053 (958/547/548) · val 513 (239/137/137) · test 450 (150×3); 0 hash
-  mismatches, 0 cross-split overlaps. No NaN/Inf/NoData anywhere.
-- **Normalization (frozen):** train-only global P1/P99 — band 0 [−41.2278, 0.0],
-  band 1 [−34.3992, 0.0]; 2.66%/2.70% of pixels saturate at 1.0 (zeros + rare
-  bright scatterers). Val/test/inference reuse these bounds; refitting raises.
-- **Zero pixels:** ~2.6% exact zeros (edge-anchored fill-like blocks, both bands
-  identical); test mean 7.8%. Treated as ordinary pixels until authors confirm
-  fill semantics — no masking, no P99 change.
-- **Val inference (MEASURED, val only, `results/val_analysis/`):** best grid
-  point 512@0.80 Dice 0.61114, but the 512-vs-384 gap (+0.00137) is inside
-  bootstrap noise (95% CI [−0.01485, +0.01615]); 384 beats 256 and 0.80 beats
-  0.50. Lookalike scenes contribute ~72% of FP pixels (FA ≈ 61–65% @0.80)
-  vs No-oil FA ≈ 2%; small spills score ~0.10 Dice below medium/large.
-   Model is OVER-confident (pred−obs +0.31); min-area filtering barely moves
-   Dice; AMP ≡ fp32 (Dice diff 1e-05, 3e-06 pixels change label).
-- **Final test (MEASURED, test only, `evaluation/`):** 450/450 scenes success,
-   0 failures; Oil mean IoU 0.337/Dice 0.420 with FP scenes 112/150;
-   No-oil FP rate 0.02; Lookalike FP rate 0.307. Threshold stays 0.5 by
-   protocol — test was never used for tuning or checkpoint selection.
-
-## DATASET_STATUS: READY FOR TRAINING (data pipeline)
-
-Training blockers cleared: frozen bounds enforced, 193k verified tiles, leak-free
-split, CUDA smoke passed. Standing limitations (not training blockers): G1
-quarantine, per-band polarization order, zero fill-semantics (PATH D pending).
-(Missing mask CRS is accepted — pixel alignment verified via dimensions.)
-Train with the `preprocessing/` chain exactly as recorded in
-`preprocessing_config.json` (train≡inference); augmentation NONE for this
-experiment; Lee-window ablations require retraining.
-
-## Reproduce
+## Quick Start (Windows, copy-paste)
 
 ```powershell
-.venv\Scripts\python.exe tools\validate_b1_dataset.py --dataset dataset --out processed_dataset
-.venv\Scripts\python.exe tools\resolve_b1_issues.py  --dataset dataset --out processed_dataset
-.venv\Scripts\python.exe tools\investigate_sar_radiometry.py --dataset dataset --out processed_dataset
-.venv\Scripts\python.exe tools\create_dataset_split.py --dataset dataset --out processed_dataset --seed 42
-$env:PYTHONPATH = "<root>"
-.venv\Scripts\python.exe -m preprocessing.visualize --image <sar.tif> --mask <mask.tif> --out <qc.png> [--lee-window 5] [--no-lee]
-# Training (config: training_config.json; ~9 h on RTX 3050 6 GB)
-.venv\Scripts\python.exe training\train.py
-# Full-scene inference (defaults: stride 384, threshold 0.5)
-.venv\Scripts\python.exe -m inference.predict_scene --scene <sar.tif> --checkpoint checkpoints\best_model.pth --output-dir <out-dir> [--stride 384] [--threshold 0.5]
-# Val-only analysis, all 8 items (~35 min, val split only, nothing frozen)
-.venv\Scripts\python.exe tools\val_analysis.py
-# Canonical final test evaluation, 450 scenes (~15 min, test split only)
-.venv\Scripts\python.exe evaluation\evaluate_model.py [--n-scenes 3]
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt   # Python 3.14; torch 2.14.0+cu126 (CUDA 12.6)
+# Inference (defaults: stride 384, threshold 0.5)
+.venv\Scripts\python.exe -m inference.predict_scene --scene <sar.tif> --checkpoint checkpoints\best_model.pth --output-dir <out-dir>
+# Post-processing (defaults: threshold 0.5, open 3, close 3, min area 100 px)
+.venv\Scripts\python.exe -m postprocessing.run_postprocess --prob <out-dir>\<stem>_prob.tif --output-dir <pp-dir>
 ```
 
-`dataset/` is the immutable source (newest write May 2023). Do not delete it until
-`processed_dataset/` has been manually verified.
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[SAR GeoTIFF, 2 bands] --> B[Preprocessing: dB > linear > Lee 5x5 > dB > frozen P1/P99]
+    B --> C[UNet + ResNet34, 512x512 windows]
+    C --> D[Overlap-mean stitching, threshold once]
+    D --> E[Binary mask + probability GeoTIFF]
+    E --> F[Post-processing: morphology > regions > polygons]
+    F --> G[GeoJSON / SHP / report files]
+    G --> H[External downstream fusion]
+```
+
+| Stage | Code | Output |
+|---|---|---|
+| Preprocessing | `preprocessing/pipeline.py` (`process_scene`) | normalized tensor |
+| Inference | `inference/predict_scene.py` | `{stem}_prob.tif`, `{stem}_mask.tif`, `{stem}_inference.json` |
+| Post-processing | `postprocessing/run_postprocess.py` | masks, GeoJSON, SHP set, report JSON |
+| Training | `training/train.py` | `checkpoints/best_model.pth` |
+| Evaluation | `evaluation/evaluate_model.py`, `tools/val_analysis.py` | CSV/JSON reports |
+
+## Model Architecture (`models/unet_resnet34.py`)
+
+Custom U-Net with a ResNet34-style encoder (no LinkNet variant exists here):
+
+- **Encoder**: stem 7×7 conv rebuilt for **2 input channels** → residual stages → 512-ch bottleneck. Skip connections tap each stage.
+- **Decoder**: 4 upsampling blocks, widths **[256, 128, 64, 32]**, each fusing the matching skip; **1×1 conv head → 1 logit channel**; sigmoid applied exactly once at inference.
+- **Init**: random (Kaiming), `pretrained=False` for this experiment — no ImageNet weights. A `pretrained=True` path exists but **requires a local weights file** (`weights_path`); none is bundled. ~24.43M parameters.
+
+U-Net suits this task because skips preserve fine spill boundaries while the deep path adds context to reject look-alikes.
+
+## Input
+
+- Tensor `[2, 512, 512]`, float32, two SAR bands in file order. Stored values are Sigma0 backscatter in dB; polarization set is {VV, VH} but **per-band order is unresolved** (band 2 is systematically stronger, opposite the canonical VV > VH ordering — order stays UNKNOWN).
+- Normalization: frozen train-only P1/P99 — band 0 `[−41.2278, 0.0]`, band 1 `[−34.3992, 0.0]` (`processed_dataset/metadata/preprocessing_config.json`). Test/val reuse these bounds; refitting raises.
+- Masks: uint8 `{0, 1}`, `0 = background`, `1 = oil`.
+
+## Dataset (Trujillo-Acatitla et al., Zenodo `8346860` / `8253899` / `13761290`, CC BY 4.0)
+
+| Split | Scenes (Oil/Lookalike/No-oil) | Source |
+|---|---|---|
+| train | 2053 (958/547/548) | `processed_dataset/{train}/images\|masks/` |
+| val | 513 (239/137/137) | same layout |
+| test | 450 (150×3), 2048×2048, EPSG:4326 | `processed_dataset/test/` |
+
+Tiles for training are 512×512 (`processed_dataset/metadata/tile_index.csv`: 32,860 train / 8,208 val / 7,200 test rows). Known issues: `Oil/00007 == Oil/01339` with conflicting masks (both quarantined); exact duplicates excluded; ~2.6% exact-zero pixels treated as ordinary pixels pending author confirmation.
+
+## Preprocessing (exact order, train ≡ inference)
+
+dB input → dB→linear → Lee 5×5 (linear domain) → linear→dB → frozen P1/P99 → tensor. No resizing; scenes smaller than a tile get reflect padding. Augmentation is **disabled** for this experiment. GT masks are never augmented at inference/evaluation.
+
+## Training
+
+```powershell
+.venv\Scripts\python.exe -m training.train --epochs 50 --batch-size 2 --learning-rate 1e-4 --optimizer Adam --scheduler none --mixed-precision --data-source cache --early-stop-patience 8 --checkpoint-dir checkpoints
+```
+
+Defaults: 50 epochs, batch 2, Adam lr 1e-4, scheduler none, early-stop patience 8 on val loss, AMP on, seed 42, sampler `scene_major` (no class weighting; 82.5% of train tiles are empty-mask). Loss **0.5·BCEWithLogits + 0.5·soft-Dice** (smooth 1.0): BCE sees every pixel, Dice restores foreground signal at ~1–3% oil coverage; empty tiles get no special case. Ran 24 epochs (8.65 h, RTX 3050 6 GB); best epoch 20, tile-level **val_dice 0.55826** → `checkpoints/best_model.pth` (293 MB, sha256 `840a9018…`).
+
+## Inference
+
+```powershell
+.venv\Scripts\python.exe -m inference.predict_scene --scene <sar.tif> --checkpoint checkpoints\best_model.pth --output-dir <dir> [--stride 384] [--threshold 0.5] [--batch-size 4] [--device cuda|cpu]
+```
+
+Sliding 512-windows (stride 384 = overlap 128; edge snap, full coverage asserted) → batched forward → sigmoid once → overlap-mean stitch → threshold **after** reconstruction (never per-tile). Test-split scenes are refused without `--allow-test`. Mean ~4.9 s/scene (2048², RTX 3050). Batch: one scene per call; `run_logs/full_run_batch.ps1` loops the 450 test scenes.
+
+## Post-processing (`postprocessing/config.py` is the single source of truth)
+
+```powershell
+.venv\Scripts\python.exe -m postprocessing.run_postprocess --prob <stem>_prob.tif --output-dir <dir> [--threshold 0.5] [--opening-kernel 3] [--closing-kernel 3] [--min-region-area 100]
+```
+
+prob → threshold → binary → opening → closing (pure-NumPy) → connected components (≥100 px) → polygons → area → files. **Model output vs cleaned output are distinct files** (`_binary_mask.tif` vs `_cleaned_mask.tif`); visualization/eval use the thresholded prediction only.
+
+| Output | Schema / notes |
+|---|---|
+| `{stem}_binary_mask.tif`, `{stem}_cleaned_mask.tif` | uint8 {0,1}, source CRS + transform |
+| `{stem}_predictions.geojson` | FeatureCollection, Polygon, `crs.name = EPSG:4326`; properties: `scene_id, candidate_id, threshold, pixel_area, geographic_area_km2, centroid_geo_lon/lat, centroid_pixel_row/col` |
+| `{stem}_predictions.shp/.shx/.dbf/.prj` | polygon shapefile set, same features |
+| `{stem}_postprocessing_report.json` | counts, `total_predicted_area_km2`, timings, paths; **empty prediction → `0.0`** (never null; regression test `tools/test_postprocessing_report.py`) |
+
+## Georeferencing
+
+CRS + affine transform are copied from the source raster (test scenes: EPSG:4326); polygon coordinates derive from that transform and are asserted inside source bounds. A plain PNG carries no coordinates — geographic output requires a georeferenced GeoTIFF input.
+
+## Tiling and stitching
+
+Train tiles (512, from `tile_index.csv`) ≠ inference windows (dynamic 512/384, never materialized). Overlap is combined by uniform mean; `finalize()` raises on uncovered pixels.
+
+## Results (all MEASURED; threshold 0.5 unless noted)
+
+| Metric | Test global (450 scenes) | Test scene-mean | Val pooled |
+|---|---|---|---|
+| IoU | 0.15028 | 0.254 | — |
+| Dice | 0.26129 | 0.316 | **0.61114** @ stride 512, thr 0.80 |
+| Precision | 0.77611 | 0.615 | — |
+| Recall | 0.15709 | 0.379 | — |
+| F1 | 0.26129 | 0.552 | — |
+
+IoU = TP/(TP+FP+FN); Dice = overlap of pred/GT; precision = false-positive behavior; recall = missed oil; F1 = their balance — read them together. Groups (@0.5): Oil mean IoU 0.337 (FP scenes 112/150); No-oil FP rate 0.02; Lookalike FP rate 0.307. Test is harder than val (35/150 Oil scenes score zero) — a measurement, not a bug. Full tables: `evaluation/test_results.csv`, `evaluation/test_summary.json`.
+
+## GLCM / Database / API
+
+**Not implemented.** No texture features, no PostgreSQL/PostGIS/SQLite writes, no FastAPI service, no Docker. Outputs are files; downstream fusion is external. Do not document them as features.
+
+## Environment setup
+
+```powershell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt   # numpy 2.5.3, rasterio 1.5.1, torch 2.14.0+cu126, smp 0.5.0, ...
+.venv\Scripts\python.exe -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+```
+
+CPU fallback is automatic (`cuda` if available else `cpu`).
+
+## Troubleshooting
+
+- **CUDA unavailable**: check `torch.cuda.is_available()`; CPU still works, slower.
+- **Checkpoint not found**: expected at `checkpoints/best_model.pth` (regenerate via training).
+- **Shape mismatch**: model needs `[2,512,512]` float32; masks must be single-band uint8 {0,1}.
+- **No CRS**: polygon coordinates fall back to pixel space; verify source GeoTIFF metadata.
+- **Empty polygons**: threshold too high, empty prediction, or morphology/area filter removed everything (defaults open 3 / close 3 / 100 px).
+- **Test refusal**: inference blocks test scenes without `--allow-test` (evaluation-only flag, never for tuning).
+
+## Limitations (evidence-backed)
+
+- Look-alike confusion is the dominant error (measured FP rates above); confidence ≠ confirmation.
+- Small spills score ~0.10 Dice below medium/large (val); model is over-confident (pred−obs +0.31).
+- Generalization is distribution-bound (test ≪ val at 0.5); polarization order and zero-fill semantics unresolved (see Dataset).
+- Segmentation alone gives no source, volume, or drift — and no vessel attribution.
+
+## Scope
+
+DOES: pixel-level candidate detection, masks, cleaned regions, polygons, areas, file outputs. DOES NOT: prove petroleum, identify vessels, assign liability, replace human review, or forecast movement.
+
+## Repository structure
+
+```text
+inference/predict_scene.py  full-scene inference CLI
+postprocessing/             config, morphology, vectorize, report, run_postprocess, validate
+preprocessing/              pipeline, tiling, augmentation, tile_dataset
+training/                   train, dataloader (scene_major), losses (BCEDiceLoss), metrics
+models/unet_resnet34.py     the only architecture (no LinkNet)
+evaluation/                 canonical final-test evaluator + test_results.csv/test_summary.json
+tools/                      val_analysis, val_diagnosis, smoke/verify/test scripts
+checkpoints/                best_model.pth, last_model.pth (git-ignored, regenerable)
+processed_dataset/          splits, tile_index.csv, preprocessing_config.json, tile_cache/
+dataset/                    immutable source (136 GB, git-ignored)
+```
+
+## Reproducibility
+
+Python 3.14.7 · torch 2.14.0+cu126 · seed 42 · frozen bounds above · checkpoint sha `840a9018…028e58c5057be752ac44ecb60883e8029243fa`. Val analysis: `tools/val_analysis.py` (~35 min). Canonical test eval: `evaluation/evaluate_model.py` (~15 min, protocol-fixed threshold 0.5).
+
+## Citation
+
+Trujillo-Acatitla et al. (2024), *Mar. Pollut. Bull.* 204, 116549 (`10.1016/j.marpolbul.2024.116549`); data Zenodo `10.5281/zenodo.8346860`, `10.5281/zenodo.8253899`, `10.5281/zenodo.13761290` (CC BY 4.0). No license file is present in this repository.
