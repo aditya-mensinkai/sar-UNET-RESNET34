@@ -22,11 +22,16 @@ processed_dataset/tiled/
 processed_dataset/augmented/
 processed_dataset/stitched/
 
-# OS / editor noise
+# OS / editor / agent noise (never committed)
 Thumbs.db
 Desktop.ini
 .vscode/
 .idea/
+.kiro/
+.agents/
+.cursor/
+.claude/
+.codex/
 
 # Scratch verification scripts (never committed)
 tools/tmp_*.py
