@@ -21,3 +21,9 @@ tqdm==4.70.0
 torch==2.14.0
 torchvision==0.29.0
 segmentation-models-pytorch==0.5.0
+# ONNX export + runtime (verified 2026-09-22 with torch 2.14.0+cu126:
+# export_onnx.py -> checkpoints/best_model.onnx, opset 17, ORT CPU).
+# GPU inference uses CPUExecutionProvider; onnxruntime-gpu is NOT installed
+# (conflicts with onnxruntime -- install one, never both).
+onnx==1.23.0
+onnxruntime==1.30.0

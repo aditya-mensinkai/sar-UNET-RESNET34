@@ -81,6 +81,51 @@ Defaults: 50 epochs, batch 2, Adam lr 1e-4, scheduler none, early-stop patience 
 
 Sliding 512-windows (stride 384 = overlap 128; edge snap, full coverage asserted) → batched forward → sigmoid once → overlap-mean stitch → threshold **after** reconstruction (never per-tile). Test-split scenes are refused without `--allow-test`. Mean ~4.9 s/scene (2048², RTX 3050). Batch: one scene per call; `run_logs/full_run_batch.ps1` loops the 450 test scenes.
 
+## ONNX Export
+
+### Why ONNX?
+
+ONNX provides a framework-independent representation of the trained neural network and can make deployment easier across environments (no PyTorch/training code needed at inference time).
+
+### Export
+
+```powershell
+.venv\Scripts\python.exe export_onnx.py --checkpoint checkpoints\best_model.pth --output checkpoints\best_model.onnx
+```
+
+Optional flags: `--opset 17` (default), `--device cpu`, `--real-image <sar.tif>` (validation tile source; default `processed_dataset/test/images/Oil/00000.tif`). The script reconstructs the exact `UNetResNet34(in_channels=2, out_channels=1, pretrained=False)` architecture, loads `checkpoint["model_state_dict"]` with `strict=True` (fails loudly on any key mismatch), exports with `torch.onnx.export(..., dynamo=False)` — the TorchScript path, chosen deliberately for stable `input`/`segmentation` names and broad ONNX Runtime compatibility — then validates (`onnx.checker`), runs ONNX Runtime, and compares PyTorch vs ONNX on dummy input plus real SAR tiles.
+
+NOTE: the model is a fully custom U-Net (`models/unet_resnet34.py`, torchvision ResNet34 encoder); `segmentation_models_pytorch` is listed in requirements but is NOT used by this architecture.
+
+### Input
+
+- shape: `[1, 2, 512, 512]` (NCHW, fixed — no dynamic axes; inference tiles are always 512×512)
+- dtype: float32, two SAR bands normalized to [0,1] via frozen P1/P99 bounds (band 0 `[−41.2278, 0.0]`, band 1 `[−34.3992, 0.0]`); preprocessing stays OUTSIDE the ONNX graph
+- names: input `input`
+
+### Output
+
+- shape: `[1, 1, 512, 512]` float32, name `segmentation`
+- meaning: RAW LOGITS (no sigmoid inside ONNX). Apply sigmoid exactly once, then threshold at 0.5 AFTER stitching — identical to `inference/predict_scene.py`. The existing post-processing chain (threshold → open 3 / close 3 → components ≥100 px → GeoJSON/SHP) consumes ONNX output unchanged; CRS/transform/polygons stay outside ONNX.
+
+### Validation (measured 2026-09-22, opset 17, IR 8)
+
+| Check | Result |
+|---|---|
+| `onnx.checker` | valid |
+| Dummy logits max / mean abs diff | 1.48e-05 / 2.15e-06 |
+| Real SAR tile (Oil/00000, y=1024,x=0, 7021 pos px) logits max / mean abs diff | 1.95e-04 / 3.93e-06 |
+| Mask agreement / IoU / Dice @0.5 (dummy, background tile, positive tile) | 1.0 / 1.0 / 1.0 |
+| Sizes | `best_model.pth` 293.4 MB → `best_model.onnx` 97.7 MB (FP32, no quantization) |
+
+### Runtime
+
+- ONNX Runtime CPU (`CPUExecutionProvider`): verified working.
+- ONNX Runtime GPU (`CUDAExecutionProvider`): NOT verified — the installed `onnxruntime` 1.30 CPU build only exposes `AzureExecutionProvider`/`CPUExecutionProvider`. Use PyTorch CUDA inference for GPU until a GPU ORT build is validated.
+- Single-tile test: `python test_onnx.py --compare-torch [--save-mask out.tif]`
+
+`checkpoints/` (including `*.onnx`) is git-ignored: do not commit the 98 MB model — regenerate it with the export command above.
+
 ## Post-processing (`postprocessing/config.py` is the single source of truth)
 
 ```powershell
